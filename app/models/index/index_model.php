@@ -1,5 +1,6 @@
 <?php
 //
+
 class index_model extends BaseModel {
 	protected $dbIndex = 'phpcms';
 	protected $dbTable = "v9_www" ;
@@ -33,4 +34,5 @@ class index_model extends BaseModel {
 		return $result ;
 	}
 }
+
 

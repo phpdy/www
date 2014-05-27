@@ -22,47 +22,38 @@
 <div class="main_index">
   <!--channel begin-->
   <div class="main_channel">
-    <div class="channel_show">
-      <div class="channel_topic">课程内容</div>
-      <div class="channel_img"><img src="http://www2.nyipcn.com/files/kcnr.gif" width="304" height="200" border=0></div>
-      <div class="channel_desc">
-        <div>全科专业摄影课程涵盖了你所需要知道的关于艺术、技法和经营的方方面面。</div>
-        <div class="channel_desc_c"><a href="#">点击此处，了解更多详情>></a></div>
-      </div>
-    </div>
-    <div style="width:24px;float:left">&nbsp;</div>
-    <div class="channel_show">
-      <div class="channel_topic">学习方式</div>
-      <div class="channel_img"></div>
-      <div class="channel_desc"></div>
-    </div>
-    <div style="width:24px;float:left">&nbsp;</div>
-    <div class="channel_show">
-      <div class="channel_topic">教学资料</div>
-      <div class="channel_img"></div>
-      <div class="channel_desc"></div>
-    </div>
-  </div>
-
-  <div class="main_channel">
-    <div class="channel_show">
-      <div class="channel_topic">考核方式</div>
-      <div class="channel_img"></div>
-      <div class="channel_desc"></div>
-    </div>
-    <div style="width:24px;float:left">&nbsp;</div>
-    <div class="channel_show">
-      <div class="channel_topic">教学团队</div>
-      <div class="channel_img"></div>
-      <div class="channel_desc"></div>
-    </div>
-    <div style="width:24px;float:left">&nbsp;</div>
-    <div class="channel_show">
-      <div class="channel_topic_h">不用犹豫，现在就报名！</div>
-      <div class="channel_img"></div>
-      <div class="channel_desc"></div>
-    </div>
-  </div>
+  <?php 
+  //print_r($list);
+  foreach ($list as $key=>$item){
+  	if($item['catdir']=='lesson_0'){
+	  	echo "<div class=\"channel_show\">
+	      <div class=\"channel_topic_h\">$item[catname]</div>
+	      <div class=\"channel_img\"><img src=\"$item[image]\" width=304 height=200 border=0></div>
+	      <div class=\"channel_desc\">
+	      	<div>$item[description]</div>
+	        <div class=\"channel_desc_c\"><a href=\"#$item[catid]\">点击此处，了解更多详情>></a></div>
+	      </div>
+	    </div>" ;
+  	} else {
+	  	echo "<div class=\"channel_show\">
+	      <div class=\"channel_topic\">$item[catname]</div>
+	      <div class=\"channel_img\"><img src=\"$item[image]\" width=304 height=200 border=0></div>
+	      <div class=\"channel_desc\">
+	      	<div>$item[description]</div>
+	        <div class=\"channel_desc_c\"><a href=\"?control=lesson&action=info&id=$item[catid]\">点击此处，了解更多详情>></a></div>
+	      </div>
+	    </div>" ;
+  	}
+  	if(($key+1)%3==0){
+  		echo "</div>
+  		<div class=\"main_channel\">" ;
+  	}else if($key+1==sizeof($list)){
+  		echo "</div>" ;
+  	} else {
+  		echo "<div style=\"width:24px;float:left\">&nbsp;</div>" ;
+  	}
+  }
+  ?>
   <!--channel end-->
 
   <!--commend begin-->
