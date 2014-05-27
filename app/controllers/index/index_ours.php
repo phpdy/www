@@ -1,6 +1,6 @@
 <?php
 
-class index_index extends BaseController {
+class index_ours extends BaseController {
 
 	public function init(){
 		$this->index_model = $this->initModel('index_model','index');
@@ -13,7 +13,7 @@ class index_index extends BaseController {
 	}
 	
 	public function defaultAction(){
-		$this->view->display('index.php');
+		$this->view->display('ours.php');
 	}
 	
 }

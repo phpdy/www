@@ -2,18 +2,18 @@
 //
 class index_model extends BaseModel {
 	protected $dbIndex = 'phpcms';
-	protected $dbTable = "v9_club" ;
+	protected $dbTable = "v9_www" ;
 	
-	protected $items = array('name','times','info','imgurl') ;
+	protected $items = array('catid','title','description','content','thumb','inputtime') ;
 
 
 	protected function getOrder(){
-		return "order by startdate desc" ;
+		return "order by inputtime desc" ;
 	}
 	
-	public function getNewsList($pid){
+	public function getDataList($pid){
 		
-		$sql = "select id,catid,title,thumb,description,url,startdate,closedate,fee from v9_club where catid=$pid order by startdate desc" ;
+		$sql = "select id,catid,title,thumb,description,url,startdate,closedate,fee from v9_www where catid=$pid order by startdate desc" ;
 		$result = $this->getAll($sql) ;
 		
 		foreach ($result as $item){
@@ -34,15 +34,15 @@ class index_model extends BaseModel {
 		return $newlist ;
 	}
 
-	public function getNewsByid($id){
-		$sql = "select id,catid,title,thumb,description,url,inputtime,startdate,closedate,fee from v9_club where id=$id" ;
+	public function getDataByid($id){
+		$sql = "select id,catid,title,thumb,description,url,inputtime,startdate,closedate,fee from v9_www where id=$id" ;
 		$result = $this->getOne($sql) ;
 		
 		return $result ;
 	}
 	
-	public function getNewsContent($id){
-		$sql = "select id,content from v9_club_data where id=$id" ;
+	public function getContentById($id){
+		$sql = "select id,content from v9_www_data where id=$id" ;
 		$result = $this->getOne($sql) ;
 		
 		return $result ;
