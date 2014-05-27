@@ -1,7 +1,7 @@
 <?php
 
 class index_faq extends BaseController {
-
+	private $_id = 64 ;
 	public function init(){
 		$this->index_model = $this->initModel('index_model','index');
 		
@@ -13,6 +13,12 @@ class index_faq extends BaseController {
 	}
 	
 	public function defaultAction(){
+		$log = __CLASS__."|".__FUNCTION__ ;
+		$start = microtime(true) ;
+
+		
+		$log .="|".(int)(microtime(true)-$start) ;
+		log::info($log);
 		$this->view->display('faq.php');
 	}
 	
