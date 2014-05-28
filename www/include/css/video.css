@@ -1,0 +1,78 @@
+﻿<style type="text/css"> 
+@charset "utf-8";
+/*index CSS Document */
+* { margin:0; padding:0;}
+ 
+
+#flash { width:960px; height:350px; overflow:hidden; margin:0 auto; clear:both; position:relative;/*--*/ padding:0px 0px;}
+#flash a {width:960px; height:350px; display:none;}
+#flash img {width:960px; height:350px;/* display:none;*/}
+.flash_bar { width:550px; padding-left:470px; z-index:69; height:30px; overflow:hidden; position:absolute; padding-top:13px!important; padding-top:12px; bottom:0px; left:0px; right:0; background:url(http://stat.ablesky.com/content/pic/album/2012-05-06/4cd1d095-3613-460d-bdbf-621a976fc739.png) repeat-x 0 0px; text-align:center;}
+.flash_bar .dq { display:block; float:left; width:8px; height:8px; margin:5px 5px; /* background: url(tg_flash_p.png) no-repeat 0px 0px;*/ cursor:pointer;background:url(http://stat.ablesky.com/content/pic/album/2012-05-06/0922ee6e-e219-4767-9b95-f06ac735d5f9.png) no-repeat 0px 0px; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.16sucai.com/uploadfile/show2011/120215001/iamges/tg_flash_p.png" ,sizingMethod="crop"); }
+.flash_bar .no { display:block; float:left; width:8px; height:8px; margin:5px 5px; /* background: url(tg_flash_p.png) no-repeat 0px 0px;*/ cursor:pointer;background:url(http://stat.ablesky.com/content/pic/album/2012-05-06/4f792d4a-15a8-4fe9-b4c2-fb43928acab8.png) no-repeat 0px 0px; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.16sucai.com/uploadfile/show2011/120215001/iamges/tg_flash_p2.png" ,sizingMethod="crop"); }
+#flashBg {height:350px; overflow:hidden; width:960px; clear:both; margin:0 auto; padding:0;}
+#flashLine {background:url(http://stat.ablesky.com/content/pic/album/2012-05-06/c3b6a1a4-7f18-4f58-8c14-05f99fa14ca2.png) repeat-x center bottom;height:350px; width:100%; clear:both;}
+ 
+/*导航开始*/
+.main_menu { margin:0 auto; padding:0; margin-bottom:25px; width:1003px; height:30px; border-left:1px solid 
+ 
+#e0e0e0; border-bottom:1px solid #e0e0e0; border-right:1px solid #e0e0e0; overflow:hidden;}
+.v_i_menu { float:left; margin:0; padding:0; width:1008px; height:30px; list-style:none;}
+.v_i_menu li { float:left; width:171px; height:30px; border-right:1px solid #e0e0e0; text-align:center; color:#fff; font:300 18px/30px 'microsoft yahei',arial;}
+.v_i_menu li a { display:block; width:171px; height:30px; background:#87cd00; color:#fff; text-decoration:none;}
+.v_i_menu li a:hover { background:#999; color:#fff; text-decoration:none;}
+ 
+.v_main_left { float:left; width:680px; height:aut; padding-bottom:30px;}
+.v_main_right { float:right; width:300px; height:auto;}
+ 
+/*登录*/
+.view_load { float:left; width:298px; height:auto; padding:9px 0 0; margin-bottom:15px; border:1px solid #f3f3f3; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; position:relative; background:#fcfcfc;}
+.view_load_ul { float:left; width:100%; height:auto; padding-bottom:6px; list-style:none;}
+.view_load_ul li { float:left; width:100%; height:30px; margin:5px 0; color:#666; font:12px/30px arial;}
+.view_load_title { float:left; width:60px; height:30px; color:#999; text-align:right;}
+.view_load_right { float:left; width:220px; height:30px;}
+.view_load_right img { border:0;}
+.view_load_right .input_1 { width:195px; height:28px; border:1px solid #eee; padding:0 5px; background:#fff; color:#333; font:12px/28px arial;}
+.view_load_right .input_2 { width:80px; height:24px; background:url(http://stat.ablesky.com/content/pic/album/2012-05-06/a7fdbb03-2d52-4820-a62e-7009e0135945.gif) no-repeat; color:#fff; font:700 12px/24px arial; border:0; cursor:pointer;}
+ 
+/*动态*/
+.k_trends { float:left; width:298px; height:auto; padding:0 0 10px; margin-bottom:15px; border:1px solid #eee; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; position:relative; background:#fff;}
+.k_trends_title { margin:0 auto; width:280px; height:25px; padding:3px 0; color:#333; font:700 12px/18px arial; text-indent:5px;}
+.k_trends_ul { margin:0 auto; width:280px; height:auto; list-style:none;}
+.k_trends_ul li { float:left; width:280px; height:30px; color:#999; border-top:1px dotted #f3f3f3; font:12px/30px '宋体',arial; overflow:hidden;}
+.k_trends_ul li a { color:#999; text-decoration:none;}
+.k_trends_ul li a:hover { color:#333;}
+.k_trends_ul li span { padding-right:5px; font-size:18px; line-height:18px; font-weight:bold; font-family:arial,'宋体';}
+.k_trends_video { margin:0 auto; width:300px; height:auto; list-style:none;}
+.k_trends_video li { float:left;width:300px; height:88px; padding:7px 0; color:#999; border-top:1px dotted #eee; font:12px/30px '宋体',arial; overflow:hidden;}
+.k_trends_video_pic { float:left; width:90px; height:auto;}
+.k_trends_video_pic img { width:80px; border:1px solid #f5f6f7; background:#fff; padding:3px;}
+.k_trends_video_right { float:left; width:180px; height:88px; padding-left:20px; }
+.k_trends_video_name { width:100%; height:30px; color:#666; font:600 12px/24px arial;}
+.k_trends_video_name a { color:#87cd00; text-decoration:none;}
+.k_trends_video_name a:hover { color:#666;}
+.k_trends_video_intro { width:100%; height:54px; color:#999; font:300 12px/18px arial; overflow:hidden;}
+ 
+.procedure { float:left; width:100%; height:auto; padding-bottom:15px;}
+.procedure_title { float:left; width:100%; height:30px; color:#666; font:700 12px/24px arial;}
+.procedure_pic { float:left; width:100%; height:auto; }
+ 
+.k_course { float:left; width:654px; height:auto; padding:14px 14px 14px; border:1px solid #eee; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; overflow:hidden;}
+.k_course_title { float:left; width:100%; height:30px;}
+.k_course_title span { float:left; width:auto; height:auto; color:#666; font:700 14px/18px arial;}
+.k_course_title p { float:right; width:auto; height:auto; padding-left:10px; background:url(http://stat.ablesky.com/content/pic/album/2012-05-06/69ef5c34-914d-4c7f-8530-c00e61a38dac.gif) 0 center no-repeat; color:#87cd00; font:12px/18px arial;}
+.k_course_title p a { color:#87cd00; text-decoration:none;}
+.k_course_title p a:hover { color:#999;}
+.k_course_ul { float:left; width:664px; height:auto; list-style:none;}
+.k_teacher_ul { float:left; width:655px; height:auto; list-style:none;}
+.k_course_ul li { float:left; width:156px; height:265px; padding-bottom:5px; margin-right:10px; margin- bottom:15px; border-bottom:1px solid #e0e0e0; background:#f5f6f7; overflow:hidden;}
+.k_course_t { padding:16px 0px 10px; font-weight:bold; font-size:20px; line-height:24px; color:#B60925; text-align:center}
+.k_course_c { font-size:14px; line-height:22px; text-indent:28px; }
+.k_course_pic { float:left; width:156px; height:200px; overflow:hidden;}
+.k_course_pic img { width:156px; height:auto; border:0;}
+.k_course_name { float:left; width:100%; height:24px; border-bottom:1px solid #eee; color:#87cd00; font:700 12px/24px arial; text-align:center;}
+.k_course_name a { color:#87cd00; text-decoration:none;}
+.k_course_name a:hover { color:#666;}
+.k_course_content { float:left; width:148px; height:36px; padding:5px 5px 0; color:#999; font:12px/18px arial; overflow:hidden;}
+ 
+

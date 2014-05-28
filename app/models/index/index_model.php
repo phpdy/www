@@ -14,10 +14,17 @@ class index_model extends BaseModel {
 	
 	public function getDataList($pid){
 		
-		$sql = "select * from v9_www where catid=$pid order by startdate desc" ;
+		$sql = "select * from v9_www where catid=$pid order by id" ;
 		$result = $this->getAll($sql) ;
 		
-		return $newlist ;
+		return $result ;
+	}
+	public function getAllDataList($pid){
+		
+		$sql = "select w.*,c.catname from v9_www w,v9_category c where c.catid = w.catid and c.parentid=$pid order by w.id" ;
+		$result = $this->getAll($sql) ;
+		
+		return $result ;
 	}
 
 	public function getDataByid($id){

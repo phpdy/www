@@ -17,10 +17,12 @@ class index_student extends BaseController {
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
 
+		$list = $this->index_model->getAllDataList($this->_id) ;
+		$this->view->assign('list',$list) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
-		$this->view->display('index.php');
+		$this->view->display('student.php');
 	}
 	
 }

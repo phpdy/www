@@ -15,7 +15,9 @@ class index_faq extends BaseController {
 	public function defaultAction(){
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
-
+		
+		$list = $this->index_model->getDataList($this->_id) ;
+		$this->view->assign('list',$list) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);

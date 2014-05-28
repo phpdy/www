@@ -16,12 +16,26 @@ class index_lesson extends BaseController {
 	public function defaultAction(){
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
-
+		
+		$list = $this->index_model->getAllDataList($this->_id) ;
+		$this->view->assign('list',$list) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
-		$this->view->display('index.php');
+		$this->view->display('lesson.php');
 	}
-	
+
+	public function infoAction(){
+		$log = __CLASS__."|".__FUNCTION__ ;
+		$start = microtime(true) ;
+		
+		$id = $_GET['id'] ;
+		$info = $this->index_model->queryById($id) ;
+		$this->view->assign('info',$info) ;
+		
+		$log .="|".(int)(microtime(true)-$start) ;
+		log::info($log);
+		$this->view->display('lesson_info.php');
+	}
 }
 ?>
