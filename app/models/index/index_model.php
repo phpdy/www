@@ -28,12 +28,17 @@ class index_model extends BaseModel {
 	}
 
 	public function getDataByid($id){
-		$sql = "select * from v9_www where id=$id" ;
+		$sql = "select v.*,d.content from v9_www v,v9_www_data d where v.id=$id and v.id = d.id" ;
 		$result = $this->getOne($sql) ;
 		
 		return $result ;
 	}
-	
+
+	public function getDataByPid($pid){
+		$sql = "select v.*,d.content from v9_www v,v9_www_data d where v.catid=$pid and v.id = d.id" ;
+		$result = $this->getAll($sql) ;
+		return $result ;
+	}
 	public function getContentById($id){
 		$sql = "select id,content from v9_www_data where id=$id" ;
 		$result = $this->getOne($sql) ;

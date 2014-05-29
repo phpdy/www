@@ -19,9 +19,9 @@
 <!--flash end-->
 
 <!--main begin-->
-<div class="main_index">
+<div id="index_main">
   <!--channel begin-->
-  <div class="main_channel">
+  <div class="index_channel">
   <?php 
   //print_r($list);
   foreach ($list as $key=>$item){
@@ -40,13 +40,13 @@
 	      <div class=\"channel_img\"><img src=\"$item[image]\" width=304 height=200 border=0></div>
 	      <div class=\"channel_desc\">
 	      	<div>$item[description]</div>
-	        <div class=\"channel_desc_c\"><a href=\"?control=lesson&action=info&id=$item[catid]\">点击此处，了解更多详情>></a></div>
+	        <div class=\"channel_desc_c\"><a href=\"?control=lesson&id=$item[catid]\">点击此处，了解更多详情>></a></div>
 	      </div>
 	    </div>" ;
   	}
   	if(($key+1)%3==0){
   		echo "</div>
-  		<div class=\"main_channel\">" ;
+  		<div class=\"index_channel\">" ;
   	}else if($key+1==sizeof($list)){
   		echo "</div>" ;
   	} else {

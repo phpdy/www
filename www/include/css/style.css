@@ -1,5 +1,6 @@
 body,h1,h2,h3,h4,h5,h6,p,ul,li,form,td{padding:0;margin:0;}
 body{padding-top:5px!important; _background-image:url(about:blank);_background-attachment:fixed;}
+body{margin:0; padding:0; font-size:12px; line-height:22px; font-family:'Verdana', 'Arial', 'sans-serif'; } 
 img{ border:none}
 #line1{ float:left; margin:0 auto; width:1px; height:30px; border-left:#ccc 1px solid; /*左边框，参数依次是颜色；粗细；类型-虚线、实线*/ }
 .Tab{ border-collapse:collapse; font-size:12px }
@@ -26,18 +27,20 @@ a:hover img{text-decoration:none;}
 .floatright{float:right;}
 
 /***导航栏***/
-.navDiv{ margin:0 auto; width:960px; height:34px; border-top:none;background:#151515;padding-top:0px;_margin-bottom:-4px;}
+#navDiv { margin:0 auto; width:960px; height:34px; border-top:none;background:#151515;padding-top:0px;_margin-bottom:-4px;}
 .nav_list { width:960px; background:none; font-size:14px; }
-.nav_sheet { float:left; height:34px; width:auto; text-align:center;  background:none; color:#F;}
+.nav_sheet { float:left; height:34px; width:auto; text-align:center; background:none; color:#F;}
 .nav_sheet a.tab_link { padding:7px 10px;color:#fff; font-weight:300; line-height:34px; text-decoration:none; background:none; font-weight:bold }
 .nav_sheet a.tab_link:hover {color:#FFFFFF; background:none; text-decoration:none; }
 .nav_sheet2 { float:left; height:34px; width:auto; text-align:center; background:#777; color:#red }
 .nav_sheet2 a.tab_link { padding:7px 10px; color:#fff; line-height:34px; text-decoration:none; background:none; font-weight:bold }
 .nav_sheet2 a.tab_link:hover { padding:7px 10px;color:#87cd00; background:none; text-decoration:none; font-weight:bold }
-#nav_search { margin:0 auto; width:300px; height:24px; float:right; margin:4px 20px 4px 0; border:1px solid #fff }
+#nav_search { width:210px; height:34px; float:right; margin-right:20px; }
+.s_text { margin:0 auto; width:160px; height:20px;padding-left:2px; margin:4px 5px 4px 0;background:#151515; border:1px solid #fff; color:#fff }
+.s_btn{ width:29px; height:20px; padding-bottom:3px; background:url(../../images/btn_s.gif) no-repeat; cursor:pointer; }
 
-.main_index { margin:0 auto; width:960px; height:auto; margin-top:20px; }
-.main_channel{ margin:0 auto; width:960px; height:340px; margin-bottom:20px;}
+#index_main { margin:0 auto; width:960px; height:auto; margin-top:20px; }
+.index_channel{ margin:0 auto; width:960px; height:340px; margin-bottom:20px;}
 .channel_show { width:304px; height:340px; background:#e7e7e7; float:left; }
 .channel_topic { width:100%; height:34px; background:#333; color:#fff; font-size:14px;line-height:24px; font-weight:bold; padding-top:10px;text-align:center}
 .channel_topic_h { width:100%; height:34px; background:#b50b25; color:#fff; font-size:14px;line-height:24px; font-weight:bold; padding-top:10px;text-align:center}
@@ -63,6 +66,22 @@ a:hover img{text-decoration:none;}
 .commend_desc_c { padding-top:6px; float:right; color:#b50b25 }
 .commend_desc_c a { color:#b50b25; background:none;  }
 .commend_desc_c a:hover { color:#87cd00; text-decoration:none;}
+
+/***频道页***/
+#channel_nav { margin:0 auto; margin-top:10px; width:960px; height:24px; font:12px/24px; color:#666; }
+#channel_main { margin:0 auto; width:960px; height:auto; margin-top:10px; }
+.channel_left { width:238px; border:1px solid #eee; margin-right:18px; float:left; }
+.channel_right { width:700px; border:1px solid #000; float:right}
+
+/*menu定义*/
+.menu { margin:0 auto; width:238px; }
+.menu li { margin:0 auto; height:36px; float:left; list-style:none; width:238px; font-size:14px; border-bottom:1px dotted #DEDEDE; font-weight:bold; }
+.menu li a, .menu li a:visited { background: #FAFAFA url(../../images/dot_2.gif) 8px 13px no-repeat; color: #666; display: block; padding: 7px 10px 7px 22px; text-decoration: none; }
+.menu li a:hover { text-decoration:none; background: #7cb600 url(../../images/dot_2.gif) 8px 13px no-repeat; color:#ffffff }
+.menu .current-menu-item a, .menu .current-menu-item a:visited { background: #FAFAFA url(../../images/dot_2.gif) 8px 13px no-repeat; color: #666; }
+.menu .current-menu-item a:hover { color:#009900 }
+
+
 
 .org_bg{margin:0 auto; width:994px; height:30px; margin-bottom:10px;border-top:none;background:#0486d9;padding-top:4px;padding-left:10px;_margin-bottom:-4px;}
 .org_tab_l_r{display:none;}
@@ -98,13 +117,6 @@ a:hover img{text-decoration:none;}
 .orderlist a, .orderlist a:visited { color:#666; }
 .orderlist a:hover { color:#F89646 }
 
-/*menu定义*/
-.menu { width: 220px; float: left; }
-.menu li { margin:0 auto; height:36px; float:left; list-style:none; width:220px; font-size:14px; border-bottom:1px solid #DEDEDE;}
-.menu li a, .menu li a:visited { background: #FFFFFF url(http://v.nyipcn.com/images/arrow.gif) 5px 12px no-repeat; color: #666; display: block; padding: 7px 10px 7px 20px; text-decoration: none; }
-.menu li a:hover { background: #FAFAFA url(http://v.nyipcn.com/images/arrow.gif) 5px 12px no-repeat; color:#F89646 }
-.menu .current-menu-item a, .menu .current-menu-item a:visited { background: #FAFAFA url(http://v.nyipcn.com/images/arrow.gif) 5px 12px no-repeat; color: #666; }
-.menu .current-menu-item a:hover { color:#F89646 }
 
 /*精品课程定义*/
 .jpk {width:735px; margin:0 0 20px 25px; float:left;}

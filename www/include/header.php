@@ -17,7 +17,7 @@
   //$nav[5] = array("学员中心","clist.php?cid=100",0);
   //print_r ($nav);
 ?>
-<div id="navTab" name="navTab" class="navDiv" style="display: block;">
+<div id="navDiv">
 <?php
 $arr = $nav;
 $i = 1;
@@ -37,6 +37,6 @@ foreach ($arr as $value) {
   $i++;
 }
 ?>
-  <div id="nav_search"></div>
+  <div id="nav_search"><input type="text" class="s_text"><input type="submit" id="su" value="" class="s_btn"></div>
 </div>
 <!--nav end-->

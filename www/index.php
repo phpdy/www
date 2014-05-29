@@ -79,9 +79,9 @@ startAm();
 <!--flash end-->
 
 <!--main begin-->
-<div class="main_index">
+<div id="index_main">
   <!--channel begin-->
-  <div class="main_channel">
+  <div class="index_channel">
     <div class="channel_show">
       <div class="channel_topic">课程内容</div>
       <div class="channel_img"><img src="http://www2.nyipcn.com/files/kcnr.gif" width="304" height="200" border=0></div>
@@ -93,33 +93,33 @@ startAm();
     <div style="width:24px;float:left">&nbsp;</div>
     <div class="channel_show">
       <div class="channel_topic">学习方式</div>
-      <div class="channel_img"></div>
+      <div class="channel_img"><img src="http://www2.nyipcn.com/files/xxfs.gif" width="304" height="200" border=0></div>
       <div class="channel_desc"></div>
     </div>
     <div style="width:24px;float:left">&nbsp;</div>
     <div class="channel_show">
       <div class="channel_topic">教学资料</div>
-      <div class="channel_img"></div>
+      <div class="channel_img"><img src="http://www2.nyipcn.com/files/jxzl.gif" width="304" height="200" border=0></div>
       <div class="channel_desc"></div>
     </div>
   </div>
 
-  <div class="main_channel">
+  <div class="index_channel">
     <div class="channel_show">
       <div class="channel_topic">考核方式</div>
-      <div class="channel_img"></div>
+      <div class="channel_img"><img src="http://www2.nyipcn.com/files/khfs.gif" width="304" height="200" border=0></div>
       <div class="channel_desc"></div>
     </div>
     <div style="width:24px;float:left">&nbsp;</div>
     <div class="channel_show">
       <div class="channel_topic">教学团队</div>
-      <div class="channel_img"></div>
+      <div class="channel_img"><img src="http://www2.nyipcn.com/files/jxtd.gif" width="304" height="200" border=0></div>
       <div class="channel_desc"></div>
     </div>
     <div style="width:24px;float:left">&nbsp;</div>
     <div class="channel_show">
       <div class="channel_topic_h">不用犹豫，现在就报名！</div>
-      <div class="channel_img"></div>
+      <div class="channel_img"><img src="http://www2.nyipcn.com/files/baoming.gif" width="304" height="200" border=0></div>
       <div class="channel_desc"></div>
     </div>
   </div>

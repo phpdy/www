@@ -1,0 +1,49 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,li,form,td{margin:0;padding:0;}
+body{padding-top:5px!important;_background-image:url(about:blank);_background-attachment:fixed;}
+body{margin:0;padding:0;font-size:12px;line-height:22px;font-family:"宋体","Arial Narrow";background:url(http://stat.ablesky.com/content/pic/album/2012-05-06/92af874b-6785-4d0b-ba07-9497559ecd78.gif) repeat-x #fff;} 
+img{ border:none}
+
+article,footer,header,audio,video{display:block;margin:0;padding:0;}
+a{color:#2B7E96;text-decoration:none;outline:none;}
+a:hover{color:#F89646;overflow:visible;-webkit-transition:color .2s linear;-moz-transition:color .2s linear;-ms-transition:color .2s linear;-o-transition:color .2s linear;transition:color .2s linear;}
+a:hover img{text-decoration:none;}
+
+.newWidth,.newWidth .masterhead,.newWidth .bar,.newWidth .route{width:1004px;}
+.newWidth ul.breadcrumb{width:998px;background-image:url(http://stat2.ablesky.cn/statb/images/bg/breadCrumbBg_width.gif);}
+.baseDiv{margin-left:auto;margin-right:auto;width:1004px;z-index:2;position:relative;}
+.floatleft{float:left;}
+.floatright{float:right;}
+ 
+.org_bg{margin:0 auto; width:994px; height:30px; margin-bottom:10px;border-top:none;background:#0486d9;padding-top:4px;padding-left:10px;_margin-bottom:-4px;}
+.org_tab_l_r{display:none;}
+.select .org_tab_l_r{display:block; height:30px; background:none; font-family:'microsoft yahei',arial;  }
+.org_tab_c{height:30px;line-height:24px; width:auto; padding:0 30px; font-size:14px; text-align:center;  background:none; color:#F}
+.org_tab_c a.tab_link{color:#fff; font-weight:300; line-height:24px;  font-size:16px; font-family:'microsoft yahei',arial; }
+
+.org_tab_c a {color:#fff; background:none;}
+.org_tab_c a:hover{color:#3a7000;  background:none;}
+.select .org_tab_c a.tab_link,.select .org_tab_c span{color:#fff; background:none; }
+.select .org_tab_c a.tab_link:hover{color:#FFFFFF; background:none; text-decoration:none; border-bottom:2px solid #FFFFFF; padding-bottom:2px; }
+.k_main { margin:0 auto; width:1004px; height:auto; padding-top:25px; border:1px solid #000000}
+
+.navbg {margin:0 auto; width:994px; height:auto; margin-bottom:10px;border-top:none;background:none;padding-top:4px;padding-left:10px;_margin-bottom:-4px;}
+.navlist {margin-left:10px; font:12px/24px arial;}
+.navchannel {margin:5px 10px; font:800 20px/24px arial; color:#B60925}
+.main {margin:0 auto; width:1004px; height:auto; background:none; _margin-bottom:-4px; border:1px solid #cccccc;}
+#catemain {margin-left:30px; width:250px;}
+#catemain li { margin:0 auto; height:30px; color:#666; font:12px/30px arial; text-align:left; background:#f3f3f3; border-bottom:1px solid #c1c1c1;list-style:none; background:url(http://v.nyipcn.com/images/arrow.gif) 10px 10px 0px 0px no-repeat;padding-left:10px;}
+
+/*头部定义开始*/
+.k_header { margin:0 auto; width:100%; height:130px; background:url(http://stat.ablesky.com/content/pic/album/2012-05-06/c0e7217e-7d89-4297-8409-4943fc7a00cb.png) center bottom no-repeat;}
+.header { margin:0 auto; padding:0; width:100%; height:30px; background:url(../images/index_headerbg.jpg) 0 9px repeat-x #fff; border-bottom:1px solid #eaeaea;}
+.header_center { margin:0 auto; padding:0; width:979px; height:30px; border-left:1px solid #eaeaea;}
+.header_con { float:left; width:auto; height:30px; list-style:none; margin:0; padding:0;}
+.header_con li { float:left; width:auto; height:30px; padding:0 15px; border-right:1px solid #eaeaea; color:#666; font:12px/30px arial; text-align:center;}
+.header_con li a { color:#666; text-decoration:none;}
+.header_con li a:hover { color:#87cd00;}
+
+/*尾部定义*/
+.footer { margin:0 auto; width:1004px; height:auto; padding-bottom:15px;padding-left:0px; border-top:1px solid #efede7;}
+.index_footer { margin:0 auto; padding:0; width:979px; height:30px; padding-top:5px;}
+.index_footer_left { float:left; width:auto; height:auto; padding-top:5px; padding-left:0px; color:#909090; font:12px/20px arial;}
+.index_footer_right { float:right; width:auto; height:auto; padding-top:5px; padding-right:0px; color:#909090; font:12px/24px arial; text-align:right;}
