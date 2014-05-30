@@ -75,7 +75,7 @@
         <div class="commend_desc">
           <div class="commend_desc_t">纽摄在线学院视频课程</div>
           <div>我们提供的每一节课都是专业摄影师的拍摄心得，能够为任何类型的学员提供专业的帮助。</div>
-          <div class="commend_desc_c"><a href="www.newshootedu.com">点击此处，进入在线学院>></a></div>
+          <div class="commend_desc_c"><a href="http://www.newshootedu.com">点击此处，进入在线学院>></a></div>
         </div>
       </div>
       <div style="width:17px;float:left">&nbsp;</div>
