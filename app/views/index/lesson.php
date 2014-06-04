@@ -1,4 +1,4 @@
-<div id="channel_nav"><a href="/">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;<a href="clist.php?cid=<?=$cid;?>">课程信息</a></div>
+<div id="channel_nav"><a href="?">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;<a href="#">课程信息</a></div>
 
 <!--main begin-->
 <div id="channel_main">
