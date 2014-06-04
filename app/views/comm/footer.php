@@ -1,5 +1,4 @@
 <div style="clear:both;"></div>
-
 <div class="ifooter">
   <ul>
     <li><a href="http://www.pop-photo.com.cn/" title="大众摄影网" target="_blank">大众摄影网</a></li>

@@ -44,16 +44,17 @@
 	      </div>
 	    </div>" ;
   	}
-  	if(($key+1)%3==0){
-  		echo "</div>
-  		<div class=\"index_channel\">" ;
-  	}else if($key+1==sizeof($list)){
-  		echo "</div>" ;
+  	if(($key+1)%3==0 ){
+  		if($key<sizeof($list)-1){
+	  		echo "</div>
+	  		<div class=\"index_channel\">" ;
+  		}
   	} else {
   		echo "<div style=\"width:24px;float:left\">&nbsp;</div>" ;
   	}
   }
   ?>
+  </div>
   <!--channel end-->
 
   <!--commend begin-->
@@ -109,7 +110,7 @@
   </div>
   <!--commend end-->
 </div>
-
+<!--main end-->
 
 <script>
 var currentindex=1;
@@ -143,5 +144,3 @@ $(".flash_bar div").mouseover(function(){stopAm();}).mouseout(function(){startAm
 startAm();
 });
 </script>
-
-<!--main end-->
