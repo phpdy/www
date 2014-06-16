@@ -26,7 +26,7 @@ class index_info extends BaseController {
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
-		$this->view->display('info.php');
+		$this->view->display('detail.php');
 	}
 	
 }

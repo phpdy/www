@@ -22,7 +22,7 @@ class index_ours extends BaseController {
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
-		$this->view->display('ours.php');
+		$this->view->display('detail.php');
 	}
 	
 }

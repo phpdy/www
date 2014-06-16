@@ -10,8 +10,6 @@
   		echo "<li><a href='?control=lesson&id=$value[catid]'>$value[catname]</a></li>" ;
   	}
   ?>
-    <li><a href='#'>常见问题</a></li>
-    <li><a href='#'>无风险退款政策</a></li>
   </ul>
   </div>
 

@@ -14,7 +14,13 @@
   </div>
 
   <div class="channel_right">
-	<?php  echo $info[0]['content'] ;?>
+	<?php  
+	foreach ($info as $key=>$value){
+		echo "<div><a href='$value[catid]'><p>$key.$value[title]<p>" ;
+		echo "<div>$value[description]</div></a>" ;
+		echo '</div>' ;
+	}
+	?>
   </div>
   <!--left end-->
 

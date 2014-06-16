@@ -21,7 +21,7 @@ class index_faq extends BaseController {
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
-		$this->view->display('faq.php');
+		$this->view->display('detail.php');
 	}
 	
 }

@@ -70,8 +70,17 @@ a:hover img{text-decoration:none;}
 /***频道页***/
 #channel_nav { margin:0 auto; margin-top:10px; width:960px; height:24px; font:12px/24px; color:#666; }
 #channel_main { margin:0 auto; width:960px; height:auto; margin-top:10px; }
-.channel_left { width:238px; border:1px solid #eee; margin-right:18px; float:left; }
-.channel_right { width:700px; border:1px solid #000; float:right}
+.channel_left { width:238px; border:1px solid #eee; margin-right:12px; float:left; }
+.channel_right { width:706px; border-left:1px solid #ccc; float:right}
+
+/***详情页***/
+#content_main { margin:0 auto; width:680px; margin-bottom:20px; }
+.qk_title { padding-bottom:10px; font-size:20px; line-height:24px; color:#B60925; text-align:center; font-family: "Microsoft YaHei"; }
+.qk_content { font-size:14px; line-height:22px; text-indent:28px; }
+.date {	background-color:#fffeef;font-size:12px; width:680px; clear:both; padding:5px 10px;	}
+.dateleft {	width:560px; float:left; }
+.dateright { width:100px; float:right;	text-align:right; }
+.time {	background: url(../../images/icon_time.gif) no-repeat top left; padding: 0px 0px 0px 18px; }
 
 /*menu定义*/
 .menu { margin:0 auto; width:238px; }
