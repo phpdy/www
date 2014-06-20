@@ -13,10 +13,10 @@
   </ul>
   </div>
 
+  <!--left end-->
   <div class="channel_right">
 	<?php  echo $info[0]['content'] ;?>
   </div>
-  <!--left end-->
 
 </div>
 

@@ -25,12 +25,20 @@ class index_student extends BaseController {
 		if(empty($id)){
 			$id = $list[0]['catid'] ;
 		}
+		foreach ($list as $value){
+	  		if($value['catid']==$id){
+	  			$cat = $value ;
+	  		}
+	  	}
+		$this->view->assign('cat',$cat) ;
+		
 		$info = $this->index_model->getDataByPid($id) ;
 		$this->view->assign('info',$info) ;
 		
+		$this->view->assign('type','student') ;
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
-		$this->view->display('student.php');
+		$this->view->display('photo.php');
 	}
 	
 }
