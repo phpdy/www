@@ -1,7 +1,6 @@
 <?php
 
-class index_ours extends BaseController {
-	private $_id = 62 ;
+class index_detail extends BaseController {
 	
 	public function init(){
 		$this->index_model = $this->initModel('index_model','index');
@@ -16,9 +15,10 @@ class index_ours extends BaseController {
 	public function defaultAction(){
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
-
-		$list = $this->index_model->getDataByPid($this->_id) ;
-		$this->view->assign('info',$list[0]) ;
+		
+		$id = $_GET['id'] ;
+		$info = $this->index_model->getDataByid($id) ;
+		$this->view->assign('info',$info) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);

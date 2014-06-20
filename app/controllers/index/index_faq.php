@@ -17,7 +17,7 @@ class index_faq extends BaseController {
 		$start = microtime(true) ;
 		
 		$list = $this->index_model->getDataByPid($this->_id) ;
-		$this->view->assign('list',$list) ;
+		$this->view->assign('info',$list[0]) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);

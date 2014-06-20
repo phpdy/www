@@ -8,10 +8,14 @@
 }
 </style>
 <div id="lists">
+<br/>
+<br/>
+<div style="align:center;font-size:20;"><b><?php echo $info['title'] ;?></b></div>
+<div style="align:center;"><?php echo date("Y-m-d H:m:i",$info['inputtime']) ;?></div>
 <?php
 //print_r($list) ;
-if(!empty($list) && sizeof($list)>0){
-	echo $list[0]['content'] ;
+if(!empty($info) && sizeof($info)>0){
+	echo $info['content'] ;
 }
 ?>
 </div>

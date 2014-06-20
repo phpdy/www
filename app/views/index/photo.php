@@ -27,7 +27,7 @@
 	?>
 	 <div class="channel_list">
         <div class="channel_list_img"><img src="<?php echo $value['thumb'] ;?>" width=68 height=68></div>
-        <div class="channel_list_title"><a href="?control=info&id=<?php echo $value['catid'];?>"><?php echo ($key+1).".".$value['title'];?></a></div>
+        <div class="channel_list_title"><a href="?control=detail&id=<?php echo $value['id'];?>"><?php echo ($key+1).".".$value['title'];?></a></div>
         <div class="channel_list_desc"><?php echo $value['description'] ;?></div>
       </div>
 	<?php } ?>

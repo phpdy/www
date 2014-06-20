@@ -22,7 +22,7 @@ class index_info extends BaseController {
 			$id = $this->_id ;
 		}
 		$list = $this->index_model->getDataByPid($id) ;
-		$this->view->assign('list',$list) ;
+		$this->view->assign('info',$list[0]) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
