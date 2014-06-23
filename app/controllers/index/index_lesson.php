@@ -21,11 +21,18 @@ class index_lesson extends BaseController {
 		$list = $this->index_category->query(array('parentid'=>$this->_id)) ;
 		$this->view->assign('list',$list) ;
 		
-		$id = $_GET['id'] ;
-		if(empty($id)){
-			$id = $list[0]['catid'] ;
+		$catid = $_GET['catid'] ;
+		if(empty($catid)){
+			$catid = $list[0]['catid'] ;
 		}
-		$info = $this->index_model->getDataByPid($id) ;
+		foreach ($list as $value){
+	  		if($value['catid']==$catid){
+	  			$cat = $value ;
+	  		}
+	  	}
+		$this->view->assign('cat',$cat) ;
+		
+		$info = $this->index_model->getDataByPid($catid) ;
 		$this->view->assign('info',$info) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
