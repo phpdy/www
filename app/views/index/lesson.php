@@ -1,6 +1,6 @@
 <div id="channel_nav">
 	<a href="?">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
-	<a href="?control=lesson&catid=<?php echo $cat['catid'];?>">课程信息</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
+	<a href="?control=lesson">课程信息</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
 	<?php  echo $cat['catname'] ;?>
 </div>
 

@@ -1,4 +1,15 @@
-<div id="channel_nav"><a href="?">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;<a href="#"><?php echo $cat['catname'];?></a></div>
+<div id="channel_nav">
+	<a href="?">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
+	<a href="<?php echo "?control=$type&catid=$cat[catid]"; ?>"><?php
+	 foreach ($categoryList as $value){
+	 	if($value['catid']==$tid){
+	 		echo $value['catname'];
+	 		break ;
+	 	}
+	 }
+	?></a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
+	<?php echo $cat['catname'];?>
+</div>
 
 <!--main begin-->
 <div id="channel_main">
@@ -27,7 +38,7 @@
 	?>
 	 <div class="channel_list">
         <div class="channel_list_img"><img src="<?php echo $value['thumb'] ;?>" width=68 height=68></div>
-        <div class="channel_list_title"><a href="?control=detail&id=<?php echo $value['id'];?>"><?php echo ($key+1).".".$value['title'];?></a></div>
+        <div class="channel_list_title"><a href="<?php echo "?control=detail&tid=$tid&pid=$cat[catid]&id=$value[id]";?>"><?php echo ($key+1).".".$value['title'];?></a></div>
         <div class="channel_list_desc"><?php echo $value['description'] ;?></div>
       </div>
 	<?php } ?>

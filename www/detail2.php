@@ -64,7 +64,11 @@
 
   <!--right begin-->
   <div class="dt_right">
-
+    <!--sina weibo begin-->
+    <div class="dt_wb"><h2 class="widgettitle">纽摄微博</h2>
+      <div class="textwidget"><iframe id="sina_widget_1930141335" style="width:100%; height:575px;" frameborder="0" scrolling="no" src="http://v.t.sina.com.cn/widget/widget_blog.php?uid=2722123761&height=575&skin=wd_02&showpic=1"></iframe></div>
+    </div>
+    <!--sina weibo end-->
   </div>
   <!--right end-->
 
