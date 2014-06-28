@@ -13,7 +13,7 @@
 	 foreach ($categoryList as $value){
 	 	if($value['catid']==$pid){
 	 		
-	 		echo "<a href='?control=$typeid'&catid=$pid>$value[catname]</a>";
+	 		echo "<a href='?control=$typeid&id=$pid'>$value[catname]</a>";
 	 		break ;
 	 	}
 	 }

@@ -159,7 +159,7 @@ class BaseModel extends Model {
 		$params = array() ;
 		if(is_array($data))
 		foreach ($data as $key=>$value){
-			if(empty($value)){
+			if(empty($key)){
 				continue ;
 			}
 			if(in_array($key, $this->items)){

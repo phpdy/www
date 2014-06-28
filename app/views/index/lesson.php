@@ -11,7 +11,7 @@
   <ul class="menu">
   <?php 
   	foreach ($list as $value){
-  		echo "<li><a href='?control=lesson&catid=$value[catid]'>$value[catname]</a></li>" ;
+  		echo "<li><a href='?control=lesson&id=$value[catid]'>$value[catname]</a></li>" ;
   	}
   ?>
   </ul>

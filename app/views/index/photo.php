@@ -1,6 +1,6 @@
 <div id="channel_nav">
 	<a href="?">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
-	<a href="<?php echo "?control=$type&catid=$cat[catid]"; ?>"><?php
+	<a href="<?php echo "?control=$type"; ?>"><?php
 	 foreach ($categoryList as $value){
 	 	if($value['catid']==$tid){
 	 		echo $value['catname'];

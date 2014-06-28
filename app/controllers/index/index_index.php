@@ -19,7 +19,7 @@ class index_index extends BaseController {
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
 		
-		$list = $this->index_category->query(array('parentid'=>59)) ;
+		$list = $this->index_category->query(array('parentid'=>59,'type'=>'0')) ;
 		$this->view->assign('list',$list) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;

@@ -21,7 +21,7 @@ class index_model extends BaseModel {
 	}
 	public function getAllDataList($pid){
 		
-		$sql = "select w.*,c.catname from v9_www w,v9_category c where c.catid = w.catid and c.parentid=$pid order by w.id" ;
+		$sql = "select w.*,c.catname from v9_www w,v9_category c where c.catid = w.catid and c.parentid=$pid order by w.inputtime desc" ;
 		$result = $this->getAll($sql) ;
 		
 		return $result ;
@@ -35,7 +35,7 @@ class index_model extends BaseModel {
 	}
 
 	public function getDataByPid($pid){
-		$sql = "select v.*,d.content from v9_www v,v9_www_data d where v.catid=$pid and v.id = d.id" ;
+		$sql = "select v.*,d.content from v9_www v,v9_www_data d where v.catid=$pid and v.id = d.id order by v.inputtime desc" ;
 		$result = $this->getAll($sql) ;
 		return $result ;
 	}
