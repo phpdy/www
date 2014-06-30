@@ -7,8 +7,12 @@
 	 		break ;
 	 	}
 	 }
-	?></a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
-	<?php echo $cat['catname'];?>
+	?></a>
+	<?php if(isset($_GET['id'])){ ?>
+	&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
+	<?php echo $cat['catname'];
+	}
+	?>
 </div>
 
 <!--main begin-->
@@ -34,16 +38,40 @@
       <div style="clear:both"></div>
       </div>
 	<?php  
-		foreach ($info as $key=>$value){
+		$pn = empty($_GET['pn'])?0:$_GET['pn'] ;
+		$psize = 10 ;
+		
+		$start = $pn * $psize ;
+		$outlist = array_slice($info,$start,$psize) ;
+		foreach ($outlist as $key=>$value){
 	?>
-	 <div class="channel_list">
+	  <div class="channel_list">
         <div class="channel_list_img"><img src="<?php echo $value['thumb'] ;?>" width=68 height=68></div>
-        <div class="channel_list_title"><a href="<?php echo "?control=detail&tid=$tid&pid=$cat[catid]&id=$value[id]";?>"><?php echo ($key+1).".".$value['title'];?></a></div>
+        <div class="channel_list_title"><a href="<?php echo "?control=detail&tid=$tid&pid=$value[catid]&id=$value[id]";?>"><?php echo ($key+1).".".$value['title'];?></a></div>
         <div class="channel_list_desc"><?php echo $value['description'] ;?></div>
       </div>
 	<?php } ?>
       <div class="qk_content"><br>
-
+		<?php 
+		//分页
+		$count = sizeof($info);
+		$allPn = ($count-1)/$psize +1 ;
+		$url = "?control=$type" ;
+		if(isset($_GET['id'])){
+			$url .= "&id=".$_GET['id'] ;
+		}
+		for($s=0;$s<$allPn;$s++){
+			$outp = $s+1 ;
+			if($s == $pn){
+				echo $outp ;
+			} else {
+				echo "<a href='$url'>$outp</a>" ;
+			}
+			if($s<$allPn-1){
+				echo " . " ;
+			}
+		}
+		?>
       </div>
     </div>
   </div>
