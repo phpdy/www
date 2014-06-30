@@ -39,7 +39,7 @@
       </div>
 	<?php  
 		$pn = empty($_GET['pn'])?0:$_GET['pn'] ;
-		$psize = 10 ;
+		$psize = 30 ;
 		
 		$start = $pn * $psize ;
 		$outlist = array_slice($info,$start,$psize) ;
@@ -47,7 +47,7 @@
 	?>
 	  <div class="channel_list">
         <div class="channel_list_img"><img src="<?php echo $value['thumb'] ;?>" width=68 height=68></div>
-        <div class="channel_list_title"><a href="<?php echo "?control=detail&tid=$tid&pid=$value[catid]&id=$value[id]";?>"><?php echo ($key+1).".".$value['title'];?></a></div>
+        <div class="channel_list_title"><a href="<?php echo "?control=detail&tid=$tid&pid=$value[catid]&id=$value[id]";?>"><?php echo ($start+$key+1).".".$value['title'];?></a></div>
         <div class="channel_list_desc"><?php echo $value['description'] ;?></div>
       </div>
 	<?php } ?>
@@ -55,17 +55,18 @@
 		<?php 
 		//分页
 		$count = sizeof($info);
-		$allPn = ($count-1)/$psize +1 ;
+		$allPn = (int)(($count-1)/$psize) +1 ;
 		$url = "?control=$type" ;
 		if(isset($_GET['id'])){
 			$url .= "&id=".$_GET['id'] ;
 		}
+		if ($allPn>1)
 		for($s=0;$s<$allPn;$s++){
 			$outp = $s+1 ;
 			if($s == $pn){
 				echo $outp ;
 			} else {
-				echo "<a href='$url'>$outp</a>" ;
+				echo "<a href='$url&pn=$s'>$outp</a>" ;
 			}
 			if($s<$allPn-1){
 				echo " . " ;
