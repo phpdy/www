@@ -6,6 +6,7 @@ class index_index extends BaseController {
 	public function init(){
 //		$this->index_model = $this->initModel('index_model','index');
 //		$this->index_category = $this->initModel('index_category','index');
+		$this->pictue_model = $this->initModel('pictue_model','index');
 		
 		$this->view->assign('tid',$this->_id) ;
 		$this->view->display2('title.php','comm');
@@ -21,6 +22,9 @@ class index_index extends BaseController {
 		
 		$list = $this->index_category->query(array('parentid'=>59,'type'=>'0')) ;
 		$this->view->assign('list',$list) ;
+		
+		$piclist = $this->pictue_model->queryAll(array('catid'=>83)) ;
+		$this->view->assign('piclist',$piclist) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
