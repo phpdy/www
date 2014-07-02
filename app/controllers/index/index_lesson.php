@@ -28,7 +28,7 @@ class index_lesson extends BaseController {
 		
 		$catid = $_GET['id'] ;
 		if(empty($catid)){
-			return $this->index($list);
+			return $this->index();
 		}
 		foreach ($list as $value){
 	  		if($value['catid']==$catid){
@@ -38,7 +38,7 @@ class index_lesson extends BaseController {
 		$this->view->assign('cat',$cat) ;
 		
 		$info = $this->index_model->getDataByPid($catid) ;
-		$this->view->assign('info',$info) ;
+		$this->view->assign('info',$info[0]) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
@@ -46,32 +46,21 @@ class index_lesson extends BaseController {
 	}
 
 	//频道首页
-	public function index($list){
+	public function index(){
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
 		
-		$list2 = $this->index_category->query(array('parentid'=>$this->_id,'type'=>'1')) ;
-		$catid = $list2[0]['catid'] ;
-		$log.="|$catid" ;
-		
-		$page = $this->index_page->getDatByCateid($catid) ;
-		$cat = array(
-			'catname'		=>	$page['title'],
-			'description'	=>	$page['content'],
-		) ;
-		$this->view->assign('cat',$cat) ;
-		
-		$infolist = array();
-		foreach ($list as $value){
-			$id = $value['catid'] ;
-			$info = $this->index_model->getDataByPid($id) ;
-			$infolist = array_merge($infolist,$info) ;
-		}
-		$this->view->assign('info',$infolist) ;
+		$page = $this->index_page->getDatByCateid(81) ;
+		$info = array(
+			'inputtime'	=>	$page['updatetime'],
+			'content'	=>	$page['content'],
+		);
+		$this->view->assign('info',$info) ;
+		$this->view->assign('cat',array('catname'=>'课程信息')) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
-		$this->view->display('photo.php');
+		$this->view->display('lesson_index.php');
 	}
 }
 ?>

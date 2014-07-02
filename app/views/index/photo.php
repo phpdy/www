@@ -39,7 +39,7 @@
       </div>
 	<?php  
 		$pn = empty($_GET['pn'])?0:$_GET['pn'] ;
-		$psize = 30 ;
+		$psize = 15 ;
 		
 		$start = $pn * $psize ;
 		$outlist = array_slice($info,$start,$psize) ;
@@ -47,7 +47,7 @@
 	?>
 	  <div class="channel_list">
         <div class="channel_list_img"><img src="<?php echo $value['thumb'] ;?>" width=68 height=68></div>
-        <div class="channel_list_title"><a href="<?php echo "?control=detail&tid=$tid&pid=$value[catid]&id=$value[id]";?>"><?php echo ($start+$key+1).".".$value['title'];?></a></div>
+        <div class="channel_list_title"><a href="<?php echo "?control=detail&tid=$tid&pid=$value[catid]&id=$value[id]";?>"><?php echo $value['title'];?></a></div>
         <div class="channel_list_desc"><?php echo $value['description'] ;?></div>
       </div>
 	<?php } ?>

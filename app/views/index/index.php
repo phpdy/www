@@ -3,10 +3,11 @@
 <div id="flashBg" style="background-color: rgb(25, 73, 130);">
     <div id="flashLine">
         <div id="flash">
-            <a href="http://www.nyipcn.com" id="flash1" name="#0b0b0b" style="display: none;"><img src="./files/adshow1.gif" width="960" height="350"></a>
-            <a href="http://www.nyipcn.com" id="flash2" name="#194982" style="display: block;"><img src="./files/adshow2.gif" width="960" height="350"></a>
-            <a href="http://www.nyipcn.com" id="flash3" name="#04304b" style="display: none;"><img src="./files/adshow3.gif" width="960" height="350"></a>
-            <a href="http://www.nyipcn.com" id="flash4" name="#194982" style="display: none;"><img src="./files/adshow4.gif" width="960" height="350"></a>
+        <?php 
+        foreach ($piclist as $key => $value){
+        	echo '<a href="'.$value['url'].'" id="flash'.($key+1).'" name="#0b0b0b" style="display: none;"><img src="'.$value['imgurl'].'" width="960" height="350"></a>' ;
+        }
+        ?>
             <div class="flash_bar">
                 <div class="no" id="f1" onclick="changeflash(1)"></div>
                 <div class="dq" id="f2" onclick="changeflash(2)"></div>
@@ -28,7 +29,7 @@
   	if($item['catdir']=='lesson_0'){
 	  	echo "<div class=\"channel_show\">
 	      <div class=\"channel_topic_h\">$item[catname]</div>
-	      <div class=\"channel_img\"><img src=\"$item[image]\" width=304 height=200 border=0></div>
+	      <div class=\"channel_img\"><a href=\"#$item[catid]\"><img src=\"$item[image]\" width=304 height=200 border=0></a></div>
 	      <div class=\"channel_desc\">
 	      	<div>$item[description]</div>
 	        <div class=\"channel_desc_c\"><a href=\"#$item[catid]\">点击此处，了解更多详情>></a></div>
@@ -37,7 +38,7 @@
   	} else {
 	  	echo "<div class=\"channel_show\">
 	      <div class=\"channel_topic\">$item[catname]</div>
-	      <div class=\"channel_img\"><img src=\"$item[image]\" width=304 height=200 border=0></div>
+	      <div class=\"channel_img\"><a href=\"?control=lesson&id=$item[catid]\"><img src=\"$item[image]\" width=304 height=200 border=0></a></div>
 	      <div class=\"channel_desc\">
 	      	<div>$item[description]</div>
 	        <div class=\"channel_desc_c\"><a href=\"?control=lesson&id=$item[catid]\">点击此处，了解更多详情>></a></div>
@@ -72,7 +73,7 @@
     </div>
     <div class="commend_area">
       <div class="commend_show">
-        <div class="commend_img"><img src="files/online.gif" width="227" height="90" border=0></div>
+        <div class="commend_img"><a href="http://www.newshootedu.com"><img src="files/online.gif" width="227" height="90" border=0></a></div>
         <div class="commend_desc">
           <div class="commend_desc_t">纽摄在线学院视频课程</div>
           <div>我们提供的每一节课都是专业摄影师的拍摄心得，能够为任何类型的学员提供专业的帮助。</div>
@@ -81,7 +82,7 @@
       </div>
       <div style="width:17px;float:left">&nbsp;</div>
       <div class="commend_show">
-        <div class="commend_img"><img src="files/club.gif" width="227" height="90" border=0></div>
+        <div class="commend_img"><a href="http://club2.nyipcn.com"><img src="files/club.gif" width="227" height="90" border=0></a></div>
         <div class="commend_desc">
           <div class="commend_desc_t">纽摄学员俱乐部</div>
           <div>我们提供的每一节课都是专业摄影师的拍摄心得，能够为任何类型的学员提供专业的帮助。</div>
@@ -90,16 +91,16 @@
       </div>
       <div style="width:17px;float:left">&nbsp;</div>
       <div class="commend_show">
-        <div class="commend_img"><img src="files/addus.gif" width="227" height="90" border=0></div>
+        <div class="commend_img"><a href="?control=detail&tid=59&id=307"><img src="files/addus.gif" width="227" height="90" border=0></a></div>
         <div class="commend_desc">
           <div class="commend_desc_t">美国摄影学会</div>
           <div>我们提供的每一节课都是专业摄影师的拍摄心得，能够为任何类型的学员提供专业的帮助。</div>
-          <div class="commend_desc_c"><a href="http://www.nyipcn.com/?page_id=4753">点击此处，进入>></a></div>
+          <div class="commend_desc_c"><a href="?control=detail&tid=59&id=307">点击此处，进入>></a></div>
         </div>
       </div>
       <div style="width:17px;float:left">&nbsp;</div>
       <div class="commend_show">
-        <div class="commend_img"><img src="files/store.gif" width="227" height="90" border=0></div>
+        <div class="commend_img"><a href="http://nyipcn.taobao.com"><img src="files/store.gif" width="227" height="90" border=0></a></div>
         <div class="commend_desc" align=center>
           <div class="commend_desc_t">纽摄校园商店</div>
           <div>我们提供的每一节课都是专业摄影师的拍摄心得，能够为任何类型的学员提供专业的帮助。</div>
@@ -115,7 +116,7 @@
 <script>
 var currentindex=1;
 $("#flashBg").css("background-color",$("#flash1").attr("name"));
-function changeflash(i) {	
+function changeflash(i) {
 currentindex=i;
 for (j=1;j<=4;j++){
 	if (j==i) 
@@ -130,6 +131,7 @@ for (j=1;j<=4;j++){
 	$("#f"+j).removeClass();
 	$("#f"+j).addClass("no");}
 }}
+changeflash(1);
 function startAm(){
 timerID = setInterval("timer_tick()",5000);
 }
