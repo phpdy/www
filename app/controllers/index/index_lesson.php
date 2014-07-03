@@ -38,11 +38,16 @@ class index_lesson extends BaseController {
 		$this->view->assign('cat',$cat) ;
 		
 		$info = $this->index_model->getDataByPid($catid) ;
-		$this->view->assign('info',$info[0]) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
-		$this->view->display('lesson.php');
+		if ($catid==74){
+			$this->view->assign('info',$info) ;
+			$this->view->display('photo.php');
+		} else {
+			$this->view->assign('info',$info[0]) ;
+			$this->view->display('lesson.php');
+		}
 	}
 
 	//频道首页

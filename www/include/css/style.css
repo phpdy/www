@@ -22,13 +22,16 @@ a:hover{color:#F89646;overflow:visible;-webkit-transition:color .2s linear;-moz-
 a:hover img{text-decoration:none;}
 
 .newWidth {width:960px;}
-.baseLogo{margin-left:auto;margin-right:auto;width:960px;z-index:2;position:relative;}
+.baseLogo {margin:0 auto;width:960px;z-index:2;position:relative;}
+.slogin { float:left; padding-top:6px; width:130px; text-align:right; background:none; font-size:12px; color:#ccc; }
+.slogin a, .slogin a:visited { color:#87cd00; background:none; }
+.slogin a:hover { text-decoration:underline }
 .floatleft{float:left;}
 .floatright{float:right;}
 
 /***导航栏***/
 #navDiv { margin:0 auto; width:960px; height:34px; border-top:none;background:#151515;padding-top:0px;_margin-bottom:-4px;}
-.nav_list { width:960px; background:none; font-size:14px; }
+.nav_list { width:700px; background:none; font-size:14px; }
 .nav_sheet { float:left; height:34px; width:auto; text-align:center; background:none; color:#F;}
 .nav_sheet a.tab_link { padding:7px 10px;color:#fff; font-weight:300; line-height:34px; text-decoration:none; background:none; font-weight:bold }
 .nav_sheet a.tab_link:hover {color:#FFFFFF; background:none; text-decoration:none; }
@@ -70,20 +73,54 @@ a:hover img{text-decoration:none;}
 /***频道页***/
 #channel_nav { margin:0 auto; margin-top:10px; width:960px; height:24px; font:12px/24px; color:#666; }
 #channel_main { margin:0 auto; width:960px; height:auto; margin-top:10px; }
-.channel_left { width:238px; border:1px solid #eee; margin-right:12px; float:left; }
+.channel_left { width:238px; border:0px solid #eee; margin-right:12px; float:left; }
 .channel_right { width:706px; border-left:1px solid #ccc; float:right}
+.channel_list_topic { width:690px; padding:10px 0px; font-size:20px; line-height:24px; color:#136ec2; text-align:center; font-family: "Microsoft YaHei"; background:#fafafa }
+.channel_intro { padding:0px 5px 10px 15px; width:670px; height:auto; border:0px solid #ccc; font-size:14px; color:#000; margin-bottom:20px; background:#fafafa; display: block; }
+.channel_list { width:690px; height:80px; margin-top:10px; color:#000; border-bottom:1px dotted #ccc; display: block; }
+.channel_list_img { width:68px; height:68px; padding:0px 10px; border:0px; float:left }
+.channel_list_title { float:right; width:600px; padding-bottom:6px; font-size:14px; line-height:16px; color:#136ec2; font-weight:bold; }
+.channel_list_title a { color:#136ec2; text-decoration:none; }
+.channel_list_title a:hover { color:#87cd00; text-decoration:none; }
+.channel_list_desc { float:right;width:590px; margin-right:10px; font-size:12px; line-height:16px; color:#666; text-indent:28px; }
 
-/***详情页***/
-#content_main { margin:0 auto; width:680px; margin-bottom:20px; }
+/***详情页-分类***/
+#content_main { margin:0 auto; width:680px; }
 .qk_title { padding-bottom:10px; font-size:20px; line-height:24px; color:#B60925; text-align:center; font-family: "Microsoft YaHei"; }
 .qk_content { font-size:14px; line-height:22px; text-indent:28px; }
-.date {	background-color:#fffeef;font-size:12px; width:680px; clear:both; padding:5px 10px;	}
+.date {	background-color:#fffeef;font-size:12px; width:670px; clear:both; padding:5px 10px;	}
 .dateleft {	width:560px; float:left; }
 .dateright { width:100px; float:right;	text-align:right; }
 .time {	background: url(../../images/icon_time.gif) no-repeat top left; padding: 0px 0px 0px 18px; }
 
+/***详情页-info***/
+.dt_left { width:680px; margin-right:20px; float:left; }
+.dt_right { width:258px; float:right; }
+#dt_main { margin:0 auto; width:680px; }
+.dt_title { padding-bottom:10px; font-size:20px; line-height:24px; color:#B60925; text-align:center; font-family: "Microsoft YaHei"; }
+.dt_content { padding-left:10px; font-size:14px; line-height:22px; text-indent:28px; }
+.dt_date {	background-color:#fffeef;font-size:12px; width:660px; clear:both; padding:5px 10px;	}
+.dt_list_topic { width:680px; padding:10px 0px; font-size:20px; line-height:24px; color:#136ec2; text-align:center; font-family: "Microsoft YaHei"; background:#fafafa }
+.dt_intro { padding:0px 5px 10px 15px; width:660px; height:auto; border:0px solid #ccc; font-size:14px; color:#000; margin-bottom:20px; background:#fafafa; display: block; }
+.dt_list { width:680px; height:80px; margin-top:10px; color:#000; border-bottom:1px dotted #ccc; display: block; }
+.dt_list_img { width:68px; height:68px; padding:0px 10px; border:0px; float:left }
+.dt_list_title { float:right; width:590px; padding-bottom:6px; font-size:14px; line-height:16px; color:#136ec2; font-weight:bold; }
+.dt_list_title a { color:#136ec2; text-decoration:none; }
+.dt_list_title a:hover { color:#87cd00; text-decoration:none; }
+.dt_list_desc { float:right;width:580px; margin-right:10px; font-size:12px; line-height:16px; color:#666; text-indent:28px; }
+.dt_wb { margin:0 auto; height:603px; padding:1px 1px; border:1px solid #ccc; }
+.dt_wb h2 {background: #666666;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-family: Arial, Tahoma, Verdana;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 3px 0px 3px 7px;
+	}
+
 /*menu定义*/
-.menu { margin:0 auto; width:238px; }
+.menu { margin:0 auto;padding:0; width:238px; margin-bottom:120px; }
 .menu li { margin:0 auto; height:36px; float:left; list-style:none; width:238px; font-size:14px; border-bottom:1px dotted #DEDEDE; font-weight:bold; }
 .menu li a, .menu li a:visited { background: #FAFAFA url(../../images/dot_2.gif) 8px 13px no-repeat; color: #666; display: block; padding: 7px 10px 7px 22px; text-decoration: none; }
 .menu li a:hover { text-decoration:none; background: #7cb600 url(../../images/dot_2.gif) 8px 13px no-repeat; color:#ffffff }

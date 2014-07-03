@@ -1,4 +1,5 @@
 <div class="baseLogo">
+  <div class="login"><div>
   <div style="width:960px;height:130px;background:url(http://www2.nyipcn.com/images/logo_top.gif) no-repeat;">
   </div>
 
@@ -18,25 +19,28 @@
   //print_r ($nav);
 ?>
 <div id="navDiv">
+  <div class="nav_list">
 <?php
 $arr = $nav;
 $i = 1;
 foreach ($arr as $value) {
 ?>
-<div class="nav_list">
-  <div class="nav_sheet" onmouseover="this.className='nav_sheet2'" onmouseout="this.className='nav_sheet'">
-    <a onfocus="this.blur()" class="tab_link" href="<?=$value[1];?>"><?=$value[0];?></a>
-  </div>
-  <?php
-  if ($i<7) {
-  ?>
-  <div style="padding:0;float:left;color:#fff;padding-top:8px;">|</div>
-  <? } ?>
-</div>
+
+    <div class="nav_sheet" onmouseover="this.className='nav_sheet2'" onmouseout="this.className='nav_sheet'">
+      <a onfocus="this.blur()" class="tab_link" href="<?=$value[1];?>"><?=$value[0];?></a>
+    </div>
+    <?php
+    if ($i<7) {
+    ?>
+    <div style="padding:0;float:left;color:#fff;padding-top:6px;">|</div>
+    <? } ?>
+
 <?php
   $i++;
 }
 ?>
+  <div class="slogin">[ <a href=#>登录</a> | <a href=#>注册</a> ]</div></div>
+  
   <div id="nav_search"><input type="text" class="s_text"><input type="submit" id="su" value="" class="s_btn"></div>
 </div>
 <!--nav end-->

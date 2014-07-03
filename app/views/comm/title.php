@@ -54,6 +54,7 @@ foreach ($arr as $value) {
   $i++;
 }
 ?>
+<div class="slogin">[ <a href="http://club2.nyipcn.com/login.php">登录</a> | <a href="http://club2.nyipcn.com/reg.php">注册</a> ]</div>
   <div id="nav_search"><input type="text" class="s_text"><input type="submit" id="su" value="" class="s_btn"></div>
 </div>
 <!--nav end-->

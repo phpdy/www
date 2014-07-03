@@ -31,14 +31,22 @@
 <div id="channel_main">
   <!--left begin-->
   <div class="channel_left">
-  <ul class="menu">
-    <li><a href='#'>短期课程</a></li>
-    <li><a href='#'>最新消息</a></li>
-    <li><a href='#'>教学实践</a></li>
-    <li><a href='#'>集中培训</a></li>
-    <li><a href='#'>公益专栏</a></li>
-  </ul>
+    <div class="menu">
+      <li><a href='#'>短期课程</a></li>
+      <li><a href='#'>最新消息</a></li>
+      <li><a href='#'>教学实践</a></li>
+      <li><a href='#'>集中培训</a></li>
+      <li><a href='#'>公益专栏</a></li>
+    </div>
+    <!--纽摄微博
+    <div style="float:left;margin:0 auto;padding-top:20px; width:238px;">
+      <div class="dt_wb"><h2 class="widgettitle">纽摄微博</h2>
+        <div class="textwidget"><iframe id="sina_widget_1930141335" style="width:100%; height:575px;" frameborder="0" scrolling="no" src="http://v.t.sina.com.cn/widget/widget_blog.php?uid=2722123761&height=575&skin=wd_02&showpic=1"></iframe></div>
+      </div>
+    </div>
+    -->
   </div>
+
   <!--left end-->
 
   <!--right begin-->
