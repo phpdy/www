@@ -51,7 +51,7 @@
         <div class="channel_list_desc"><?php echo $value['description'] ;?></div>
       </div>
 	<?php } ?>
-      <div class="qk_content"><br>
+      <div class="qk_content" style="float:right;"><br>
 		<?php 
 		//分页
 		$count = sizeof($info);
