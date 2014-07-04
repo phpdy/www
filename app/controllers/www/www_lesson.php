@@ -9,13 +9,9 @@ class www_lesson extends BaseWWWController {
 		$this->www_page = $this->initModel('www_page','www');
 		
 		$this->view->assign('tid',$this->_id) ;
-		$this->view->display2('title.php','comm');
+		$this->view->display('comm-title.php');
 	}
 
-	public function destroy(){
-		$this->view->display2('footer.php','comm');
-	}
-	
 	public function defaultAction(){
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;

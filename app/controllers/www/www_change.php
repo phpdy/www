@@ -6,11 +6,7 @@ class www_change extends BaseWWWController {
 //		$this->www_model = $this->initModel('www_model','www');
 		$this->www_change = $this->initModel('www_changeModel','www');
 		
-		$this->view->display2('title.php','comm');
-	}
-
-	public function destroy(){
-		$this->view->display2('footer.php','comm');
+		$this->view->display('comm-title.php');
 	}
 	
 	public function defaultAction(){

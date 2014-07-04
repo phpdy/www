@@ -6,11 +6,7 @@ class www_detail extends BaseWWWController {
 //		$this->www_model = $this->initModel('www_model','www');
 //		$this->www_category = $this->initModel('www_category','www');
 		
-		$this->view->display2('title.php','comm');
-	}
-
-	public function destroy(){
-		$this->view->display2('footer.php','comm');
+		$this->view->display('comm-title.php');
 	}
 	
 	public function defaultAction(){

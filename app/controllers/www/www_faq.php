@@ -6,11 +6,7 @@ class www_faq extends BaseWWWController {
 //		$this->www_model = $this->initModel('www_model','www');
 		
 		$this->view->assign('tid',$this->_id) ;
-		$this->view->display2('title.php','comm');
-	}
-
-	public function destroy(){
-		$this->view->display2('footer.php','comm');
+		$this->view->display('comm-title.php');
 	}
 	
 	public function defaultAction(){

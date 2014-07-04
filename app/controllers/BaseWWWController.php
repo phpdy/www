@@ -23,6 +23,10 @@ class BaseWWWController extends BaseController {
 		$this->view->assign('idlist',$this->idlist) ;
 	}
 	
+	public function destroy(){
+		$this->view->display('comm-footer.php');
+	}
+	
 	protected function getUserID(){
 		@session_start ();
 		$userid = $_SESSION [FinalClass::$_session_user]['id'] ;
