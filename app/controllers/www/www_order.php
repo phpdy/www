@@ -18,9 +18,11 @@ class www_order extends BaseWWWController {
 		}
 		$list = $this->payorder_model->query(array('catid'=>$id)) ;
 		$info = $list[0] ;
+		
 		$content = $this->payorder_model->getContent($info['id']) ;
 		$info['content'] = $content['content'] ;
 		$this->view->assign('info',$info) ;
+		//print_r($info) ;
 		
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);

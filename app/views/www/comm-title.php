@@ -24,7 +24,7 @@
 <!--nav begin-->
 <?php
   //$sql = "select catid,catname from v9_category order by listorder";
-  $nav[0] = array("首页","?",0);
+  $nav[0] = array("首页","index.php",0);
   $nav[1] = array("课程信息","index.php?control=lesson",10);
   $nav[2] = array("摄影天地","index.php?control=photo",20);
   $nav[3] = array("学员中心","index.php?control=student",15);
@@ -53,8 +53,17 @@ foreach ($arr as $value) {
 <?php
   $i++;
 }
+
+//登陆注册
+@session_start ();
+$user = $_SESSION [FinalClass::$_session_user] ;
+if(!empty($user)){
+	echo '<div class="slogin">[ <a href="user.php">'.$user['username'].'</a> | <a href="user.php?action=loginout">退出</a> ]</div>' ;
+} else {
+	echo '<div class="slogin">[ <a href="user.php">登录</a> | <a href="user.php?action=reg">注册</a> ]</div>' ;
+}
 ?>
-<div class="slogin">[ <a href="user.php">登录</a> | <a href="user.php?action=reg">注册</a> ]</div>
+
   <div id="nav_search"><input type="text" class="s_text"><input type="submit" id="su" value="" class="s_btn"></div>
 </div>
 <!--nav end-->

@@ -1,5 +1,4 @@
 <link type="text/css" href="./css/order.css" rel="stylesheet">
-<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
 
 <div id="mainbody">
 	<div class="main_new">
@@ -27,11 +26,6 @@
 		<input type="button" value="稍后汇款报名" class="btn-order" id="order_hk"></td></tr>
 	</table>
 	</div>
-	
-	<div class="main_daily">
-		<div class="hd_title">活动排期</div>
-		<?php include 'daily.php';?>
-	</div>
 	</div>
 </div>
 
@@ -43,11 +37,11 @@ $(function(){
 	});
 
 	$("#order_ali").click(function(){
-		window.location.href="/order.php?action=ali&userid=<?php echo $user['id']; ?>&id=<?php echo $news['id']; ?>";
+		window.location.href="/pay.php?action=ali&userid=<?php echo $user['id']; ?>&id=<?php echo $news['id']; ?>";
 	});
 
 	$("#order_hk").click(function(){
-		window.location.href="/order.php?action=hk&userid=<?php echo $user['id']; ?>&id=<?php echo $news['id']; ?>";
+		window.location.href="/pay.php?action=hk&userid=<?php echo $user['id']; ?>&id=<?php echo $news['id']; ?>";
 	});
 	
 });

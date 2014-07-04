@@ -104,7 +104,7 @@ class user_index extends BaseController {
 		$_SESSION [FinalClass::$_session_user] = null ;
 		unset($_SESSION[FinalClass::$_session_user]) ;
 		
-		$url = urlencode("login.php") ;
+		$url = urlencode("user.php") ;
 		header("location:$url") ;
 	}
 	

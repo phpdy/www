@@ -28,11 +28,11 @@
   foreach ($list as $key=>$item){
   	if($item['catdir']=='lesson_0'){
 	  	echo "<div class=\"channel_show\">
-	      <div class=\"channel_topic_h\">$item[catname]</div>
-	      <div class=\"channel_img\"><a href=\"#$item[catid]\"><img src=\"$item[image]\" width=304 height=200 border=0></a></div>
+	      <div class=\"channel_topic_h\">不用犹豫，现在就报名！</div>
+	      <div class=\"channel_img\"><a href=\"?control=order&catid=75\"><img src=\"$item[image]\" width=304 height=200 border=0></a></div>
 	      <div class=\"channel_desc\">
 	      	<div>$item[description]</div>
-	        <div class=\"channel_desc_c\"><a href=\"#$item[catid]\">点击此处，了解更多详情>></a></div>
+	        <div class=\"channel_desc_c\"><a href=\"?control=order&catid=75\">点击此处，了解更多详情>></a></div>
 	      </div>
 	    </div>" ;
   	} else {

@@ -4,38 +4,28 @@ class pay_index extends BaseController {
 
 	public function init(){
 		$this->userinfo_model = $this->initModel('userinfo_model','user');
-		$this->pay_model = $this->initModel('pay_model');
+		$this->pay_model = $this->initModel('pay_model','user');
+		$this->payorder_model = $this->initModel('payorder_model','user');
 		
-		$this->view->assign('t',5) ;
-		
-		$title = array(
-			0	=> '首页' ,
-			1	=> '摄影之旅' ,
-			2	=> '摄影课程' ,
-			3	=> '公益活动' ,
-			4	=> '关于我们' ,
-			5	=> '会员中心' ,
-		) ;
-		$this->view->assign('title',$title) ;
-		$this->view->display2('title.php','comm');
+		$this->view->display2('comm-title.php','www');
 	}
 	public function destroy(){
-		$this->view->display2('footer.php','comm');
+		$this->view->display2('comm-footer.php','www');
 	}
 	
 	public function defaultAction(){
-//		print_r($_SERVER) ; die();
 		//用户登录检验
 		@session_start ();
 		$user = $_SESSION[FinalClass::$_session_user] ;
 		if(empty($user)){
-			header("location:login.php?url=".urldecode($_SERVER['REQUEST_URI'])) ;
+			header("location: user.php?url=".urldecode($_SERVER['REQUEST_URI'])) ;
 			die() ;
 		}
-		
-		$typeid = empty($_GET['typeid'])?0:$_GET['typeid'] ;
-		$this->view->assign('typeid',$typeid) ;
+		$user = $this->userinfo_model->queryById($user['id']) ;
 		$this->view->assign('user',$user) ;
+		
+		$pay = $this->payorder_model->queryById($_GET['id']) ;
+		$this->view->assign('pay',$pay) ;
 		
 		$this->view->display('pay_order.php');
 	}

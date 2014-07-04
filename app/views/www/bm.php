@@ -18,7 +18,10 @@
 
       <div class="dt_content"><br>
 		<?php echo $info['content'] ; ?>
-        </div>
+      </div>
+      <div class="dt_content"><br>
+      <div class="my_button"><a href="pay.php?id=<?php echo $info['id'];?>"><img src="./images/bm.gif"/></a></div>
+      </div>
     </div>
   </div>
   <!--left end-->
@@ -32,7 +35,7 @@
     </div>
     <!--sina weibo end-->
     
-    <div class="my_button"><a href="pay.php?id=<?php echo $info['id'];?>"><img src="./images/bm.gif"/></a></div>
+    
   </div>
   <!--right end-->
 
