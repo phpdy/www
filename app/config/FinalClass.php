@@ -8,7 +8,7 @@ class FinalClass  {
 	public static $_session_user = "nyipcn_user" ; //session 名
 	public static $_list_pagesize = 20 ;
 	
-	public static $_home_url = "/index.php?t=5" ;
+	public static $_home_url = "/user.php?action=info" ;
 }
 
 ?>

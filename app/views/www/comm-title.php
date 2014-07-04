@@ -25,12 +25,12 @@
 <?php
   //$sql = "select catid,catname from v9_category order by listorder";
   $nav[0] = array("首页","?",0);
-  $nav[1] = array("课程信息","?control=lesson",10);
-  $nav[2] = array("摄影天地","?control=photo",20);
-  $nav[3] = array("学员中心","?control=student",15);
-  $nav[4] = array("关于我们","?control=ours",17);
-  $nav[5] = array("联系我们","?control=info",17);
-  $nav[6] = array("常见问题","?control=faq",17);
+  $nav[1] = array("课程信息","index.php?control=lesson",10);
+  $nav[2] = array("摄影天地","index.php?control=photo",20);
+  $nav[3] = array("学员中心","index.php?control=student",15);
+  $nav[4] = array("关于我们","index.php?control=ours",17);
+  $nav[5] = array("联系我们","index.php?control=info",17);
+  $nav[6] = array("常见问题","index.php?control=faq",17);
   //$nav[5] = array("学员中心","clist.php?cid=100",0);
   //print_r ($nav);
 ?>
@@ -54,7 +54,7 @@ foreach ($arr as $value) {
   $i++;
 }
 ?>
-<div class="slogin">[ <a href="http://club2.nyipcn.com/login.php">登录</a> | <a href="http://club2.nyipcn.com/reg.php">注册</a> ]</div>
+<div class="slogin">[ <a href="user.php">登录</a> | <a href="user.php?action=reg">注册</a> ]</div>
   <div id="nav_search"><input type="text" class="s_text"><input type="submit" id="su" value="" class="s_btn"></div>
 </div>
 <!--nav end-->
