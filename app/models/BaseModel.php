@@ -171,7 +171,7 @@ class BaseModel extends Model {
 		if(!empty($k)){
 			$p1 = "and ".implode("and", $k) ;
 		}
-		$sql = "select * from ".$this->dbTable." where ".$this->getWhere()." $p1 ".$this->getOrder().$this->getLimit($data);
+		$sql = "select * from ".$this->dbTable." where ".$this->getWhere()." $p1 ".$this->getOrder().' '.$this->getLimit($data);
 		$result = $this->querySQL($sql,$params) ;
 		
 		$log .= '|' . $sql." > ".implode(",", $params);
@@ -261,7 +261,7 @@ class BaseModel extends Model {
 		$size = FinalClass::$_list_pagesize ;
 		$start = (empty($data['page'])?0:$data['page'])*$size ;
 		
-		$sql = "limit $start,$size ";
+		$sql = " limit $start,$size ";
 		return $sql ;
 	}
 	protected function getOrder(){
