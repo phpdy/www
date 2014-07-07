@@ -3,7 +3,7 @@
 class www_order extends BaseWWWController {
 	
 	public function init(){
-		$this->payorder_model = $this->initModel('payorder_model','user');
+		$this->club_model = $this->initModel('club_model','user');
 		
 		$this->view->display('comm-title.php');
 	}
@@ -16,10 +16,10 @@ class www_order extends BaseWWWController {
 		if(empty($id)){
 			$id = 84 ;
 		}
-		$list = $this->payorder_model->query(array('catid'=>$id)) ;
+		$list = $this->club_model->query(array('catid'=>$id)) ;
 		$info = $list[0] ;
 		
-		$content = $this->payorder_model->getContent($info['id']) ;
+		$content = $this->club_model->getContent($info['id']) ;
 		$info['content'] = $content['content'] ;
 		$this->view->assign('info',$info) ;
 		//print_r($info) ;
