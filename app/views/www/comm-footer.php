@@ -28,8 +28,8 @@
     <li><a href="http://www.nyipcn.com/?page_id=7157" title="更多友情链接" target="_blank">更多友情链接</a></li>
     <div style="clear:both;"></div>
   </ul>
-
-  <div class="ifooter_1"><a href="http://www.nyipcn.com" target="_blank">纽约摄影学院全科专业摄影课程</a> | <a href="/clist.php?cid=19&lid=28" target="_blank">联系我们</a></div>
+  
+  <div class="ifooter_1"><a href="http://club2.nyipcn.com" target="_blank">纽摄俱乐部</a> |<a href="http://www.nyipcn.com" target="_blank">纽摄教育在线学院</a> | <a href="index.php?control=info" target="_blank">联系我们</a></div>
   <div class="ifooter_2">北京纽摄教育科技有限公司版权所有，严禁转载  Copyright © 2013 · All Right Reserved<br>京公网安备110108003932号&nbsp;&nbsp;京ICP备05076531号&nbsp;&nbsp;&nbsp;&nbsp;<script src="http://v1.cnzz.com/stat.php?id=5642382&web_id=5642382&show=pic" language="JavaScript"></script></div>
 </div>
 
