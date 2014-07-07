@@ -3,10 +3,7 @@
 <script language="javascript" type="text/javascript" src="js/common.js" ></script>
 <!--main begin-->
 <div class="main">
-<div class="apply_sub">用户信息</div>
-<?php
-include './comm/user_left.php';
-?>
+<div class="apply_sub">完善用户信息</div>
 
 	<div class="rmain">
 	<div class="jpk">
@@ -14,7 +11,7 @@ include './comm/user_left.php';
       <div class="apply_sheet">
       	<input type="hidden" name="url" value="<?php echo @$_GET['url']; ?>">
       	<input type="hidden" class="sele" name="id" value="<?php echo $user['id']; ?>">
-        <div class="apply_t1"><b>欢迎您成为纽摄俱乐部大家庭的一员！请您尽快完善会员信息。</b></div>
+        <div class="apply_t1"><b>欢迎您成为全科专业摄影课程学员！请您完善学员信息，以便完成在线报名流程。</b></div>
         <div class="apply_t1">用户名（不可修改）：<?php echo $user['name']; ?></div>
         <div class="apply_t1"><b style="color:#F00;">*</b>姓名（请填写真实姓名）：<input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="username" value="<?php echo $user['username']; ?>"></div>
         <div class="apply_t1"><b style="color:#F00;">*</b>性别：
@@ -31,8 +28,8 @@ include './comm/user_left.php';
 				<option value='4' <?php if(@$user['paper']==4){echo "selected";} ?>>其他
 			</select></div>
         <div class="apply_t1"><b style="color:#F00;">*</b>证件号码：<input type="text" class="sele" size="50" maxlength="18" name="paperno" id="paperno" value="<?php echo $user['paperno']; ?>"></div>
-        <div class="apply_t1"><b style="color:#F00;">*</b>所在单位：<input type="text" class="sele" size="50" maxlength="50" name="company" value="<?php echo $user['company']; ?>"></div>
-        <div class="apply_t1"><b style="color:#F00;">*</b>公司职务：<input type="text" class="sele" size="50" maxlength="50" name="job" value="<?php echo $user['job']; ?>"></div>
+        <div class="apply_t1">所在单位：<input type="text" class="sele" size="50" maxlength="50" name="company" value="<?php echo $user['company']; ?>"></div>
+        <div class="apply_t1">公司职务：<input type="text" class="sele" size="50" maxlength="50" name="job" value="<?php echo $user['job']; ?>"></div>
         <div class="apply_t1">
         	<b style="color:#F00;">*</b>所在省：<select name="province" id="s1" class="sele"><option></option></select>
 	        <b style="color:#F00;">*</b>市：<select name="city" id="s2" class="sele"><option></option></select>
@@ -43,7 +40,10 @@ include './comm/user_left.php';
         	备用电话：<input type="text" class="sele" size="15" maxlength="15" name="phone" value="<?php echo $user['phone']; ?>"></div>
         <div class="apply_t1"><b style="color:#F00;">*</b>电子邮件：<input type="text" class="sele" size="50" maxlength="100" name="email" value="<?php echo $user['email']; ?>"></div>
 		<!--div class="apply_t1"> <b style="color:#F00;">*</b><input type="checkbox" class="sele" checked> 用户须知</div-->
-		<div class="apply_t1"><textarea rows="5" cols="90%" tabindex="1" readonly="true" style="padding:5px 5px;overflow:auto;resize:none">    你所填写的个人信息是为方便您以后参加俱乐部各类活动时，我们可以及时与您联系。同时也为了能够及时快捷地为您安排行程（比如预定酒店、航班、办理保险等）。<br/>纽摄俱乐部将严格遵守个人信息保护的相关法律和法规，仅在法律规定的范围内使用您的个人信息，未经您的许可不会提供给任何第三方。如果您有任何疑虑，请随时致电纽摄俱乐部。<br/>再次欢迎您成为纽摄俱乐部的一员，共同分享摄影的快乐！</textarea></div>
+		<div class="apply_t1"><textarea rows="5" cols="90%" tabindex="1" readonly="true" style="padding:5px 5px;overflow:auto;resize:none">
+你所填写的个人信息是为了能够准确及时地将课程包裹递送到您手上，并方便您以后参加学校以及俱乐部举办的各类活动时，我们可以及时与您联系。我们将严格遵守个人信息保护的相关法律和法规，仅在法律规定的范围内使用您的个人信息，未经您的许可不会提供给任何第三方。如果您有任何疑虑，请随时致电我们。再次欢迎您成为纽摄大家庭中的一员，共同分享摄影的快乐！
+			</textarea>
+		</div>
 
       </div>
       <div class="apply_next">

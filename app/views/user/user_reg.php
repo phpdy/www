@@ -4,37 +4,40 @@
 <div class="main">
 	<div class="apply_main">
 
-    <div class="apply_sub">注册信息填写</div>
+    <div class="apply_sub">全科专业摄影课程报名注册信息填写</div>
     <form name="form" id="form" method="post" action="user.php?action=regSubmit">
 		<div class="apply_sheet">
         <div class="apply_t1"><b style="color:#F00;">*</b>电子邮箱：<input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="name" id="name">（电子邮箱地址，用户的登录名）</div>
         <div class="apply_t1"><b style="color:#F00;">*</b>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="password" id="password">（密码长度不少于6位）</div>
         <div class="apply_t1"><b style="color:#F00;">*</b>确认密码：<input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="repassword" id="repassword"></div>
 		<div class="apply_t1"><b style="color:#F00;">*</b>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="username" id="username">（请填写真实姓名）</div>
-		<div style="margin:0 auto;width:800px;text-align:left;padding-left:5px;"><label><font color="#B60925"><b>纽摄俱乐部-注册告知函：</b></font></label></div>
+		<div style="margin:0 auto;width:800px;text-align:left;padding-left:5px;"><label><font color="#B60925"><b>全科专业摄影课程报名注册告知函：</b></font></label></div>
         <div><textarea rows="12" cols="90%" tabindex="1" readonly="true" style="padding:5px 5px;overflow:auto;resize:none">
 您好！
-欢迎您注册成为成为纽摄俱乐部会员！
+欢迎您报名参加全科专业摄影课程的学习！在成为全科专业摄影课程学员的同时，您还将免费成为纽摄俱乐部会员！
+
+
 纽摄俱乐部（Newshoot Club以下简称NC）是北京纽摄教育科技有限公司的持有品牌，致力于为摄影人提供最有价值的摄影实践、摄影创作、摄影文化交流等活动。
 
-请您认真填写相关信息，纽摄俱乐部就您填写的个人信息承担保密义务。并就个人信息保护政策，做出如下说明与承诺：
+请您认真填写相关信息，我们就您填写的个人信息承担保密义务。并就个人信息保护政策，做出如下说明与承诺：
  
 1.收集、使用和提供个人信息
-鉴于在为俱乐部会员办理各项事务中（包括但不限于办理注册、活动保险、预订各类服务等方面）需要个人信息。纽摄俱乐部会保存会员的部分信息，并针对每种业务建立了个人信息保护管理系统，遵守收集、使用和提供个人信息的相关制度，在法律规定的范围内使用个人信息。
+鉴于在为您办理各项事务中（包括但不限于办理注册、活动保险、预订各类服务等方面）需要个人信息。我们保存会员的部分信息，并针对每种业务建立了个人信息保护管理系统，遵守收集、使用和提供个人信息的相关制度，在法律规定的范围内使用个人信息。
  
 2.遵守相关法律和法规
-在处理个人信息问题上，纽摄俱乐部将遵守适用于个人信息保护的相关法律和法规，仅在法律规定的范围内使用，同时未经会员授权不会把相关信息提供给任何第三方。
+在处理个人信息问题上，我们将遵守适用于个人信息保护的相关法律和法规，仅在法律规定的范围内使用，同时未经会员授权不会把相关信息提供给任何第三方。
  
 3.尊重信息所有者本人的权利
-当会员要求更正或删除自己的信息，或要求拒绝本人信息的使用或提供时，纽摄俱乐部将充分尊重信息所有者本人的权利，并根据会员的要求予以处理。
+当会员要求更正或删除自己的信息，或要求拒绝本人信息的使用或提供时，我们将充分尊重信息所有者本人的权利，并根据会员的要求予以处理。
  
 4.执行安全措施
-为确保个人信息的正确性和安全性，纽摄俱乐部将根据信息安全条例进行个人信息调用的管理、限制个人信息外传途径以及防止来自公司内部与外部的不恰 当调用等，并努力防止信息的遗失、毁坏、篡改或泄露等任何与个人信息相关的问题。对于任何组织与个人窃取、盗用会员个人信息的违法行为，纽摄俱乐部坚决反对，并将配合相关法律部门予以严肃查处。
+为确保个人信息的正确性和安全性，我们将根据信息安全条例进行个人信息调用的管理、限制个人信息外传途径以及防止来自公司内部与外部的不恰 当调用等，并努力防止信息的遗失、毁坏、篡改或泄露等任何与个人信息相关的问题。对于任何组织与个人窃取、盗用会员个人信息的违法行为，我们坚决反对，并将配合相关法律部门予以严肃查处。
  
 5.不断完善个人信息管理
-纽摄俱乐部让所有员工都认识到个人信息保护的重要性，并认真执行个人信息管理制度，以确保个人信息得到合理的使用和保护。
+我们让所有员工都认识到个人信息保护的重要性，并认真执行个人信息管理制度，以确保个人信息得到合理的使用和保护。
 
-再次，欢迎您成为纽摄大家庭的一员！</textarea></div>
+再次，欢迎您成为纽摄大家庭的一员！
+</textarea></div>
         <div class="apply_t1"><input id="instruction" type="checkbox" checked="checked" value=1 tabindex="2"><b style="color:#F00;">*</b>我已经阅读并接受注册告知函。</div>
         </div>
 		<div class="apply_next">

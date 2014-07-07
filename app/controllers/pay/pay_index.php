@@ -18,7 +18,7 @@ class pay_index extends BaseController {
 		@session_start ();
 		$user = $_SESSION[FinalClass::$_session_user] ;
 		if(empty($user)){
-			header("location: user.php?url=".urldecode($_SERVER['REQUEST_URI'])) ;
+			header("location: user.php?action=login&url=".urldecode($_SERVER['REQUEST_URI'])) ;
 			die() ;
 		}
 		$user = $this->userinfo_model->queryById($user['id']) ;
