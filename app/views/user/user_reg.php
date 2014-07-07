@@ -1,5 +1,13 @@
-<link type="text/css" href="./css/user-style.css" rel="stylesheet">
+<div id="channel_nav">
+	<a href="index.php">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
+	用户注册
+</div>
 
+<div id="channel_main">
+
+  <!--left begin-->
+  <div class="dt_left">
+	
 <!--main begin-->
 <div class="main">
 	<div class="apply_main">
@@ -48,6 +56,20 @@
 	</div>
 </div>
 <!--main end-->
+  </div>
+  <!--left end-->
+
+  <!--right begin-->
+  <div class="dt_right">
+
+  </div>
+  <!--right end-->
+
+</div>
+
+
+<link type="text/css" href="./css/user-style.css" rel="stylesheet">
+
 
 <script type="text/javascript">
 $(function(){
@@ -68,7 +90,7 @@ $(function(){
 			return false;
 		}
 		
-		$.post("./box.php?action=check",{name:$('#name').val()},function(data){
+		$.post("./user.php?control=json&action=check",{name:$('#name').val()},function(data){
 			//alert(data) ;
 			if(data==0){
 				alert("用户名已被使用，请重新输入") ;

@@ -11,25 +11,6 @@ class user_box extends BaseController {
 		$this->view->display('user_login_box.php');
 	}
 	
-	//用户名检验
-	public function checkAction(){
-		$start = microtime(true)*1000 ;
-		$log = __CLASS__."|".__FUNCTION__ ;
-		
-		$name = $_POST['name'] ;
-		$result = $this->userinfo_model->query(array('name'=>$name)) ;
-//		print_r($result) ;
-
-		$log .= "|$name|".sizeof($result) ;
-		$log .= "|".(int)(microtime(true)*1000-$start) ;
-		Log::logBusiness($log) ;
-		
-		if(empty($result) || sizeof($result)==0){
-			echo 1 ;
-		} else {
-			echo 0 ;
-		}
-	}
 	
 	//密码检验
 	public function checkpwdAction(){

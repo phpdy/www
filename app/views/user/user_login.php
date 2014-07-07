@@ -1,8 +1,13 @@
-<link type="text/css" href="./css/user-style.css" rel="stylesheet">
+<div id="channel_nav">
+	<a href="index.php">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
+	用户登录
+</div>
 
-<!--main begin-->
-<div class="main">
-	<div class="apply_main">
+<div id="channel_main">
+
+  <!--left begin-->
+  <div class="dt_left">
+    <div class="apply_main">
 
     <div class="apply_sub">用户登录</div>
     <form name="myForm" onSubmit="return chkForm(this)" method="post" action="">
@@ -18,8 +23,18 @@
 		</div>
     </form>
 	</div>
+  </div>
+  <!--left end-->
+
+  <!--right begin-->
+  <div class="dt_right">
+
+  </div>
+  <!--right end-->
+
 </div>
-<!--main end-->
+
+<link type="text/css" href="./css/user-style.css" rel="stylesheet">
 
 <script type="text/javascript">
 $(function(){

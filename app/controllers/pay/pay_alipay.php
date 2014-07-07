@@ -3,7 +3,7 @@
 class pay_alipay extends BaseController {
 
 	public function init(){
-		$this->pay_model = $this->initModel('pay_model');
+		$this->pay_model = $this->initModel('pay_model','user');
 	}
 	
 	public function notifyAction(){
@@ -42,9 +42,10 @@ class pay_alipay extends BaseController {
     		}
     		
     		//订单成功，修改状态
+    		$orderlist = $this->pay_model->query(array('orderid'=>$_GET['orderid'])) ;
     		$pay = array(
-    			'orderid'	=>$_GET['orderid'],
-    			'state'		=>1,
+    			'id'	=>$orderlist[0]['id'],
+    			'state'	=>1,
     		) ;
     		$this->pay_model->update($pay) ;
     		
@@ -65,7 +66,7 @@ class pay_alipay extends BaseController {
 				//判断该笔订单是否在商户网站中已经做过处理
 					//如果没有做过处理，根据订单号（out_trade_no）在商户网站的订单系统中查到该笔订单的详细，并执行商户的业务程序
 					//如果有做过处理，不执行商户的业务程序
-					$text="您的商品将很快邮寄，请等待";
+					$text="交易成功.";
 		    }else if($_GET['trade_status'] == 'TRADE_FINISHED') {
 				//判断该笔订单是否在商户网站中已经做过处理
 					//如果没有做过处理，根据订单号（out_trade_no）在商户网站的订单系统中查到该笔订单的详细，并执行商户的业务程序
@@ -78,7 +79,7 @@ class pay_alipay extends BaseController {
 		   $text="交易失败";
 		}
 		
-		header("Location: order.php?action=success&orderid=$_GET[orderid]&text=".$text);
+		header("Location: pay.php?action=success&orderid=$_GET[orderid]&text=".$text);
 	}
 	
 }

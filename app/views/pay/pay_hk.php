@@ -1,20 +1,30 @@
 <link type="text/css" href="./css/order.css" rel="stylesheet">
+<div id="channel_nav">
+	<a href="index.php">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
+	汇款报名
+</div>
 
-<div id="mainbody">
-	<div class="main_new">
-	<div class="main_new_nav">
-		<span><a href="index.php">首页</a></span>&nbsp;&nbsp;>>&nbsp;&nbsp;
-		<span><a href="index.php?t=5">会员中心</a></span>&nbsp;&nbsp;>>&nbsp;&nbsp;
-		<span>订单</span>
-	</div>
-	<div class="main_content">
-	<table class="order">
-		<tr><td>订单信息</td><td>&nbsp;</td></tr>
-		<tr><td>订单号：</td><td><?php echo $order['orderid']; ?></td>	</tr>
-		<tr><td>金额：</td><td><?php echo $order['money']; ?></td>	</tr>
-		<tr><td>订单日期：</td><td><?php echo $order['paydate'] ; ?></td></tr>
-		<tr><td>支付方式：</td><td><?php echo $order['paytype'] ; ?></td></tr>
-	</table>
+<div id="channel_main">
+
+  <!--left begin-->
+  <div class="dt_left">
+    <div id="dt_main">
+      <div style="clear:both"></div>
+      <div class="dt_title">订单信息</div>
+      <div class="dt_content">
+	      <table class="order">
+			<tr><td>订单号：</td><td><?php echo $order['orderid']; ?></td>	</tr>
+			<tr><td>金额：</td><td><?php echo $order['money']; ?></td>	</tr>
+			<tr><td>订单日期：</td><td><?php echo $order['paydate'] ; ?></td></tr>
+			<tr><td>支付方式：</td><td><?php echo $order['paytype'] ; ?></td></tr>
+		  </table>
+	  </div>
+
+	  <br>
+	  <div style="clear:both"></div>
+	  <div class="dt_title">汇款方式</div>
+      <div class="dt_content">
+      	
 	<table class="order">
 		<tr>
 			<td colspan="2"><b>如果您希望通过银行汇款，可将学习费用汇入纽摄教育公司账户：</b></td>
@@ -101,10 +111,22 @@
 			<td colspan="2">5、千万不要向上述账号之外的银行卡汇款，否则可能导致您的财产损失。<br/>一旦遭遇诈骗行为，请立即向发卡银行和当地警方报警。（无论是固话和手机均可拨打报警电话：110）</td>
 		</tr>
 	</table>
-	</div>
-	
-	<div class="main_daily">
-		<?php include 'daily.php';?>
-	</div>
-	</div>
+      </div>
+      
+    </div>
+  </div>
+  <!--left end-->
+
+  <!--right begin-->
+  <div class="dt_right">
+
+    <!--sina weibo begin-->
+    <div class="dt_wb"><h2 class="widgettitle">纽摄微博</h2>
+      <div class="textwidget"><iframe id="sina_widget_1930141335" style="width:100%; height:575px;" frameborder="0" scrolling="no" src="http://v.t.sina.com.cn/widget/widget_blog.php?uid=2722123761&height=575&skin=wd_02&showpic=1"></iframe></div>
+    </div>
+    <!--sina weibo end-->
+    
+  </div>
+  <!--right end-->
+
 </div>

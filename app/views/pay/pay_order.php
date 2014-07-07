@@ -1,3 +1,4 @@
+<link type="text/css" href="./css/order.css" rel="stylesheet">
 <div id="channel_nav">
 	<a href="index.php">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
 	马上报名
@@ -8,20 +9,34 @@
   <!--left begin-->
   <div class="dt_left">
     <div id="dt_main">
-      <div class="dt_title"><?php echo $info['title'] ;?></div>
-      <div class="dt_date">
-        <div class="dateleft">
-        <p><span class="time"><?php echo date("Y-m-d H:m:i",$info['inputtime']) ;?></span></p> 
-        </div>
-        <div style="clear:both"></div>
-      </div>
+      <div style="clear:both"></div>
+      <div class="dt_title">用户信息</div>
+      <div class="dt_content">
+	      <table class="order">
+			<tr><td>姓名：</td><td><?php echo $user['username']; ?></td>	</tr>
+			<tr><td>邮箱：</td><td><?php echo $user['email']; ?></td>	</tr>
+			<tr><td>性别：</td><td><?php echo $user['sex']==2?'女':'男'; ?></td>	</tr>
+			<tr><td>地址：</td><td><?php echo $user['province'].' '.$user['city'].' '.$user['address']; ?></td></tr>	
+			<tr><td>联系方式：</td><td><?php echo $user['mobile'].' '.$user['phone'] ; ?></td></tr>	
+			<tr><td>&nbsp;</td><td><input type="button" value="修改资料" class="btn-order" id="mod_user"></td></tr>
+		  </table>
+	  </div>
 
-      <div class="dt_content"><br>
-		<?php echo $info['content'] ; ?>
+	  <br>
+	  <div style="clear:both"></div>
+	  <div class="dt_title">订单信息</div>
+      <div class="dt_content">
+      	<?php //print_r($pay); ?>
+		<table class="order">
+			<tr><td>订单名称：</td><td><?php echo $pay['title']; ?></td></tr>
+			<tr><td>课程介绍：</td><td><?php echo $pay['description'] ; ?></td></tr>
+			<tr><td>报名费用：</td><td><?php echo $pay['fee']; ?></td></tr>
+			<tr><td>&nbsp;</td>
+			<td><input type="button" value="立刻在线报名" class="btn-order" id="order_ali">&nbsp;&nbsp;&nbsp;
+			<input type="button" value="稍后汇款报名" class="btn-order" id="order_hk"></td></tr>
+		</table>
       </div>
-      <div class="dt_content"><br>
-      <div class="my_button"><a href="pay.php?id=<?php echo $info['id'];?>"><img src="./images/bm.gif"/></a></div>
-      </div>
+      
     </div>
   </div>
   <!--left end-->
@@ -35,41 +50,11 @@
     </div>
     <!--sina weibo end-->
     
-    
   </div>
   <!--right end-->
 
 </div>
 
-
-<div id="mainbody">
-	<div class="main_new">
-	<div class="main_new_nav">
-		<span><a href="index.php">首页</a></span>&nbsp;&nbsp;>>&nbsp;&nbsp;
-		<span><a href="index.php?t=5">会员中心</a></span>&nbsp;&nbsp;>>&nbsp;&nbsp;
-		<span><?php echo $news['title'];?></span>
-	</div>
-	<div class="main_content">
-	<table class="order">
-		<tr><td>会员信息</td><td><input type="button" value="修改资料" class="btn-order" id="mod_user"></td></tr>
-		<tr><td>姓名：</td><td><?php echo $user['username']; ?></td>	</tr>
-		<tr><td>性别：</td><td><?php echo $user['sex']==2?'女':'男'; ?></td>	</tr>
-		<tr><td>地址：</td><td><?php echo $user['province'].' '.$user['city'].' '.$user['address']; ?></td></tr>
-		<tr><td><input type="hidden" value="<?php echo $user['id']; ?>" name="userid" id="userid"/>&nbsp;</td><td>&nbsp;</td></tr>
-	</table>
-	<table class="order">
-		<tr><td>活动信息</td><td>&nbsp;</td></tr>
-		<tr><td>活动：</td><td><?php echo $news['title']; ?></td></tr>
-		<tr><td>&nbsp;</td><td><img src="<?php echo $news['thumb']; ?>" width=120 /></td></tr>
-		<tr><td>活动日期：</td><td><?php echo $news['startdate']." 至 ".$news['closedate'] ; ?></td></tr>
-		<tr><td>活动费用：</td><td><?php echo $news['fee']; ?></td></tr>
-		<tr><td>&nbsp;</td>
-		<td><input type="button" value="立刻在线报名" class="btn-order" id="order_ali">&nbsp;&nbsp;&nbsp;
-		<input type="button" value="稍后汇款报名" class="btn-order" id="order_hk"></td></tr>
-	</table>
-	</div>
-	</div>
-</div>
 
 <script language="javascript">
 $(function(){
@@ -79,11 +64,11 @@ $(function(){
 	});
 
 	$("#order_ali").click(function(){
-		window.location.href="/pay.php?action=ali&userid=<?php echo $user['id']; ?>&id=<?php echo $news['id']; ?>";
+		window.location.href="/pay.php?action=ali&userid=<?php echo $user['id']; ?>&id=<?php echo $pay['id']; ?>";
 	});
 
 	$("#order_hk").click(function(){
-		window.location.href="/pay.php?action=hk&userid=<?php echo $user['id']; ?>&id=<?php echo $news['id']; ?>";
+		window.location.href="/pay.php?action=hk&userid=<?php echo $user['id']; ?>&id=<?php echo $pay['id']; ?>";
 	});
 	
 });

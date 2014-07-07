@@ -3,7 +3,7 @@
 class www_order extends BaseWWWController {
 	
 	public function init(){
-		$this->club_model = $this->initModel('club_model','user');
+		$this->club_model = $this->initModel('club_model','club');
 		
 		$this->view->display('comm-title.php');
 	}

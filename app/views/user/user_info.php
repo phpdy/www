@@ -1,8 +1,18 @@
 <link type="text/css" href="./css/user-style.css" rel="stylesheet">
-
 <script language="javascript" type="text/javascript" src="js/common.js" ></script>
+<script language="javascript" type="text/javascript" src="js/Calendar3.js" ></script>
+
+<div id="channel_nav">
+	<a href="index.php">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
+	用户信息修改
+</div>
+
+<div id="channel_main">
+
+  <!--left begin-->
+  <div class="dt_left">
 <!--main begin-->
-<div class="main">
+<div class="apply_main">
 <div class="apply_sub">完善用户信息</div>
 
 	<div class="rmain">
@@ -54,8 +64,17 @@
 	</div>
 </div>
 <!--main end-->
+  </div>
+  <!--left end-->
 
-<script language="javascript" type="text/javascript" src="js/Calendar3.js" ></script>
+  <!--right begin-->
+  <div class="dt_right">
+
+  </div>
+  <!--right end-->
+
+</div>
+
 <script type="text/javascript">
 $(function(){
 	$("#username").change(function(){

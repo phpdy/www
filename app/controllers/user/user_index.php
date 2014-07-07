@@ -108,44 +108,6 @@ class user_index extends BaseController {
 		header("location:$url") ;
 	}
 	
-	public function orderAction(){
-		$user = $_SESSION[FinalClass::$_session_user] ;
-
-//		$newslist = $this->index_model->queryAll() ;
-		//print_r($newslist) ;
-		$orderlist = $this->pay_model->findOrderListByUserid($user['id']) ;
-		
-		foreach($orderlist as $key=>$order){
-			$state = "未付款" ;
-			if($order['state']==1){
-				$state = "成功" ;
-			}
-			if($order['state']==-1){
-				$state = "失败" ;
-			}
-			$orderlist[$key]['state2'] = $state ;
-			foreach($newslist as $news){
-				if($news['id']==$order['pid']){
-					$orderlist[$key]['hd'] = $news ;
-					break ;
-				}
-			}
-		}
-		$now = time() ;
-		foreach($orderlist as $key=>$order){
-			$time = strtotime($order['hd']['startdate']) ;
-			if($now>$time){
-				$orderlist1[] = $order ;
-			} else {
-				$orderlist2[] = $order ;
-			}
-		}
-
-		$this->view->assign('orderlist1',$orderlist1) ;
-		$this->view->assign('orderlist2',$orderlist2) ;
-		$this->view->assign('orderlist',$orderlist) ;
-		$this->view->display('user_order.php');
-	}
 	
 }
 
