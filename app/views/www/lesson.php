@@ -25,7 +25,9 @@
       <div class="qk_title"><?php  echo $cat['catname'] ;?></div>
       <div class="date">
         <div class="dateleft">
+        <!-- 
         <p><span class="time"><?php echo date("Y-m-d H:m:i",$info['inputtime']) ;?></span> &nbsp;栏目：课程信息&nbsp;</p> 
+         -->
         </div>
         <div style="clear:both"></div>
       </div>

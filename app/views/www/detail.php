@@ -28,7 +28,9 @@
       <div class="dt_title"><?php echo $info['title'] ;?></div>
       <div class="dt_date">
         <div class="dateleft">
+        <!-- 
         <p><span class="time"><?php echo date("Y-m-d H:m:i",$info['inputtime']) ;?></span> &nbsp;栏目：<?php echo $cat['catname'];?>&nbsp;</p> 
+         -->
         </div>
         <div style="clear:both"></div>
       </div>
