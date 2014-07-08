@@ -40,6 +40,9 @@ if(file_exists(CONFIG_PATH. 'Configs.php')){
 }
 if(file_exists(CONFIG_PATH. 'FinalClass.php')){
 	require CONFIG_PATH. 'FinalClass.php';
+	if(FinalClass::$cookie_domain){
+		ini_set("session.cookie_domain",FinalClass::$cookie_domain);
+	}
 }
 
 ?>
