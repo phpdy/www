@@ -41,6 +41,8 @@ if(file_exists(CONFIG_PATH. 'Configs.php')){
 if(file_exists(CONFIG_PATH. 'FinalClass.php')){
 	require CONFIG_PATH. 'FinalClass.php';
 	if(FinalClass::$cookie_domain){
+		ini_set('session.use_cookies', 1);//使用 COOKIE 保存 SESSION ID 的方式  
+		ini_set('session.cookie_path', '/');
 		ini_set("session.cookie_domain",FinalClass::$cookie_domain);
 	}
 }
