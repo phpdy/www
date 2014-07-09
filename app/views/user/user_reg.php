@@ -50,7 +50,9 @@
         </div>
 		<div class="apply_next">
 	        <input type="hidden" name="url" value="<?php echo @$_REQUEST['url'] ;?>">
-	        <input type="reset" name="chongxie" class="btn-img btn-regist" value="重新填写" />&nbsp;&nbsp;<input type="button" class="btn-img btn-regist" id="registsubmit" value="注册" tabindex="5" onclick="return btn()">
+	        <input type="button" class="btn-img btn-regist" id="registsubmit" value="注册"/>&nbsp;&nbsp;
+	        <input type="reset" name="chongxie" class="btn-img btn-regist" value="重新填写" />&nbsp;&nbsp;
+	        <input type="button" class="btn-img btn-regist" id="loginsubmit" value="登录"/>
 		</div>
     </form>
 	</div>
@@ -67,9 +69,7 @@
 
 </div>
 
-
 <link type="text/css" href="./css/user-style.css" rel="stylesheet">
-
 
 <script type="text/javascript">
 $(function(){
@@ -156,6 +156,10 @@ $(function(){
 			$("#form").submit();
 		    return true;
 		}
+	});
+	
+	$("#loginsubmit").click(function(){
+		document.location.href="/user.php?action=login&url=<?php echo @$_REQUEST['url'] ;?>" ;
 	});
 })
 

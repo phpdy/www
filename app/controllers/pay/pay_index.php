@@ -19,7 +19,7 @@ class pay_index extends BaseController {
 		@session_start ();
 		$user = $_SESSION[FinalClass::$_session_user] ;
 		if(empty($user)){
-			header("location: user.php?action=login&url=".urldecode($_SERVER['REQUEST_URI'])) ;
+			header("location: user.php?action=reg&url=".urldecode($_SERVER['REQUEST_URI'])) ;
 			die() ;
 		}
 		$user = $this->userinfo_model->queryById($user['id']) ;
@@ -28,7 +28,12 @@ class pay_index extends BaseController {
 		$pay = $this->club_model->queryById($_GET['id']) ;
 		$this->view->assign('pay',$pay) ;
 		
-		$this->view->display('pay_order.php');
+		$type = $_GET['type'] ;
+		if(!empty($type) && $type == 'free'){
+			$this->view->display('pay_free.php');
+		} else {
+			$this->view->display('pay_order.php');
+		}
 	}
 
 	//支付宝支付
@@ -45,6 +50,9 @@ class pay_index extends BaseController {
 		$this->view->assign('order',$order) ;
 		
 		$this->view->display('pay_hk.php');
+	}
+	public function freeAction(){
+		
 	}
 	//支付宝支付成功页面
 	public function successAction(){
