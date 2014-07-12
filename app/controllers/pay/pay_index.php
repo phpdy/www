@@ -74,7 +74,7 @@ class pay_index extends BaseController {
 		} else {
 			$t = "-电子" ;
 		}
-		$order = $this->Order(1,'免费领取'+$t,$_GET['id'],0) ;
+		$order = $this->Order(1,'免费领取'.$t,$_GET['id'],0) ;
 		if(!is_array($order)){
 			$this->view->assign('text',$order) ;
 		} else {

@@ -15,7 +15,6 @@
 	      <table class="order">
 			<tr><td colspan=2><b><font color="red"><?php echo @$text; ?></font></b></td></tr>
 			<tr><td>订单号：</td><td><?php echo @$order['orderid']; ?></td>	</tr>
-			<tr><td>金额：</td><td>￥ <?php echo @$order['money']; ?> 元</td>	</tr>
 			<tr><td>订单日期：</td><td><?php echo @$order['paydate'] ; ?></td></tr>
 			<tr><td>支付方式：</td><td><?php echo @$order['paytype'] ; ?></td></tr>
 		  </table>
