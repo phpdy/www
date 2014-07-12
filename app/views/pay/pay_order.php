@@ -30,7 +30,7 @@
 		<table class="order">
 			<tr><td>订单名称：</td><td><?php echo $pay['title']; ?></td></tr>
 			<tr><td>课程介绍：</td><td><?php echo $pay['description'] ; ?></td></tr>
-			<tr><td>报名费用：</td><td><?php echo $pay['fee']; ?></td></tr>
+			<tr><td>报名费用：</td><td>￥ <?php echo $pay['fee']; ?> 元</td></tr>
 			<tr><td>&nbsp;</td>
 			<td><input type="button" value="立刻在线报名" class="btn-order" id="order_ali">&nbsp;&nbsp;&nbsp;
 			<input type="button" value="稍后汇款报名" class="btn-order" id="order_hk"></td></tr>
@@ -64,11 +64,11 @@ $(function(){
 	});
 
 	$("#order_ali").click(function(){
-		window.location.href="/pay.php?action=ali&userid=<?php echo $user['id']; ?>&id=<?php echo $pay['id']; ?>";
+		window.location.href="/pay.php?action=ali&id=<?php echo $pay['id']; ?>&fee=<?php echo $pay['fee']; ?>";
 	});
 
 	$("#order_hk").click(function(){
-		window.location.href="/pay.php?action=hk&userid=<?php echo $user['id']; ?>&id=<?php echo $pay['id']; ?>";
+		window.location.href="/pay.php?action=hk&id=<?php echo $pay['id']; ?>&fee=<?php echo $pay['fee']; ?>";
 	});
 	
 });

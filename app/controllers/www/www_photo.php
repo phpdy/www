@@ -21,7 +21,7 @@ class www_photo extends BaseWWWController {
 		$this->view->assign('list',$list) ;
 		$this->view->assign('type','photo') ;
 		
-		$id = $_GET['id'] ;
+		$id = @$_GET['id'] ;
 		if(empty($id)){
 			$this->index($list);
 		} else {

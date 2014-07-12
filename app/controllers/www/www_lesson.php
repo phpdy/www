@@ -22,7 +22,7 @@ class www_lesson extends BaseWWWController {
 		$this->view->assign('list',$list) ;
 		$this->view->assign('type','lesson') ;
 		
-		$catid = $_GET['id'] ;
+		$catid = @$_GET['id'] ;
 		if(empty($catid)){
 			return $this->index();
 		}

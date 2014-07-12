@@ -11,7 +11,7 @@
 	 <?php
 	 $typeid = $idlist[$tid] ;
 	 foreach ($categoryList as $value){
-	 	if($value['catid']==$pid){
+	 	if($value['catid']==@$pid){
 	 		
 	 		echo "<a href='?control=$typeid&id=$pid'>$value[catname]</a>";
 	 		break ;

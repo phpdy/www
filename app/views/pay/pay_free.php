@@ -26,19 +26,21 @@
 	  <div style="clear:both"></div>
 	  <div class="dt_title">订单信息</div>
       <div class="dt_content">
-      	<?php //print_r($pay); ?>
+      <form name="myForm" id="myForm" method="get" action="pay.php">
+      	<input type="hidden" value="free" name="action">
+      	<input type="hidden" value="<?php echo @$pay['id']; ?>" name="id">
 		<table class="order">
-			<tr><td>递送方式：</td><td><select name="t1">
+			<tr><td>递送方式：</td><td><select name="t1" id="t1">
 				<option value='1' >请把资料通过邮局寄给我
 				<option value='2' >请把电子版的资料发到我的电子邮箱
 			</select></td></tr>
 			<tr><td>从何处获得招生信息：</td><td>         
-				<input type="checkbox" id="1" value="1" name="t2"><label for="1">网站</label>&nbsp;&nbsp;
-				<input type="checkbox" id="2" value="2" name="t2"><label for="2">微信</label>&nbsp;&nbsp;
-				<input type="checkbox" id="3" value="3" name="t2"><label for="3">微博</label>&nbsp;&nbsp;
-				<input type="checkbox" id="4" value="4" name="t2"><label for="4">杂志</label>&nbsp;&nbsp;
-				<input type="checkbox" id="5" value="5" name="t2"><label for="5">报纸</label>&nbsp;&nbsp;
-				<input type="checkbox" id="6" value="6" name="t2"><label for="6">朋友介绍</label>&nbsp;&nbsp;
+				<input type="checkbox" id="1" value="1" name="t2[]"><label for="1">网站</label>&nbsp;&nbsp;
+				<input type="checkbox" id="2" value="2" name="t2[]"><label for="2">微信</label>&nbsp;&nbsp;
+				<input type="checkbox" id="3" value="3" name="t2[]"><label for="3">微博</label>&nbsp;&nbsp;
+				<input type="checkbox" id="4" value="4" name="t2[]"><label for="4">杂志</label>&nbsp;&nbsp;
+				<input type="checkbox" id="5" value="5" name="t2[]"><label for="5">报纸</label>&nbsp;&nbsp;
+				<input type="checkbox" id="6" value="6" name="t2[]"><label for="6">朋友介绍</label>&nbsp;&nbsp;
 			</td></tr>
 			<tr><td colspan=2><p><b>免费课程介绍申请注册告知函：</b></p></td></tr>
 			<tr><td colspan=2>
@@ -69,6 +71,7 @@
 			<td><input type="button" value="立刻免费领取" class="btn-order" id="order_free">&nbsp;&nbsp;&nbsp;
 			</td></tr>
 		</table>
+		</form>
       </div>
       
     </div>
@@ -98,7 +101,8 @@ $(function(){
 	});
 
 	$("#order_free").click(function(){
-		window.location.href="/pay.php?action=free&userid=<?php echo $user['id']; ?>&id=<?php echo $pay['id']; ?>";
+		//window.location.href="/pay.php?action=free&id=<?php echo $pay['id']; ?>&t1="+$('#t1').val()+"&t2="+$('#t2').val();
+		$("#myForm").submit();
 	});
 	
 });

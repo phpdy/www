@@ -10,26 +10,26 @@ class user_json extends BaseController {
 		$start = microtime(true)*1000 ;
 		$log = __CLASS__."|".__FUNCTION__ ;
 		
-		$name = $_POST['name'] ;
-		$password = $_POST['password'] ;
+		$name = @$_GET['name'] ;
+		$password = @$_GET['password'] ;
 		$log .= "|$name,$password" ;
 		$result = $this->userinfo_model->query(array('name'=>$name)) ;
-		
+//		print_r($result) ;
+
 		if(!empty($result) && sizeof($result)==1){
 			$userinfo = $result[0] ;
 			if(md5($password) == $userinfo['password']){
 				//登陆成功
 				@session_start ();
 				$_SESSION[FinalClass::$_session_user] = $userinfo ;
-				
-				echo true ;
+				echo 1 ;
 				$log .= "|true" ;
 				$log .= "|".(int)(microtime(true)*1000-$start) ;
 				Log::logBusiness($log) ;
 				return ;
 			}
 		}
-		echo false ;
+		echo 0 ;
 		
 		$log .= "|false" ;
 		$log .= "|".(int)(microtime(true)*1000-$start) ;

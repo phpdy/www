@@ -62,7 +62,7 @@ class user_index extends BaseController {
 	//修改信息
 	public function infoAction(){
 		@session_start ();
-		$user = $_SESSION[FinalClass::$_session_user] ;
+		$user = @$_SESSION[FinalClass::$_session_user] ;
 		if(empty($user)){
 			header("location:user.php?action=login&url=".urlencode($_SERVER['REQUEST_URI'])) ;
 			die() ;

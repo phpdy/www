@@ -56,7 +56,7 @@ foreach ($arr as $value) {
 
 //登陆注册
 @session_start ();
-$user = $_SESSION [FinalClass::$_session_user] ;
+$user = @$_SESSION [FinalClass::$_session_user] ;
 if(!empty($user)){
 	echo '<div class="slogin">[ <a href="user.php">'.$user['username'].'</a> | <a href="user.php?action=loginout">退出</a> ]</div>' ;
 } else {

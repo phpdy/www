@@ -14,7 +14,7 @@ class www_info extends BaseWWWController {
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
 		
-		$id = $_GET['id'] ;
+		$id = @$_GET['id'] ;
 		if(empty($id)){
 			$id = $this->_id ;
 		}

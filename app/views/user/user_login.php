@@ -17,7 +17,6 @@
         <div class="apply_t1">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" class="sele" size="20" maxlength="20" name="password" id="password"></div>
        </div>
 		<div class="apply_next">
-	        <input type="hidden" name="url" value="<?php echo $url ;?>">
 	        <input type="button" class="btn-img btn-regist" id="login" value="登录" tabindex="5">&nbsp;&nbsp;
 	        <input type="button" name="regist" id="regist" class="btn-img btn-regist" value="注册" />
 		</div>
@@ -51,12 +50,13 @@ $(function(){
 			return false ;
 		}
 
-		$.post("./user.php?control=json",{name:name,password:password},function(data){
+		$.get("./user.php?control=json",{name:name,password:password},function(data){
 			//alert(data) ;
-			if(data==false){
+			if(data==0){
 				alert("登录失败，请检查用户名和密码是否正确。") ;
 				return false ;
 			}
+			
 			document.location.href="<?php echo $url; ?>" ;
 		});
 		

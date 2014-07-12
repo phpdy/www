@@ -28,7 +28,7 @@ class pay_index extends BaseController {
 		$pay = $this->club_model->queryById($_GET['id']) ;
 		$this->view->assign('pay',$pay) ;
 		
-		$type = $_GET['type'] ;
+		$type = @$_GET['type'] ;
 		if(!empty($type) && $type == 'free'){
 			$this->view->display('pay_free.php');
 		} else {
@@ -38,21 +38,52 @@ class pay_index extends BaseController {
 
 	//支付宝支付
 	public function aliAction(){
-		$order = $this->Order('在线支付') ;
-		
-		header("location: alipay/alipayapi.php?orderid=$order[orderid]&money=$order[money]") ;
+		$order = $this->Order(1,'在线支付',$_GET['id'],$_GET['fee']) ;
+		if(!is_array($order)){
+			$this->view->assign('text',$order) ;
+			$this->view->display('result_ali.php');
+		} else {
+			header("location: alipay/alipayapi.php?orderid=$order[orderid]&money=$order[money]") ;
+		}
 //		$this->view->display('pay_order.php');
 	}
 	//汇款支付
 	public function hkAction(){
-		$order = $this->Order('汇款') ;
+		$order = $this->Order(1,'汇款',$_GET['id'],$_GET['fee']) ;
+		if(!is_array($order)){
+			$this->view->assign('text',$order) ;
+		} else {
+			$this->view->assign('order',$order) ;
+		}
 		
-		$this->view->assign('order',$order) ;
-		
-		$this->view->display('pay_hk.php');
+		$this->view->display('result_hk.php');
 	}
 	public function freeAction(){
+		$start = microtime(true)*1000 ;
+		$log = __CLASS__."|".__FUNCTION__ ;
 		
+		$t1 = $_GET['t1'] ;
+		$t2 = @$_GET['t2'] ;
+		$log .= "|$t1" ;
+		if(!empty($t2)){
+			$log .= "|".implode(",",$t2) ;
+		}
+		if($t1==1){
+			$t = "-实物" ;
+		} else {
+			$t = "-电子" ;
+		}
+		$order = $this->Order(1,'免费领取'+$t,$_GET['id'],0) ;
+		if(!is_array($order)){
+			$this->view->assign('text',$order) ;
+		} else {
+			$this->view->assign('order',$order) ;
+		}
+		
+		$this->view->display('result_free.php');
+		
+		$log .= '|' . (int)(microtime(true)*1000-$start);
+		Log::logBusiness($log);
 	}
 	//支付宝支付成功页面
 	public function successAction(){
@@ -61,11 +92,18 @@ class pay_index extends BaseController {
 		$this->view->assign('order',$order[0]) ;
 		$this->view->assign('text',$_GET['text']) ;
 		
-		$this->view->display('pay_ali.php');
+		$this->view->display('result_ali.php');
 	}
-	//订单入库
-	private function Order($paytype){
-		
+	
+	/**
+	 * 订单入库
+	 * @param string $ptype 产品类型 全科1 俱乐部4 
+	 * @param string $paytype 付款类型 ：在线支付、汇款、免费领取
+	 * @param int $id	付款产品ID
+	 * @param int $fee	付款金额 ，需要做校验
+	 * @return unknown
+	 */
+	private function Order($ptype,$paytype,$id,$fee=0){
 		//用户登录检验
 		@session_start ();
 		$user = $_SESSION[FinalClass::$_session_user] ;
@@ -76,14 +114,20 @@ class pay_index extends BaseController {
 		
 		//用户信息完整性校验
 		$user = $this->userinfo_model->queryById($user['id']) ;
-		
-		$pay = $this->club_model->queryById($_GET['id']) ;
-		
+	
+		if(empty($id)){
+			return "非法请求，请不要修改链接。" ;
+		}
+		$pay = $this->club_model->queryById($id) ;
+		//金额校验
+		if(!empty($fee) && $fee!=$pay['fee']){
+			return "缴费金额不符，请不要修改链接。" ;
+		}
 		$order = array(
 			'orderid'	=>	'NY'.time() ,
 			'userid'	=>	$user['id'] ,
 			'username'	=>	$user['username'] ,
-			'ptype'		=>	1 ,
+			'ptype'		=>	$ptype ,
 			'pid'		=>	$pay['id'] ,
 			'money'		=>	$pay['fee'] ,
 			'paytype'	=>	$paytype ,
@@ -93,7 +137,7 @@ class pay_index extends BaseController {
 		if($result){
 			return $order ;
 		} else {
-			return $order ;
+			return "订单失败！" ;
 		}
 	}
 	

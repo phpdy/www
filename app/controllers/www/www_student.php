@@ -21,7 +21,7 @@ class www_student extends BaseWWWController {
 		$this->view->assign('list',$list) ;
 		$this->view->assign('type','student') ;
 		
-		$id = $_GET['id'] ;
+		$id = @$_GET['id'] ;
 		if(empty($id)){
 			$this->index($list);
 		} else {

@@ -1,7 +1,7 @@
 <link type="text/css" href="./css/order.css" rel="stylesheet">
 <div id="channel_nav">
 	<a href="index.php">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
-	在线报名
+	汇款报名
 </div>
 
 <div id="channel_main">
@@ -10,16 +10,20 @@
   <div class="dt_left">
     <div id="dt_main">
       <div style="clear:both"></div>
-      <div class="dt_title">订单信息</div>
+      <div class="dt_title">欢迎领取免费资料！</div>
       <div class="dt_content">
 	      <table class="order">
-			<tr><td>订单号：</td><td><?php echo $order['orderid']; ?></td></tr>
-			<tr><td>订单金额：</td><td><?php echo $order['money']; ?></td></tr>
-			<tr><td>订单日期：</td><td><?php echo $order['paydate'] ; ?></td></tr>
-			<tr><td>支付方式：</td><td><?php echo $order['paytype'] ; ?></td></tr>
+			<tr><td colspan=2><b><font color="red"><?php echo @$text; ?></font></b></td></tr>
+			<tr><td>订单号：</td><td><?php echo @$order['orderid']; ?></td>	</tr>
+			<tr><td>金额：</td><td>￥ <?php echo @$order['money']; ?> 元</td>	</tr>
+			<tr><td>订单日期：</td><td><?php echo @$order['paydate'] ; ?></td></tr>
+			<tr><td>支付方式：</td><td><?php echo @$order['paytype'] ; ?></td></tr>
 		  </table>
 	  </div>
 
+	  <br>
+	  <div style="clear:both"></div>
+      
     </div>
   </div>
   <!--left end-->
