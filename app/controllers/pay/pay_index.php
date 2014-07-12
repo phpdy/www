@@ -53,6 +53,7 @@ class pay_index extends BaseController {
 		if(!is_array($order)){
 			$this->view->assign('text',$order) ;
 		} else {
+			$this->view->assign('text',"订单成功！") ;
 			$this->view->assign('order',$order) ;
 		}
 		
@@ -77,6 +78,7 @@ class pay_index extends BaseController {
 		if(!is_array($order)){
 			$this->view->assign('text',$order) ;
 		} else {
+			$this->view->assign('text',"领取成功！") ;
 			$this->view->assign('order',$order) ;
 		}
 		
@@ -89,8 +91,12 @@ class pay_index extends BaseController {
 	public function successAction(){
 		$order = $this->pay_model->query(array('orderid'=>$_GET['orderid'])) ;
 		
+		$text = $_GET['text'] ;
+		if(empty($text)){
+			$text = "支付成功！" ;
+		}
 		$this->view->assign('order',$order[0]) ;
-		$this->view->assign('text',$_GET['text']) ;
+		$this->view->assign('text',$text) ;
 		
 		$this->view->display('result_ali.php');
 	}
