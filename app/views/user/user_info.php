@@ -3,8 +3,7 @@
 <script language="javascript" type="text/javascript" src="js/Calendar3.js" ></script>
 
 <div id="channel_nav">
-	<a href="index.php">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
-	用户信息修改
+	<a href="index.php">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;用户信息修改
 </div>
 
 <div id="channel_main">

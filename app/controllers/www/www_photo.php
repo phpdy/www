@@ -6,7 +6,7 @@ class www_photo extends BaseWWWController {
 	public function init(){
 //		$this->www_category = $this->initModel('www_category','www');
 //		$this->www_model = $this->initModel('www_model','www');
-		$this->www_page = $this->initModel('www_page','www');
+		$this->index_page = $this->initModel('index_page','index');
 		
 		$this->view->assign('tid',$this->_id) ;
 		$this->view->display('comm-title.php');
@@ -17,7 +17,7 @@ class www_photo extends BaseWWWController {
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
 		
-		$list = $this->www_category->query(array('parentid'=>$this->_id,'type'=>'0')) ;
+		$list = $this->index_category->query(array('parentid'=>$this->_id,'type'=>'0')) ;
 		$this->view->assign('list',$list) ;
 		$this->view->assign('type','photo') ;
 		
@@ -45,11 +45,11 @@ class www_photo extends BaseWWWController {
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
 		
-		$list2 = $this->www_category->query(array('parentid'=>$this->_id,'type'=>'1')) ;
+		$list2 = $this->index_category->query(array('parentid'=>$this->_id,'type'=>'1')) ;
 		$catid = $list2[0]['catid'] ;
 		$log.="|$catid" ;
 		
-		$page = $this->www_page->getDatByCateid($catid) ;
+		$page = $this->index_page->getDatByCateid($catid) ;
 		$cat = array(
 			'catname'		=>	$page['title'],
 			'description'	=>	$page['content'],

@@ -25,7 +25,6 @@ class pay_model extends BaseModel {
 	public function findOrderListByPid($pid){
 		$sql = "select orderid,userid,username,ptype,pid,paytype,paydate,state,money from ".$this->dbTable." where ptype=4 and pid=$pid order by paydate" ;
 		$result = $this->getAll($sql) ;
-		
 		return $result ;
 	}
 

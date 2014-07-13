@@ -15,12 +15,25 @@
     <div class="apply_sub">全科专业摄影课程报名注册信息填写</div>
     <form name="form" id="form" method="post" action="user.php?action=regSubmit">
 		<div class="apply_sheet">
-        <div class="apply_t1"><b style="color:#F00;">*</b>电子邮箱：<input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="name" id="name">（电子邮箱地址，用户的登录名）</div>
-        <div class="apply_t1"><b style="color:#F00;">*</b>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="password" id="password">（密码长度不少于6位）</div>
-        <div class="apply_t1"><b style="color:#F00;">*</b>确认密码：<input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="repassword" id="repassword"></div>
-		<div class="apply_t1"><b style="color:#F00;">*</b>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="username" id="username">（请填写真实姓名）</div>
-		<div style="margin:0 auto;width:800px;text-align:left;padding-left:5px;"><label><font color="#B60925"><b>全科专业摄影课程报名注册告知函：</b></font></label></div>
-        <div><textarea rows="12" cols="90%" tabindex="1" readonly="true" style="padding:5px 5px;overflow:auto;resize:none">
+		
+		<table>
+		<tr>
+			<td><b style="color:#F00;">*</b>电子邮箱：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="name" id="name">（电子邮箱地址，用户的登录名）</td>
+		</tr>
+		<tr>
+			<td><b style="color:#F00;">*</b>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</td><td align="left"><input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="password" id="password">（密码长度不少于6位）</td>
+		</tr>
+		<tr>
+			<td><b style="color:#F00;">*</b>确认密码：</td><td align="left"><input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="repassword" id="repassword"></td>
+		</tr>
+		<tr>
+			<td><b style="color:#F00;">*</b>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="username" id="username">（请填写真实姓名）</td>
+		</tr>
+		<tr>
+			<td colspan=2 align="left"><label><font color="#B60925"><b>全科专业摄影课程报名注册告知函：</b></font></label></td>
+		</tr>
+		<tr>
+			<td colspan=2 align="left"><textarea rows="12" cols="90%" tabindex="1" readonly="true" style="padding:5px 5px;overflow:auto;resize:none">
 您好！
 欢迎您报名参加全科专业摄影课程的学习！在成为全科专业摄影课程学员的同时，您还将免费成为纽摄俱乐部会员！
 
@@ -45,9 +58,14 @@
 我们让所有员工都认识到个人信息保护的重要性，并认真执行个人信息管理制度，以确保个人信息得到合理的使用和保护。
 
 再次，欢迎您成为纽摄大家庭的一员！
-</textarea></div>
-        <div class="apply_t1"><input id="instruction" type="checkbox" checked="checked" value=1 tabindex="2"><b style="color:#F00;">*</b>我已经阅读并接受注册告知函。</div>
-        </div>
+</textarea></td>
+		</tr>
+		<tr>
+			<td colspan=2 align="left"><input id="instruction" type="checkbox" checked="checked" value=1 tabindex="2"><b style="color:#F00;">*</b>我已经阅读并接受注册告知函。</td>
+		</tr>
+		</table>
+		
+		</div>
 		<div class="apply_next">
 	        <input type="hidden" name="url" value="<?php echo @$_REQUEST['url'] ;?>">
 	        <input type="button" class="btn-img btn-regist" id="registsubmit" value="注册"/>&nbsp;&nbsp;

@@ -18,7 +18,7 @@ class www_detail extends BaseWWWController {
 		$this->view->assign('info',$info) ;
 		
 		$catid = $info['catid'] ;
-		$list = $this->www_category->query(array('catid'=>$catid)) ;
+		$list = $this->index_category->query(array('catid'=>$catid)) ;
 		$this->view->assign('cat',$list[0]) ;
 		
 		$this->view->assign('tid',$_GET['tid']) ;

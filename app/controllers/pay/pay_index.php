@@ -17,7 +17,7 @@ class pay_index extends BaseController {
 	public function defaultAction(){
 		//用户登录检验
 		@session_start ();
-		$user = $_SESSION[FinalClass::$_session_user] ;
+		$user = @$_SESSION[FinalClass::$_session_user] ;
 		if(empty($user)){
 			header("location: user.php?action=reg&url=".urldecode($_SERVER['REQUEST_URI'])) ;
 			die() ;
@@ -89,13 +89,21 @@ class pay_index extends BaseController {
 	}
 	//支付宝支付成功页面
 	public function successAction(){
-		$order = $this->pay_model->query(array('orderid'=>$_GET['orderid'])) ;
+		$orderlist = $this->pay_model->query(array('orderid'=>$_GET['orderid'])) ;
 		
 		$text = $_GET['text'] ;
-		if(empty($text)){
-			$text = "支付成功！" ;
+		if($orderlist && is_array($orderlist)){
+			$order = $orderlist[0] ;
+			if($order['state']!='1'){
+				$text = "支付未成功！" ;
+			} else {
+				$text = "支付成功！" ;
+			}
+			$this->view->assign('order',$order) ;
+		} else {
+			$text = "订单不存在！" ;
 		}
-		$this->view->assign('order',$order[0]) ;
+		
 		$this->view->assign('text',$text) ;
 		
 		$this->view->display('result_ali.php');
@@ -114,7 +122,7 @@ class pay_index extends BaseController {
 		@session_start ();
 		$user = $_SESSION[FinalClass::$_session_user] ;
 		if(empty($user)){
-			header("location:login.php?url=".urlencode($_SERVER['REQUEST_URI'])) ;
+			header("location:user.php?url=".urlencode($_SERVER['REQUEST_URI'])) ;
 			die() ;
 		}
 		

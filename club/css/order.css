@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+.order{
+	width:100%;
+	font-size:14px;
+	padding:5px;
+	border:1px solid #dfe;
+}
+.order tr td{
+	padding:5px;
+	align:left;
+}
+
+.btn-order {
+	width:180px; 
+	height:36px; 
+	color:#FFF; 
+	font-size:14px;
+	font-weight:800;
+	background:url(http://v.nyipcn.com/images/btn.gif) no-repeat ;
+}

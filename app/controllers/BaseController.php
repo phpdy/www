@@ -1,6 +1,8 @@
 <?php
 
+require CONTROLLER_PATH . 'BaseClubController.php';
 require CONTROLLER_PATH . 'BaseWWWController.php';
+require CONTROLLER_PATH . 'BaseUserController.php';
 class BaseController extends Controller {
 	protected $start ;//起始时间
 	

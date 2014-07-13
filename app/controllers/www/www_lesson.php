@@ -6,7 +6,7 @@ class www_lesson extends BaseWWWController {
 	public function init(){
 //		$this->www_category = $this->initModel('www_category','www');
 //		$this->www_model = $this->initModel('www_model','www');
-		$this->www_page = $this->initModel('www_page','www');
+		$this->index_page = $this->initModel('index_page','index');
 		
 		$this->view->assign('tid',$this->_id) ;
 		$this->view->display('comm-title.php');
@@ -16,7 +16,7 @@ class www_lesson extends BaseWWWController {
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
 		
-		$list = $this->www_category->query(array('parentid'=>$this->_id,'type'=>'0')) ;
+		$list = $this->index_category->query(array('parentid'=>$this->_id,'type'=>'0')) ;
 		//剔除最后报名信息
 		unset($list[sizeof($list)-1]) ;
 		$this->view->assign('list',$list) ;
@@ -51,7 +51,7 @@ class www_lesson extends BaseWWWController {
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
 		
-		$page = $this->www_page->getDatByCateid(81) ;
+		$page = $this->index_page->getDatByCateid(81) ;
 		$info = array(
 			'inputtime'	=>	$page['updatetime'],
 			'content'	=>	$page['content'],

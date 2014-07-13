@@ -11,10 +11,25 @@ class club_model extends BaseModel {
 	}
 
 	public function getContent($id){
-		$sql = "select id,content from ".$this->dbTable."_data where id=$id" ;
+		$start = time() ;
+		$log = __CLASS__."|".__FUNCTION__ ;
+		$sql = "select a.*,c.content from ".$this->dbTable." a,".$this->dbTable."_data c where a.id=c.id and a.id=$id" ;
 		$result = $this->getOne($sql) ;
 		
-		log::logBehavior(__CLASS__."|".__FUNCTION__."|".$sql." >> ".$result['id']);
+		$log .= "|$sql|".$result['id']."|".(time()-$start) ;
+		log::logBehavior($log);
+		
+		return $result ;
+	}
+	
+	public function getAllByCatid($catid){
+		$start = time() ;
+		$log = __CLASS__."|".__FUNCTION__ ;
+		$sql = "select * from ".$this->dbTable." where catid=$catid order by startdate desc" ;
+		$result = $this->getAll($sql) ;
+		
+		$log .= "|$sql|".sizeof($result)."|".(time()-$start) ;
+		log::logBehavior($log);
 		
 		return $result ;
 	}
