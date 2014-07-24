@@ -64,7 +64,16 @@ if(!empty($user)){
 }
 ?>
 
-  <div id="nav_search"><input type="text" class="s_text"><input type="submit" id="su" value="" class="s_btn"></div>
+  <div id="nav_search">
+  <form action="http://www.baidu.com/baidu" target="_blank">
+  <input type="text" name="word" class="s_text">
+  <input type="submit" id="su" value="" class="s_btn">
+  <input name=tn type=hidden value="bds">
+  <input name=cl type=hidden value="3">
+  <input name=ct type=hidden value="2097152">
+  <input name=si type=hidden value=".nyipcn.com">
+  </form>
+  </div>
 </div>
 <!--nav end-->
 
