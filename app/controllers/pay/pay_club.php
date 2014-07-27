@@ -15,7 +15,6 @@ class pay_club extends BaseClubController {
 		$this->id = $id ;
 		$this->view->assign('id',$id) ;
 		
-		$this->view->display2('comm-title.php','club');
 	}
 	
 	public function defaultAction(){
@@ -40,6 +39,7 @@ class pay_club extends BaseClubController {
 		$this->view->assign('news',$result) ;
 		$this->view->assign('user',$user) ;
 		
+		$this->view->display2('comm-title.php','club');
 		$this->view->display('pay_order.php','club');
 	}
 
@@ -59,6 +59,7 @@ class pay_club extends BaseClubController {
 		$result = $this->club_model->queryById($id) ;
 		$this->view->assign('news',$result) ;
 		
+		$this->view->display2('comm-title.php','club');
 		$this->view->display('pay_hk.php','club');
 	}
 	public function freeAction(){
@@ -72,6 +73,7 @@ class pay_club extends BaseClubController {
 		
 		$text = "免费报名成功！" ;
 		$this->view->assign('text',$text) ;
+		$this->view->display2('comm-title.php','club');
 		$this->view->display('pay_free.php','club');
 	}
 	public function successAction(){
@@ -92,6 +94,7 @@ class pay_club extends BaseClubController {
 		
 		$this->view->assign('text',$text) ;
 		
+		$this->view->display2('comm-title.php','club');
 		$this->view->display('pay_ali.php','club');
 	}
 

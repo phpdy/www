@@ -6,7 +6,6 @@ class user_index extends BaseController {
 		$this->userinfo_model = $this->initModel('userinfo_model');
 		$this->pay_model = $this->initModel('pay_model');
 
-		$this->view->display2('comm-title.php','www');
 	}
 	public function destroy(){
 		$this->view->display2('comm-footer.php','www');
@@ -23,6 +22,7 @@ class user_index extends BaseController {
 			$url = FinalClass::$_home_url ;
 		}
 		$this->view->assign('url',urldecode($url)) ;
+		$this->view->display2('comm-title.php','www');
 		$this->view->display('user_login.php');
 	}
 	//注册
@@ -32,6 +32,7 @@ class user_index extends BaseController {
 			$url = FinalClass::$_home_url ;
 		}
 		$this->view->assign('url',urldecode($url)) ;
+		$this->view->display2('comm-title.php','www');
 		$this->view->display('user_reg.php');
 	}
 	public function regSubmitAction(){
@@ -69,6 +70,7 @@ class user_index extends BaseController {
 		}
 		$user = $this->userinfo_model->queryById($user['id']) ;
 		$this->view->assign('user',$user) ;
+		$this->view->display2('comm-title.php','www');
 		$this->view->display('user_info.php');
 	}
 	public function infoSubmitAction(){
@@ -95,6 +97,7 @@ class user_index extends BaseController {
 			die() ;
 		}
 		$this->view->assign('user',$user) ;
+		$this->view->display2('comm-title.php','www');
 		$this->view->display('user_pwd.php');
 	}
 	

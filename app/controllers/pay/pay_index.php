@@ -7,7 +7,6 @@ class pay_index extends BaseController {
 		$this->pay_model = $this->initModel('pay_model','user');
 		$this->club_model = $this->initModel('club_model','club');
 		
-		$this->view->display2('comm-title.php','www');
 	}
 	public function destroy(){
 		$this->view->display2('comm-footer.php','www');
@@ -29,6 +28,7 @@ class pay_index extends BaseController {
 		$this->view->assign('pay',$pay) ;
 		
 		$type = @$_GET['type'] ;
+		$this->view->display2('comm-title.php','www');
 		if(!empty($type) && $type == 'free'){
 			$this->view->display('pay_free.php');
 		} else {
@@ -57,6 +57,7 @@ class pay_index extends BaseController {
 			$this->view->assign('order',$order) ;
 		}
 		
+		$this->view->display2('comm-title.php','www');
 		$this->view->display('result_hk.php');
 	}
 	public function freeAction(){
@@ -82,6 +83,7 @@ class pay_index extends BaseController {
 			$this->view->assign('order',$order) ;
 		}
 		
+		$this->view->display2('comm-title.php','www');
 		$this->view->display('result_free.php');
 		
 		$log .= '|' . (int)(microtime(true)*1000-$start);
@@ -106,6 +108,7 @@ class pay_index extends BaseController {
 		
 		$this->view->assign('text',$text) ;
 		
+		$this->view->display2('comm-title.php','www');
 		$this->view->display('result_ali.php');
 	}
 	
