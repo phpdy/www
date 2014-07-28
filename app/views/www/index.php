@@ -100,11 +100,11 @@
       </div>
       <div style="width:17px;float:left">&nbsp;</div>
       <div class="commend_show">
-        <div class="commend_img"><a href="http://nyipcn.taobao.com"><img src="files/store.gif" width="227" height="90" border=0></a></div>
+        <div class="commend_img"><a href="index.php?control=detail&tid=59&id=665"><img src="files/qqwx.jpg" width="227" height="90" border=0></a></div>
         <div class="commend_desc" align=center>
-          <div class="commend_desc_t">欢迎光临校园商店</div>
-          <div>在这里你可以方便地购买各类远程或短期摄影课程，或是为你选中的摄影摄影实践活动付费。</div>
-          <div class="commend_desc_c"><a href="http://nyipcn.taobao.com">点击此处，进入校园商店>></a></div>
+          <div class="commend_desc_t">通过微信和QQ群与我们联系</div>
+          <div>欢迎您关注纽摄教育微信公众号“纽摄教育”，或是加入纽摄官方学员QQ群244835929</div>
+          <div class="commend_desc_c"><a href="index.php?control=detail&tid=59&id=665">点击此处，了解详情>></a></div>
          </div>
       </div>
     </div>

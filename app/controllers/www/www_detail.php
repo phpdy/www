@@ -13,7 +13,7 @@ class www_detail extends BaseWWWController {
 		$start = microtime(true) ;
 		
 		//最新资讯下载(90)处理，必须登录，且是全科学员才可以下载
-		if ($_GET['pid']==90){
+		if (@$_GET['pid']==90){
 			@session_start ();
 			$user = @$_SESSION[FinalClass::$_session_user] ;
 			if(empty($user)){

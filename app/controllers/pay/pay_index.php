@@ -17,8 +17,12 @@ class pay_index extends BaseController {
 		//用户登录检验
 		@session_start ();
 		$user = @$_SESSION[FinalClass::$_session_user] ;
+		$type = @$_GET['type'];
 		if(empty($user)){
-			header("location: user.php?action=reg&url=".urldecode($_SERVER['REQUEST_URI'])) ;
+			if(!empty($type)){
+				$type = "&type=$type" ;
+			}
+			header("location: user.php?action=reg&url=".urlencode($_SERVER['REQUEST_URI']).$type) ;
 			die() ;
 		}
 		$user = $this->userinfo_model->queryById($user['id']) ;
@@ -27,7 +31,6 @@ class pay_index extends BaseController {
 		$pay = $this->club_model->queryById($_GET['id']) ;
 		$this->view->assign('pay',$pay) ;
 		
-		$type = @$_GET['type'] ;
 		$this->view->display2('comm-title.php','www');
 		if(!empty($type) && $type == 'free'){
 			$this->view->display('pay_free.php');

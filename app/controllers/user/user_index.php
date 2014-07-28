@@ -23,7 +23,7 @@ class user_index extends BaseController {
 		}
 		$this->view->assign('url',urldecode($url)) ;
 		$this->view->display2('comm-title.php','www');
-		$this->view->display('user_login.php');
+		$this->view->display('user_login.php','www');
 	}
 	//注册
 	public function regAction(){
@@ -32,8 +32,15 @@ class user_index extends BaseController {
 			$url = FinalClass::$_home_url ;
 		}
 		$this->view->assign('url',urldecode($url)) ;
+		
 		$this->view->display2('comm-title.php','www');
-		$this->view->display('user_reg.php');
+		$type = @$_GET['type'] ;
+		$this->view->assign('type',$type) ;
+		if(!empty($type) && $type=='free'){
+			$this->view->display('user_reg_free.php','www');
+		} else {
+			$this->view->display('user_reg.php','www');
+		}
 	}
 	public function regSubmitAction(){
 		$start = microtime(true)*1000 ;
@@ -73,7 +80,7 @@ class user_index extends BaseController {
 		$user = $this->userinfo_model->queryById($user['id']) ;
 		$this->view->assign('user',$user) ;
 		$this->view->display2('comm-title.php','www');
-		$this->view->display('user_info.php');
+		$this->view->display('user_info.php','www');
 	}
 	public function infoSubmitAction(){
 		$start = microtime(true)*1000 ;
@@ -100,7 +107,7 @@ class user_index extends BaseController {
 		}
 		$this->view->assign('user',$user) ;
 		$this->view->display2('comm-title.php','www');
-		$this->view->display('user_pwd.php');
+		$this->view->display('user_pwd.php','www');
 	}
 	
 	//退出

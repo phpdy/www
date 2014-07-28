@@ -39,7 +39,7 @@
 $(function(){
 	$("#regist").click(function(){
 		//alert(1) ;
-		document.location.href="user.php?action=reg&url=<?php echo urlencode($url); ?>" ;
+		document.location.href="user.php?action=reg&url=<?php echo urlencode($url).'&type='.@$_GET['type']; ?>" ;
 	});
 	
 	$("#login").click(function(){

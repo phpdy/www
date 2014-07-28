@@ -12,13 +12,19 @@
 <div class="main">
 	<div class="apply_main">
 
-    <div class="apply_sub">全科专业摄影课程报名注册信息填写</div>
+    <div class="apply_sub">免费课程介绍申请注册表</div>
     <form name="form" id="form" method="post" action="user.php?action=regSubmit">
 		<div class="apply_sheet">
 		
 		<table>
 		<tr>
-			<td><b style="color:#F00;">*</b>电子邮箱：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="name" id="name">（电子邮箱地址，用户的登录名）</td>
+			<td><b style="color:#F00;">*</b>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="username" id="username">（请填写真实姓名）</td>
+		</tr>
+		<tr>
+			<td><b style="color:#F00;">*</b>电子邮箱：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="name" id="name">（电子邮箱地址，您以后的登录名）</td>
+		</tr>
+		<tr>
+			<td><b style="color:#F00;">*</b>联系电话：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="mobile" id="mobile">（电话信息可以帮助我们在邮件投递出现问题时与您联系。）</td>
 		</tr>
 		<tr>
 			<td><b style="color:#F00;">*</b>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</td><td align="left"><input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="password" id="password">（密码长度不少于6位）</td>
@@ -27,18 +33,19 @@
 			<td><b style="color:#F00;">*</b>确认密码：</td><td align="left"><input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="repassword" id="repassword"></td>
 		</tr>
 		<tr>
-			<td><b style="color:#F00;">*</b>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="username" id="username">（请填写真实姓名）</td>
+			<td><b style="color:#F00;">*</b>详细地址：</td><td align="left"><input type="text" tabindex="3" class="sele" size="80" maxlength="80" name="address" id="address"></td>
 		</tr>
 		<tr>
-			<td colspan=2 align="left"><label><font color="#B60925"><b>全科专业摄影课程报名注册告知函：</b></font></label></td>
+			<td><b style="color:#F00;">*</b>邮政编码：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="post" id="post">（街道信息、门牌号和邮政编码可以让投递更加准确。）</td>
+		</tr>
+		<tr>
+			<td colspan=2 align="left"><label><font color="#B60925"><b>免费课程介绍申请注册告知函：</b></font></label></td>
 		</tr>
 		<tr>
 			<td colspan=2 align="left"><textarea rows="12" cols="90%" tabindex="1" readonly="true" style="padding:5px 5px;overflow:auto;resize:none">
 您好！
-欢迎您报名参加全科专业摄影课程的学习！在成为全科专业摄影课程学员的同时，您还将免费成为纽摄俱乐部会员！
 
-
-纽摄俱乐部（Newshoot Club以下简称NC）是北京纽摄教育科技有限公司的持有品牌，致力于为摄影人提供最有价值的摄影实践、摄影创作、摄影文化交流等活动。
+感谢您申请全科专业摄影课程的免费课程介绍！为感谢您的关注，您还将免费成为纽摄俱乐部会员！纽摄俱乐部是北京纽摄教育科技有限公司的持有品牌，致力于为摄影人提供最有价值的摄影实践、摄影创作、摄影文化交流等活动。
 
 请您认真填写相关信息，我们就您填写的个人信息承担保密义务。并就个人信息保护政策，做出如下说明与承诺：
  
@@ -57,7 +64,7 @@
 5.不断完善个人信息管理
 我们让所有员工都认识到个人信息保护的重要性，并认真执行个人信息管理制度，以确保个人信息得到合理的使用和保护。
 
-再次，欢迎您成为纽摄大家庭的一员！
+再次感谢您对我们的关注，并期待您成为纽摄大家庭中的一员！
 </textarea></td>
 		</tr>
 		<tr>
@@ -67,7 +74,7 @@
 		
 		</div>
 		<div class="apply_next">
-	        <input type="hidden" name="url" value="<?php echo @$_REQUEST['url'] ;?>">
+	        <input type="hidden" name="url" value="<?php echo @$url;?>">
 	        <input type="button" class="btn-img btn-regist" id="registsubmit" value="注册"/>&nbsp;&nbsp;
 	        <input type="reset" name="chongxie" class="btn-img btn-regist" value="重新填写" />&nbsp;&nbsp;
 	        <input type="button" class="btn-img btn-regist" id="loginsubmit" value="登录"/>
@@ -177,7 +184,7 @@ $(function(){
 	});
 	
 	$("#loginsubmit").click(function(){
-		document.location.href="/user.php?action=login&url=<?php echo @$_REQUEST['url'] ;?>" ;
+		document.location.href="/user.php?action=login&type=<?php echo $type;?>&url=<?php echo urlencode($url) ;?>" ;
 	});
 })
 
