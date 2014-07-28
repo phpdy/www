@@ -33,6 +33,7 @@ class user_club extends BaseUserController {
 		
 		$data = $_POST ;
 		$data['password'] = md5($data['password']) ;
+		$data['createtime'] = date('Y-m-d H:i:s') ;
 		$result = $this->userinfo_model->insert($data) ;
 		
 		//自动登录
