@@ -6,12 +6,27 @@ class www_detail extends BaseWWWController {
 //		$this->www_model = $this->initModel('www_model','www');
 //		$this->www_category = $this->initModel('www_category','www');
 		
-		$this->view->display('comm-title.php');
 	}
 	
 	public function defaultAction(){
 		$log = __CLASS__."|".__FUNCTION__ ;
 		$start = microtime(true) ;
+		
+		//最新资讯下载(90)处理，必须登录，且是全科学员才可以下载
+		if ($_GET['pid']==90){
+			@session_start ();
+			$user = @$_SESSION[FinalClass::$_session_user] ;
+			if(empty($user)){
+				header("location:user.php?action=login&url=".urlencode($_SERVER['REQUEST_URI'])) ;
+				die() ;
+			}
+			//判断是否是全科学员，2
+			$memberid = $user['memberid'] ;
+			if(!strstr($memberid,"2")){
+				echo "对不起，您还未报名全科学员，无权下载。" ;
+				die() ;
+			}
+		}
 		
 		$id = $_GET['id'] ;
 		$info = $this->www_model->getDataByid($id) ;
@@ -25,6 +40,7 @@ class www_detail extends BaseWWWController {
 		$this->view->assign('pid',$_GET['pid']) ;
 		$log .="|".(int)(microtime(true)-$start) ;
 		log::info($log);
+		$this->view->display('comm-title.php');
 		$this->view->display('detail.php');
 	}
 	
