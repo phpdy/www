@@ -83,9 +83,9 @@ class pay_index extends BaseController {
 			$this->view->assign('order',$order) ;
 		}
 		
-		$this->view->display2('comm-title.php','www');
-		$this->view->display('result_free.php');
-		
+//		$this->view->display2('comm-title.php','www');
+//		$this->view->display('result_free.php');
+		header("location: index.php?control=detail&tid=59&id=652");
 		$log .= '|' . (int)(microtime(true)*1000-$start);
 		Log::logBusiness($log);
 	}

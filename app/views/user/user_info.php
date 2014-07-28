@@ -34,7 +34,8 @@
 				<option value='1' <?php if(@$user['paper']==1){echo "selected";} ?>>身份证
 				<option value='2' <?php if(@$user['paper']==2){echo "selected";} ?>>军官证
 				<option value='3' <?php if(@$user['paper']==3){echo "selected";} ?>>护照
-				<option value='4' <?php if(@$user['paper']==4){echo "selected";} ?>>其他
+				<option value='4' <?php if(@$user['paper']==4){echo "selected";} ?>>港台证
+				<option value='5' <?php if(@$user['paper']==5){echo "selected";} ?>>其他
 			</select></div>
         <div class="apply_t1"><b style="color:#F00;">*</b>证件号码：<input type="text" class="sele" size="50" maxlength="18" name="paperno" id="paperno" value="<?php echo $user['paperno']; ?>"></div>
         <div class="apply_t1">所在单位：<input type="text" class="sele" size="50" maxlength="50" name="company" value="<?php echo $user['company']; ?>"></div>

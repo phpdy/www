@@ -103,6 +103,7 @@ $(function(){
 	$("#order_free").click(function(){
 		//window.location.href="/pay.php?action=free&id=<?php echo $pay['id']; ?>&t1="+$('#t1').val()+"&t2="+$('#t2').val();
 		$("#myForm").submit();
+		//window.location.href="index.php?control=detail&tid=59&id=652" ;
 	});
 	
 });
