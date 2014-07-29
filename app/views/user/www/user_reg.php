@@ -18,7 +18,7 @@
 		
 		<table>
 		<tr>
-			<td><b style="color:#F00;">*</b>电子邮箱：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="name" id="name">（电子邮箱地址，用户的登录名）</td>
+			<td><b style="color:#F00;">*</b>电子邮箱：</td><td align="left"><input type="text" tabindex="3" class="sele" size="30" maxlength="30" name="name" id="name">（电子邮箱地址，用户的登录名）</td>
 		</tr>
 		<tr>
 			<td><b style="color:#F00;">*</b>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</td><td align="left"><input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="password" id="password">（密码长度不少于6位）</td>

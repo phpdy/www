@@ -18,7 +18,7 @@
 	<div>
 <!--	<img style="display:block;border-bottom:1px #CDCDCD solid" src="./images/top.jpg" class="" width="960" height="80">-->
 	<img src="./images/top.jpg" class="" width="960" height="75">
-	<div class="top_link"><a href="http://www.nyipcn.com/">纽约摄影学院全科专业摄影课程</a> | <a href="http://v.nyipcn.com/">纽摄教育在线学院</a></div>
+	<div class="top_link"><a href="http://www.nyipcn.com/" target="_blank">纽约摄影学院全科专业摄影课程</a> | <a href="http://v.nyipcn.com/" target="_blank">纽摄教育在线学院</a></div>
 	</div>
 	<span class="topbar">
   <?php 
