@@ -14,6 +14,7 @@
   		echo "<li><a href='?control=lesson&id=$value[catid]'>$value[catname]</a></li>" ;
   	}
   ?>
+  <li><a href='?control=order&catid=75'><img src="images/lkbm.jpg" border="0" width="100" height="36" align=order></a></li>
   </ul>
   </div>
 
