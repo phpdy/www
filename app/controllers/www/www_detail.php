@@ -23,7 +23,10 @@ class www_detail extends BaseWWWController {
 			//判断是否是全科学员，2
 			$memberid = $user['memberid'] ;
 			if(!strstr($memberid,"2")){
-				echo "对不起，您还未报名全科学员，无权下载。" ;
+				//echo "《最新资料》仅供纽约摄影学院全科专业摄影课程学员登陆后下载。" ;
+				echo "<script language=javascript>
+				alert('《最新资料》仅供纽约摄影学院全科专业摄影课程学员登陆后下载。');
+				document.location.href='index.php?control=student&id=90';</script>" ;
 				die() ;
 			}
 		}
