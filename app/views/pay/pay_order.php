@@ -29,11 +29,11 @@
       	<?php //print_r($pay); ?>
 		<table class="order">
 			<tr><td>订单名称：</td><td><?php echo $pay['title']; ?></td></tr>
-			<tr><td>课程介绍：</td><td><?php echo $pay['description'] ; ?></td></tr>
-			<tr><td>报名费用：</td><td>￥ <?php echo $pay['fee']; ?> 元</td></tr>
+			<!-- <tr><td>课程介绍：</td><td><?php echo $pay['description'] ; ?></td></tr> -->
+			<tr><td>报名费用：</td><td>￥ <?php echo $pay['fee']; ?>.00 元（包含100.00元报名手续费）</td></tr>
 			<tr><td>&nbsp;</td>
-			<td><input type="button" value="立刻在线报名" class="btn-order" id="order_ali">&nbsp;&nbsp;&nbsp;
-			<input type="button" value="稍后汇款报名" class="btn-order" id="order_hk"></td></tr>
+			<td><input type="button" value="立即在线支付" class="btn-order" id="order_ali">&nbsp;&nbsp;&nbsp;
+			<input type="button" value="稍后线下汇款" class="btn-order" id="order_hk"></td></tr>
 		</table>
       </div>
       
