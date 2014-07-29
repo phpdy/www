@@ -75,7 +75,7 @@
 		</div>
 		<div class="apply_next">
 	        <input type="hidden" name="url" value="<?php echo @$url;?>">
-	        <input type="button" class="btn-img btn-regist" id="registsubmit" value="注册"/>&nbsp;&nbsp;
+	        <input type="button" class="btn-img btn-regist" id="registsubmit" value="提交"/>&nbsp;&nbsp;
 	        <input type="reset" name="chongxie" class="btn-img btn-regist" value="重新填写" />&nbsp;&nbsp;
 	        <input type="button" class="btn-img btn-regist" id="loginsubmit" value="登录"/>
 		</div>
