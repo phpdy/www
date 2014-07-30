@@ -16,6 +16,12 @@ class user_json extends BaseController {
 		$log .= "|$name,$password" ;
 		$result = $this->userinfo_model->query(array('name'=>$name)) ;
 //		print_r($result) ;
+		if(empty($result)){
+			$result = $this->userinfo_model->query(array('email'=>$name)) ;
+		}
+		if(empty($result)){
+			$result = $this->userinfo_model->query(array('mobile'=>$name)) ;
+		}
 
 		if(!empty($result) && sizeof($result)==1){
 			$userinfo = $result[0] ;
