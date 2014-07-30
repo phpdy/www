@@ -5,9 +5,9 @@
 <meta http-equiv="Cache-Control" content="no-cache">
 <meta http-equiv="Pragma" content="no-cache">
 
-<title>全科课程</title>
-<meta name="description" content="纽摄教育在线学院隶属于北京纽摄教育科技有限公司，是中国摄影网络教育领导者。 北京纽摄教育科技有限公司旗下的“纽约摄影学院中国学员班”成立于2005年，目的在于共同向更多中国摄影师推广纽约摄影学院著名的远程互动式摄影课程。纽约摄影学院名誉院长唐·谢夫作为纽约摄影学院专业摄影课程的主要作者，亲自负责监督这套专业摄影课程的汉化和发布。">
-<meta name="keywords" content="北京纽摄教育科技有限公司,网校,远程教育,网络教育,其他,摄影">
+<title>纽约摄影学院全科专业摄影课程——全球最受欢迎的摄影培训课程</title>
+<meta name="description" content="纽约摄影学院中国学员班成立于2005年，目的在于向更多中国专业摄影师及爱好者推广纽约摄影学院著名的远程互动式全科专业摄影课程。纽约摄影学院全科专业摄影课程的主要作者、纽约摄影学院名誉院长、Home Study School现任院长唐·谢夫先生，经由纽约摄影学院授权，亲自负责监督并独家授权北京纽摄教育科技有限公司在中国汉化并教授这套专业摄影课程。">
+<meta name="keywords" content="北京纽摄教育科技有限公司,远程教育,网络教育,其他,摄影">
 
 <link type="text/css" href="./include/css/style.css" rel="stylesheet">
 <link type="text/css" href="./include/css/video.css" rel="stylesheet">
