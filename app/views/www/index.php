@@ -73,38 +73,38 @@
     </div>
     <div class="commend_area">
       <div class="commend_show">
-        <div class="commend_img"><a href="http://www.newshootedu.com"><img src="files/online.gif" width="227" height="90" border=0></a></div>
+        <div class="commend_img"><a href="http://www.newshootedu.com" target="_blank"><img src="files/online.gif" width="227" height="90" border=0></a></div>
         <div class="commend_desc">
           <div class="commend_desc_t">纽摄在线学院视频课程</div>
           <div>我们提供的每一节课都是专业摄影师的拍摄心得，能够为任何类型的学员提供专业的帮助。</div>
-          <div class="commend_desc_c"><a href="http://www.newshootedu.com">点击此处，进入在线学院>></a></div>
+          <div class="commend_desc_c"><a href="http://www.newshootedu.com" target="_blank">点击此处，进入在线学院>></a></div>
         </div>
       </div>
       <div style="width:17px;float:left">&nbsp;</div>
       <div class="commend_show">
-        <div class="commend_img"><a href="http://club2.nyipcn.com"><img src="files/club.gif" width="227" height="90" border=0></a></div>
+        <div class="commend_img"><a href="http://club2.nyipcn.com" target="_blank"><img src="files/club.gif" width="227" height="90" border=0></a></div>
         <div class="commend_desc">
           <div class="commend_desc_t">纽摄俱乐部最新活动</div>
           <div>纽摄俱乐部自2006年起在世界上最美的地方带领学员跟专业的摄影师学习专业的技巧和技术。</div>
-          <div class="commend_desc_c"><a href="http://club2.nyipcn.com">点击此处，查看最新活动>></a></div>
+          <div class="commend_desc_c"><a href="http://club2.nyipcn.com" target="_blank">点击此处，查看最新活动>></a></div>
         </div>
       </div>
       <div style="width:17px;float:left">&nbsp;</div>
       <div class="commend_show">
-        <div class="commend_img"><a href="?control=detail&tid=59&id=307"><img src="files/addus.gif" width="227" height="90" border=0></a></div>
+        <div class="commend_img"><a href="?control=detail&tid=59&id=307" target="_blank"><img src="files/addus.gif" width="227" height="90" border=0></a></div>
         <div class="commend_desc">
           <div class="commend_desc_t">欢迎加入美国摄影学会</div>
           <div>美国摄影学会成立于1934年，会员遍布全球60多个国家和地区，是最权威的国际摄影组织之一。</div>
-          <div class="commend_desc_c"><a href="?control=detail&tid=59&id=307">点击此处，了解如何加入>></a></div>
+          <div class="commend_desc_c"><a href="?control=detail&tid=59&id=307" target="_blank">点击此处，了解如何加入>></a></div>
         </div>
       </div>
       <div style="width:17px;float:left">&nbsp;</div>
       <div class="commend_show">
-        <div class="commend_img"><a href="index.php?control=detail&tid=59&id=665"><img src="files/qqwx.jpg" width="227" height="90" border=0></a></div>
+        <div class="commend_img"><a href="index.php?control=detail&tid=59&id=665" target="_blank"><img src="files/qqwx.jpg" width="227" height="90" border=0></a></div>
         <div class="commend_desc" align=center>
           <div class="commend_desc_t">通过微信和QQ群与我们联系</div>
           <div>欢迎您关注纽摄教育微信公众号“纽摄教育”，或是加入纽摄官方学员QQ群244835929</div>
-          <div class="commend_desc_c"><a href="index.php?control=detail&tid=59&id=665">点击此处，了解详情>></a></div>
+          <div class="commend_desc_c"><a href="index.php?control=detail&tid=59&id=665" target="_blank">点击此处，了解详情>></a></div>
          </div>
       </div>
     </div>
