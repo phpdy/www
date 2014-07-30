@@ -33,6 +33,20 @@ class pay_club extends BaseClubController {
 			header("location:user.php?action=info&url=".urlencode($_SERVER['REQUEST_URI'])) ;
 			die() ;
 		}
+	
+		//判断是否已经提过单，避免重复提单
+		$orderlist = $this->pay_model->findOrderListByUserid($user['id']) ;
+		if(!empty($orderlist) && is_array($orderlist)){
+			foreach ($orderlist as $order){
+				$_id = $order['pid'] ;
+				if($_id==$_GET['id']){
+					echo "<script language=javascript>
+					alert('您已经提交过，请不要重复提交。');
+					document.location.href='user.php?action=myorder';</script>" ;
+				}
+			}
+		}
+		
 		$id = empty($_GET['id'])?0:$_GET['id'] ;
 		$result = $this->club_model->queryById($id) ;
 		$this->view->assign('id',$id) ;

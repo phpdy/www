@@ -91,7 +91,10 @@ class user_index extends BaseController {
 		if(!empty($_POST['url'])){
 			$url = urldecode($_POST['url']) ;
 		}
-		header("location:$url") ;
+		echo "<script language=javascript>
+				alert('您的资料已经成功提交');
+				document.location.href='$url';</script>" ;
+		//header("location:$url") ;
 		
 		$log .= "|$result|$url" ;
 		$log .= "|".(int)(microtime(true)*1000-$start) ;

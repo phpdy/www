@@ -40,7 +40,7 @@ require_once("lib/alipay_submit.class.php");
         //需http://格式的完整路径，不允许加?id=123这类自定义参数
 
         //卖家支付宝帐户
-        $seller_email = "100602915@qq.com";
+        $seller_email = "newshoot@163.com";
         //必填
 
         //商户订单号

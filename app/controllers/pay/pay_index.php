@@ -28,6 +28,19 @@ class pay_index extends BaseController {
 		$user = $this->userinfo_model->queryById($user['id']) ;
 		$this->view->assign('user',$user) ;
 		
+		//判断是否已经提过单，避免重复提单
+		$orderlist = $this->pay_model->findOrderListByUserid($user['id']) ;
+		if(!empty($orderlist) && is_array($orderlist)){
+			foreach ($orderlist as $order){
+				$_id = $order['pid'] ;
+				if($_id==$_GET['id']){
+					echo "<script language=javascript>
+					alert('您已经提交过，请不要重复提交。');
+					document.location.href='index.php?control=order&catid=75';</script>" ;
+				}
+			}
+		}
+		
 		$pay = $this->club_model->queryById($_GET['id']) ;
 		$this->view->assign('pay',$pay) ;
 		
