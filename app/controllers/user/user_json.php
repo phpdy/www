@@ -23,17 +23,18 @@ class user_json extends BaseController {
 			$result = $this->userinfo_model->query(array('mobile'=>$name)) ;
 		}
 
-		if(!empty($result) && sizeof($result)==1){
-			$userinfo = $result[0] ;
-			if(md5($password) == $userinfo['password']){
-				//登陆成功
-				@session_start ();
-				$_SESSION[FinalClass::$_session_user] = $userinfo ;
-				echo 1 ;
-				$log .= "|true" ;
-				$log .= "|".(int)(microtime(true)*1000-$start) ;
-				Log::logBusiness($log) ;
-				return ;
+		if(!empty($result) && sizeof($result)>=1){
+			foreach ($result as $userinfo){
+				if(md5($password) == $userinfo['password']){
+					//登陆成功
+					@session_start ();
+					$_SESSION[FinalClass::$_session_user] = $userinfo ;
+					echo 1 ;
+					$log .= "|true" ;
+					$log .= "|".(int)(microtime(true)*1000-$start) ;
+					Log::logBusiness($log) ;
+					return ;
+				}
 			}
 		}
 		echo 0 ;

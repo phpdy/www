@@ -50,7 +50,7 @@
 				</li>
 				<?php }
 				}?>
-				<li style="margin-left:50px;margin-bottom: 0px;">
+				<li style="float:right;margin-left:50px;margin-bottom: 0px;">
 					<a href="index.php?control=list&type=<?php echo $key;?>"><img src="images/more.gif" alt="more"/></a>
 				</li>
 			</ul>
