@@ -2,7 +2,7 @@ body,h1,h2,h3,h4,h5,h6,p,ul,li,form,td{padding:0;margin:0;}
 body{padding-top:5px!important; _background-image:url(about:blank);_background-attachment:fixed;}
 body{margin:0; padding:0; font-size:12px; line-height:22px; font-family:'Verdana', 'Arial', 'sans-serif'; } 
 img{ border:none}
-#line1{ float:left; margin:0 auto; width:1px; height:30px; border-left:#ccc 1px solid; /*×ó±ß¿ò£¬²ÎÊýÒÀ´ÎÊÇÑÕÉ«£»´ÖÏ¸£»ÀàÐÍ-ÐéÏß¡¢ÊµÏß*/ }
+#line1{ float:left; margin:0 auto; width:1px; height:30px; border-left:#ccc 1px solid; /*ï¿½ï¿½ß¿ò£¬²ï¿½ï¿½ï¿½ï¿½4ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ß¡ï¿½Êµï¿½ï¿½*/ }
 .Tab{ border-collapse:collapse; font-size:12px }
 .Tab_sheet { margin-left: auto; margin-right: auto; width:980px; font-size:14px; height:auto; text-align:center;}
 .Tab td{ padding:2px 0 2px 5px; border:solid 1px #c1c1c1 }
@@ -26,7 +26,7 @@ a:hover img{text-decoration:none;}
 .floatleft{float:left;}
 .floatright{float:right;}
 
-/***µ¼º½À¸***/
+/***ï¿½ï¿½ï¿½ï¿½8***/
 #navDiv { margin:0 auto; width:960px; height:34px; border-top:none;background:#151515;padding-top:0px;_margin-bottom:-4px;}
 .nav_list { width:960px; background:none; font-size:14px; }
 .nav_sheet { float:left; height:34px; width:auto; text-align:center; background:none; color:#F;}
@@ -50,7 +50,7 @@ a:hover img{text-decoration:none;}
 .channel_desc_c a { color:#b50b25; background:none;  }
 .channel_desc_c a:hover { color:#87cd00; text-decoration:none;}
 
-/***Ê×Ò³ÍÆ¼öÇø***/
+/***ï¿½ï¿½Ò³ï¿½Æ¼ï¿½ï¿½ï¿½***/
 #main_commend { margin:0 auto; width:960px; height:auto; }
 .commend_nav { margin:0 auto; margin-bottom:15px; width:960px; height:46px; }
 .commend_nav_1 { width:330px; height:46px; float:left; background:url(../../images/commend_topic.gif) no-repeat; }
@@ -67,7 +67,7 @@ a:hover img{text-decoration:none;}
 .commend_desc_c a { color:#b50b25; background:none;  }
 .commend_desc_c a:hover { color:#87cd00; text-decoration:none;}
 
-/***ÆµµÀÒ³***/
+/***Æµï¿½ï¿½Ò³***/
 #channel_nav { margin:0 auto; margin-top:10px; width:960px; height:24px; font:12px/24px; color:#666; }
 #channel_main { margin:0 auto; width:960px; height:auto; margin-top:10px; }
 .channel_left { width:238px; border:1px solid #eee; margin-right:12px; float:left; }
@@ -76,7 +76,7 @@ a:hover img{text-decoration:none;}
 .channel_list { width:690px; border:1px solid #ccc; color:#000; display: block; }
 
 
-/***ÏêÇéÒ³***/
+/***ï¿½ï¿½ï¿½ï¿½Ò³***/
 #content_main { margin:0 auto; width:680px; margin-bottom:20px; }
 .qk_title { padding-bottom:10px; font-size:20px; line-height:24px; color:#B60925; text-align:center; font-family: "Microsoft YaHei"; }
 .qk_content { font-size:14px; line-height:22px; text-indent:28px; }
@@ -85,7 +85,7 @@ a:hover img{text-decoration:none;}
 .dateright { width:100px; float:right;	text-align:right; }
 .time {	background: url(../../images/icon_time.gif) no-repeat top left; padding: 0px 0px 0px 18px; }
 
-/*menu¶¨Òå*/
+/*menuï¿½ï¿½ï¿½ï¿½*/
 .menu { margin:0 auto; width:238px; }
 .menu li { margin:0 auto; height:36px; float:left; list-style:none; width:238px; font-size:14px; border-bottom:1px dotted #DEDEDE; font-weight:bold; }
 .menu li a, .menu li a:visited { background: #FAFAFA url(../../images/dot_2.gif) 8px 13px no-repeat; color: #666; display: block; padding: 7px 10px 7px 22px; text-decoration: none; }
@@ -130,7 +130,7 @@ a:hover img{text-decoration:none;}
 .orderlist a:hover { color:#F89646 }
 
 
-/*¾«Æ·¿Î³Ì¶¨Òå*/
+/*ï¿½ï¿½Æ·ï¿½Î³Ì¶ï¿½ï¿½ï¿½*/
 .jpk {width:735px; margin:0 0 20px 25px; float:left;}
 .jpk_desc {width:550px; float:left;}
 .jpk_desc_t {font-size:20px; line-height:20px; font-weight:bold; margin-bottom:25px}
@@ -154,7 +154,7 @@ a:hover img{text-decoration:none;}
 .sn_content {font-size:14px; line-height:22px; text-indent:28px;}
 .sn_more {margin:5px 0; padding:5px 0 0 10px; height:28px; background:#FAFAFA; color:#136EC2; font-size:14px; font-weight:bold;}
 
-/*Í·²¿¶¨Òå*/
+/*Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .k_header { margin:0 auto; width:100%; height:130px; background:url(http://stat.ablesky.com/content/pic/album/2012-05-06/c0e7217e-7d89-4297-8409-4943fc7a00cb.png) center bottom no-repeat;}
 .header { margin:0 auto; padding:0; width:100%; height:30px; background:url(../images/index_headerbg.jpg) 0 9px repeat-x #fff; border-bottom:1px solid #dedede;}
 .header_center { margin:0 auto; padding:0; width:979px; height:30px; border-left:1px solid #dedede;}
@@ -163,8 +163,8 @@ a:hover img{text-decoration:none;}
 .header_con li a { color:#666; text-decoration:none;}
 .header_con li a:hover { color:#87cd00;}
 
-/*Î²²¿¶¨Òå*/
-.ifooter { margin:0 auto; width:960px; height:205px; clear:both; margin-top:20px; background:url(../../images/bottom_line.gif) repeat-x #e7e7e7;}
+/*Î²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+.ifooter { margin:0 auto; width:960px; height:225px; clear:both; margin-top:20px; background:url(../../images/bottom_line.gif) repeat-x #e7e7e7;}
 .ifooter a {color:#666666;}
 .ifooter a:hover {color:#F89646; text-decoration:none}
 .ifooter .ifooter_1 { margin:0 auto; padding:0; width:960px; height:30px; padding-top:10px; font:800 12px/24px arial; text-align:center}
@@ -175,7 +175,7 @@ a:hover img{text-decoration:none;}
 .ifooter li a { color:#0068b7; text-decoration:none;}
 .ifooter li a:hover { color:#87cd00;}
 
-/*ÔÚÏß×¢²á¶¨Òå*/
+/*ï¿½ï¿½ï¿½ï¿½×¢ï¿½á¶¨ï¿½ï¿½*/
 .apply_main { margin:0 auto; width:1002px; background:#f5f5f5; height:auto; border:1px solid #ccc; float:left; }
 .apply_desc { font-size:14px; padding:20px 30px 10px; }
 .apply_desc p { margin-bottom: 10px; }
@@ -197,12 +197,12 @@ a:hover img{text-decoration:none;}
 .sele{margin-right:10px;font-size:12px}
 .apply_sheet label{line-height:25px;margin:0 8px;text-align:right;}
 
-/*²úÆ·¸¶·ÑÐÅÏ¢¶¨Òå*/
+/*ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½*/
 .buy_price { padding:8px 0 5px 0; font-size:16px; font-weight:900; color:#ED1B23; text-align:center; }
 .buy_text { width:160px; line-height:20px; font-size:12px;color:#898989; text-align:center; }
 .buy_btn { width:160px; height:28px; padding:3px 0; text-align:center; }
 
-/*È«ÄêÑ§Ï°¼Æ»®*/
+/*È«ï¿½ï¿½Ñ§Ï°ï¿½Æ»ï¿½*/
 .plan { margin-top:10px; padding:0 auto; width:680px; background:none; height:auto; float:left }
 .plan_l { width:480px; color:#B60925; font-size:14px; font-weight:bold; float:left; margin-top:5px; padding-top:5px }
 .plan_r { width:185px; height:38px; float:right; margin-top:5px; }

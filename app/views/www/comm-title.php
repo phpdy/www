@@ -13,7 +13,7 @@
 <link type="text/css" href="./include/css/video.css" rel="stylesheet">
 
 <!--[if lt IE 9]> <script src="http://stat.ablesky.cn/statb/js_optimize/lib/shiv/html5.js"></script> <![endif]-->
-<link type="image/x-icon" href="http://www.nyipcn.com/wp-content/themes/nyip/images/favicon.ico" rel="shortcut icon"></head>
+<link type="image/x-icon" href="./favicon.ico" rel="shortcut icon"></head>
 
 <body>
 <div class="baseLogo">

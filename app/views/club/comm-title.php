@@ -9,6 +9,7 @@
 <meta name="keywords" content="">
 <title>纽摄俱乐部——始创于2005年，顶级行摄品牌</title>
 <link type="text/css" href="./css/common.css" rel="stylesheet">
+<link type="image/x-icon" href="./favicon.ico" rel="shortcut icon">
 </head>
 <body>
 
