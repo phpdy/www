@@ -17,6 +17,9 @@ class www_index extends BaseWWWController {
 		$start = microtime(true) ;
 		
 		$list = $this->index_category->query(array('parentid'=>59,'type'=>'0')) ;
+		if(sizeof($list)>6){
+			$list = array_splice($list,0,6) ;
+		}
 		$this->view->assign('list',$list) ;
 		
 		$piclist = $this->pictue_model->queryAll(array('catid'=>83)) ;

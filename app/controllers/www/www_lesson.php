@@ -18,7 +18,12 @@ class www_lesson extends BaseWWWController {
 		
 		$list = $this->index_category->query(array('parentid'=>$this->_id,'type'=>'0')) ;
 		//剔除最后报名信息
-		unset($list[sizeof($list)-1]) ;
+		foreach ($list as $key=>$value){
+			if($value['catid']==75){
+				unset($list[$key]) ;
+			}
+		}
+		
 		$this->view->assign('list',$list) ;
 		$this->view->assign('type','lesson') ;
 		

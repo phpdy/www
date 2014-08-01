@@ -7,7 +7,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta name="description" content="">
 <meta name="keywords" content="">
-<title>纽摄俱乐部</title>
+<title>纽摄俱乐部——始创于2005年，顶级行摄品牌</title>
 <link type="text/css" href="./css/common.css" rel="stylesheet">
 </head>
 <body>
