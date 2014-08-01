@@ -17,7 +17,7 @@
 
 <body>
 <div class="baseLogo">
-  <div style="width:960px;height:130px;background:url(http://www2.nyipcn.com/images/logo_top.gif) no-repeat;">
+  <div style="width:960px;height:130px;background:url(./images/logo_top.gif) no-repeat;">
   </div>
 </div>
 
@@ -71,7 +71,7 @@ if(!empty($user)){
   <input name=tn type=hidden value="bds">
   <input name=cl type=hidden value="3">
   <input name=ct type=hidden value="2097152">
-  <input name=si type=hidden value=".nyipcn.com">
+  <input name=si type=hidden value="www.nyipcn.com">
   </form>
   </div>
 </div>
