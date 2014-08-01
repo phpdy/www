@@ -82,11 +82,11 @@
       </div>
       <div style="width:17px;float:left">&nbsp;</div>
       <div class="commend_show">
-        <div class="commend_img"><a href="http://club2.nyipcn.com" target="_blank"><img src="files/club.gif" width="227" height="90" border=0></a></div>
+        <div class="commend_img"><a href="http://club.nyipcn.com" target="_blank"><img src="files/club.gif" width="227" height="90" border=0></a></div>
         <div class="commend_desc">
           <div class="commend_desc_t">纽摄俱乐部最新活动</div>
           <div>纽摄俱乐部自2006年起在世界上最美的地方带领学员跟专业的摄影师学习专业的技巧和技术。</div>
-          <div class="commend_desc_c"><a href="http://club2.nyipcn.com" target="_blank">点击此处，查看最新活动>></a></div>
+          <div class="commend_desc_c"><a href="http://club.nyipcn.com" target="_blank">点击此处，查看最新活动>></a></div>
         </div>
       </div>
       <div style="width:17px;float:left">&nbsp;</div>
