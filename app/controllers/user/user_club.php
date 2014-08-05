@@ -31,10 +31,16 @@ class user_club extends BaseUserController {
 		$start = microtime(true)*1000 ;
 		$log = __CLASS__."|".__FUNCTION__ ;
 		
+		if(empty($_POST['name'])){
+			echo "<script language=javascript>
+				alert('用户名不能为空');</script>" ;
+			die();
+		}
 		$data = $_POST ;
 		$data['password'] = md5($data['password']) ;
 		$data['createtime'] = date('Y-m-d H:i:s') ;
 		$data['email'] = $data['name'] ;
+		$data['tag'] = "club" ;
 		$result = $this->userinfo_model->insert($data) ;
 		
 		//自动登录
