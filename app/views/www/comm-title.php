@@ -28,8 +28,9 @@
   $nav[1] = array("课程信息","index.php?control=lesson",10);
   $nav[2] = array("摄影天地","index.php?control=photo",20);
   $nav[3] = array("学员中心","index.php?control=student",15);
-  $nav[4] = array("关于我们","index.php?control=ours",17);
-  $nav[5] = array("联系我们","index.php?control=info",17);
+  $nav[4] = array("俱乐部","http://club.nyipcn.com",17);
+  $nav[5] = array("关于我们","index.php?control=ours",17);
+  //$nav[5] = array("联系我们","index.php?control=info",17);
   $nav[6] = array("常见问题","index.php?control=faq",17);
   //$nav[5] = array("学员中心","clist.php?cid=100",0);
   //print_r ($nav);
@@ -60,7 +61,7 @@ $user = @$_SESSION [FinalClass::$_session_user] ;
 if(!empty($user)){
 	echo '<div class="slogin">[ <a href="user.php">'.$user['username'].'</a> | <a href="user.php?action=loginout">退出</a> ]</div>' ;
 } else {
-	echo '<div class="slogin">[ <a href="user.php">登录</a> | <a href="user.php?action=reg">注册</a> ]</div>' ;
+	echo '<div class="slogin">[ <a href="user.php?action=login">登录</a> | <a href="user.php?action=reg">注册</a> ]</div>' ;
 }
 ?>
 

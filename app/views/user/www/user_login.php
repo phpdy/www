@@ -15,8 +15,8 @@
     <form name="myForm" onSubmit="return chkForm(this)" method="post" action="">
 		<div class="apply_sheet">
 
-        <div class="apply_t1">用&nbsp;户&nbsp;名：<input type="text" class="sele" size="20" maxlength="20" name="name" id="name"></div>
-        <div class="apply_t1">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" class="sele" size="20" maxlength="20" name="password" id="password"></div>
+        <div class="apply_t1">用&nbsp;户&nbsp;名：<input type="text" class="sele" size="30" maxlength="50" name="name" id="name"></div>
+        <div class="apply_t1">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" class="sele" size="30" maxlength="20" name="password" id="password"></div>
        </div>
 		<div class="apply_next">
 	        <input type="button" class="btn-img btn-regist" id="login" value="登录" tabindex="5">&nbsp;&nbsp;
