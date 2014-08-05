@@ -13,7 +13,7 @@ include './comm/user_left.php';
 	<div class="jpk">
     <form name="form" id="form" method="post" action="user.php?action=pwdSubmit">
       <div class="apply_sheet">
-        <div class="apply_t1">&nbsp;&nbsp;用&nbsp;户&nbsp;名&nbsp;：<?php echo $user['name']; ?><input type="hidden" class="sele" name="id" value="<?php echo $user['id']; ?>"></div>
+        <div class="apply_t1">&nbsp;&nbsp;用&nbsp;户&nbsp;名&nbsp;：<?php echo $user['name']; ?><input type="hidden" class="sele" name="id" id="id" value="<?php echo $user['id']; ?>"></div>
         <div class="apply_t1"><b style="color:#F00;">*</b>旧&nbsp;密&nbsp;码&nbsp;：<input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="oldpassword" id="oldpassword"></div>
         <div class="apply_t1"><b style="color:#F00;">*</b>新&nbsp;密&nbsp;码&nbsp;：<input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="password" id="password">（密码长度不少于6位）</div>
         <div class="apply_t1"><b style="color:#F00;">*</b>确认密码：<input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="repassword" id="repassword"></div>
