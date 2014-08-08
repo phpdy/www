@@ -24,7 +24,8 @@ include './comm/user_left.php';
 		<?php 
 		$alipay="" ;
 		if($order['state']==0){
-			$alipay = "尚未支付&nbsp;&nbsp;<a href='alipay/alipayapi.php?orderid=$order[orderid]&money=$order[money]'><font color=red><b>立即支付</b></font></a>" ;
+			$alipay = "尚未支付&nbsp;&nbsp;<a href='alipay/alipayapi.php?orderid=$order[orderid]&money=$order[money]'><font color=red><b>支付宝支付</b></font></a>"
+			."&nbsp;&nbsp;<a href='index.php?control=info&id=311'><font color=red><b>银行汇款</b></font></a>" ;
 		}
 		echo 
 	   "&nbsp;活动名称：<b>". $order['hd']['title'] ."</b>&nbsp;<br/>"

@@ -108,13 +108,54 @@ $(function(){
 	
 	$("#infosubmit").click(function(){
 		if(confirm('你确定要提交数据吗？')){
-			if($("#username").val()!="" && $("#paperno").val()!="" && $("#mobile").val()!=""){
-				//alert("ok") ;
-				$("#myForm").submit();
-				return true ;
-			} else {
-				alert("请录入完整必填信息");
+			if($("#username").val()==""){
+				alert("请填写姓名。");
+				$("#username").focus() ;
+				return false ;
 			}
+			if($("#birth").val()==""){
+				alert("请填写出生日期。");
+				$("#birth").focus() ;
+				return false ;
+			}
+			if($("#paperno").val()==""){
+				alert("请填写证件号码。");
+				$("#paperno").focus() ;
+				return false ;
+			}
+			if($("#province").val()==""){
+				alert("请填写完整信息。");
+				$("#province").focus() ;
+				return false ;
+			}
+			if($("#city").val()==""){
+				alert("请填写完整信息。");
+				$("#city").focus() ;
+				return false ;
+			}
+			if($("#address").val()==""){
+				alert("请填写完整信息。");
+				$("#address").focus() ;
+				return false ;
+			}
+			if($("#post").val()==""){
+				alert("请填写完整信息。");
+				$("#post").focus() ;
+				return false ;
+			}
+			if($("#mobile").val()==""){
+				alert("请填写完整信息。");
+				$("#mobile").focus() ;
+				return false ;
+			}
+			if($("#email").val()==""){
+				alert("请填写完整信息。");
+				$("#email").focus() ;
+				return false ;
+			}
+			$("#myForm").submit();
+			return true ;
+			
 		}
 	});
 })

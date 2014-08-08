@@ -35,16 +35,16 @@ class pay_club extends BaseClubController {
 		}
 	
 		//判断是否已经提过单，避免重复提单
-		$orderlist = $this->pay_model->findOrderListByUserid($user['id']) ;
+		$request = array(
+			'userid'	=>$user['id'],
+			'pid'		=>$_GET['id'],
+		);
+		$orderlist = $this->pay_model->query($request) ;
 		if(!empty($orderlist) && is_array($orderlist)){
-			foreach ($orderlist as $order){
-				$_id = $order['pid'] ;
-				if($_id==$_GET['id']){
-					echo "<script language=javascript>
-					alert('您已经提交过，请不要重复提交。');
-					document.location.href='user.php?action=myorder';</script>" ;
-				}
-			}
+			echo "<script language=javascript>
+			alert('您已经提交过，请不要重复提交。');
+			document.location.href='user.php?action=myorder';</script>" ;
+			die();
 		}
 		
 		$id = empty($_GET['id'])?0:$_GET['id'] ;
@@ -77,12 +77,19 @@ class pay_club extends BaseClubController {
 		$this->view->display('pay_hk.php','club');
 	}
 	public function freeAction(){
-		$id = empty($_GET['id'])?0:$_GET['id'] ;
+		if(empty($_GET['id'])){
+			echo "请求连接已被修改，请重新请求。" ;
+			die() ;
+		}
+		$id = $_GET['id'] ;
+		$result = $this->club_model->queryById($id) ;
+		if(empty($result) || !is_array($result)){
+			echo "请不要修改连接地址。" ;
+			die() ;
+		}
 		$order = $this->Order($id,'免费报名') ;
 		
 		$this->view->assign('order',$order) ;
-		
-		$result = $this->club_model->queryById($id) ;
 		$this->view->assign('news',$result) ;
 		
 		$text = "免费报名成功！" ;
