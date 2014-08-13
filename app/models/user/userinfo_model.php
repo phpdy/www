@@ -9,5 +9,9 @@ class userinfo_model extends BaseModel {
 	protected function getOrder(){
 		return "order by name " ;
 	}
+	
+	protected function getWhere(){
+		return " state=1 " ;
+	}
 }
 
