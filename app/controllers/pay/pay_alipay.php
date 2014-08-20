@@ -7,6 +7,9 @@ class pay_alipay extends BaseController {
 	}
 	
 	public function notifyAction(){
+		$log = __CLASS__."|".__FUNCTION__ ;
+		$start = microtime(true) ;
+		
 		//计算得出通知验证结果
 		$alipayNotify = new AlipayNotify($alipay_config);
 		$verify_result = $alipayNotify->verifyNotify();
@@ -49,10 +52,14 @@ class pay_alipay extends BaseController {
     		) ;
     		$this->pay_model->update($pay) ;
     		
+    		$log .="|success" ;
 		} else {
 			//验证失败
 			echo "fail";
+    		$log .="|fail" ;
 		}
+		$log .="|".(int)(microtime(true)-$start) ;
+		log::info($log);
 	}
 
 	public function returnAction(){
@@ -73,7 +80,15 @@ class pay_alipay extends BaseController {
 					//如果有做过处理，不执行商户的业务程序
 					$text="交易成功，感谢您的参与";
 		    }
-				
+		    //修改状态
+			//订单成功，修改状态
+    		$orderlist = $this->pay_model->query(array('orderid'=>$_GET['orderid'])) ;
+    		$pay = array(
+    			'id'	=>$orderlist[0]['id'],
+    			'state'	=>1,
+    		) ;
+    		$this->pay_model->update($pay) ;
+    		
 		}else {
 		    //验证失败
 		   $text="交易失败";
