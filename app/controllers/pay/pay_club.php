@@ -51,7 +51,7 @@ class pay_club extends BaseClubController {
 		$orderlist = $this->pay_model->query($request) ;
 		if(!empty($orderlist) && is_array($orderlist)){
 			echo "<script language=javascript>
-			alert('您已经提交过，请不要重复提交。');
+			alert('您已经成功报名了本活动，您可以到“我的订单”中进行操作，谢谢！');
 			document.location.href='user.php?action=myorder';</script>" ;
 			
 			$log .="|user.php?action=myorder|".(int)(microtime(true)-$start) ;

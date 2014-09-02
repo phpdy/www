@@ -12,13 +12,16 @@
 <div class="main">
 	<div class="apply_main">
 
-    <div class="apply_sub">全科专业摄影课程报名注册信息填写</div>
+    <div class="apply_sub">全科专业摄影课程咨询信息填写</div>
     <form name="form" id="form" method="post" action="user.php?action=regSubmit">
 		<div class="apply_sheet">
 		
 		<table>
 		<tr>
 			<td><b style="color:#F00;">*</b>电子邮箱：</td><td align="left"><input type="text" tabindex="3" class="sele" size="30" maxlength="30" name="name" id="name">（电子邮箱地址，用户的登录名）</td>
+		</tr>
+		<tr>
+			<td><b style="color:#F00;">*</b>电话号码：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="mobile" id="mobile"></td>
 		</tr>
 		<tr>
 			<td><b style="color:#F00;">*</b>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</td><td align="left"><input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="password" id="password">（密码长度不少于6位）</td>
@@ -30,12 +33,17 @@
 			<td><b style="color:#F00;">*</b>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="username" id="username">（请填写真实姓名）</td>
 		</tr>
 		<tr>
-			<td colspan=2 align="left"><label><font color="#B60925"><b>全科专业摄影课程报名注册告知函：</b></font></label></td>
+			<td colspan=2 align="left"><label><font color="#B60925"><b>全科专业摄影课程咨询信息填写告知函：</b></font></label></td>
 		</tr>
 		<tr>
 			<td colspan=2 align="left"><textarea rows="12" cols="90%" tabindex="1" readonly="true" style="padding:5px 5px;overflow:auto;resize:none">
 您好！
-欢迎您报名参加全科专业摄影课程的学习！在成为全科专业摄影课程学员的同时，您还将免费成为纽摄俱乐部会员！
+
+感谢您提交课程咨询信息。
+
+在收到你的信息后，我们的老师会在1-2个工作日内与您联系，并解答您对全科专业摄影课程的各种问题。
+
+为了感谢您对全科专业摄影课程的关注，您在注册后还将免费成为纽摄俱乐部会员。您只要使用电子邮箱和您设置的密码就可以登陆http://club.nyipcn.com/，以会员的身份参加我们举办的各种活动。
 
 
 纽摄俱乐部（Newshoot Club以下简称NC）是北京纽摄教育科技有限公司的持有品牌，致力于为摄影人提供最有价值的摄影实践、摄影创作、摄影文化交流等活动。

@@ -51,6 +51,13 @@ class user_index extends BaseController {
 				alert('用户名不能为空');</script>" ;
 			die();
 		}
+		$pattern = "/^([0-9A-Za-z\\-_\\.]+)@([0-9a-z]+\\.[a-z]{2,3}(\\.[a-z]{2})?)$/i";
+		if(!preg_match( $pattern, $_POST['name'])){
+			echo "<script language=javascript>
+				alert('您输入的电子邮件地址不合法');</script>" ;
+			die();
+		}
+
 		$data = $_POST ;
 		$data['password'] = md5($data['password']) ;
 		$data['createtime'] = date('Y-m-d H:i:s') ;

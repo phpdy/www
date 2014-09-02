@@ -61,7 +61,7 @@ $user = @$_SESSION [FinalClass::$_session_user] ;
 if(!empty($user)){
 	echo '<div class="slogin">[ <a href="user.php">'.$user['username'].'</a> | <a href="user.php?action=loginout">退出</a> | <a href="http://club.nyipcn.com/user.php?action=pwd">改密码</a> ]</div>' ;
 } else {
-	echo '<div class="slogin">[ <a href="user.php?action=login">登录</a> | <a href="user.php?action=reg">注册</a> ]</div>' ;
+	echo '<div class="slogin">[ <a href="http://club.nyipcn.com/user.php?action=login">学员登录</a> | <a href="user.php?action=reg">注册</a> ]</div>' ;
 }
 ?>
 

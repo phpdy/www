@@ -47,11 +47,15 @@ $(function(){
 	});
 
 	$("#order_ali").click(function(){
-		window.location.href="/pay.php?action=ali&userid=<?php echo $user['id']; ?>&id=<?php echo $news['id']; ?>";
+		var html = "/pay.php?action=ali&userid=<?php echo $user['id']; ?>&id=<?php echo $news['id']; ?>" ;
+		//window.location.href=html;
+		window.open(html,'_blank') ;
 	});
 
 	$("#order_hk").click(function(){
-		window.location.href="/pay.php?action=hk&userid=<?php echo $user['id']; ?>&id=<?php echo $news['id']; ?>";
+		var html = "/pay.php?action=hk&userid=<?php echo $user['id']; ?>&id=<?php echo $news['id']; ?>" ;
+		//window.location.href=html;
+		window.open(html,'_blank') ;
 	});
 
 	$("#order_free").click(function(){
