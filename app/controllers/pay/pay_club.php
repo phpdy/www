@@ -184,6 +184,22 @@ class pay_club extends BaseClubController {
 		
 		$news = $this->club_model->queryById($id) ;
 		
+		//判断是否已经提过单，避免重复提单
+		$request = array(
+			'userid'	=>$user['id'],
+			'pid'		=>$id,
+		);
+		$orderlist = $this->pay_model->query($request) ;
+		if(!empty($orderlist) && is_array($orderlist)){
+			echo "<script language=javascript>
+			alert('您已经成功报名了本活动，您可以到“我的订单”中进行操作，谢谢！');
+			document.location.href='user.php?action=myorder';</script>" ;
+			
+			$log .= "|".json_encode($request) ."|order is exit|".(int)(microtime(true)-$start) ;
+			log::info($log);
+			die();
+		}
+		
 		$order = array(
 			'orderid'	=>	'NY'.time() ,
 			'userid'	=>	$user['id'] ,

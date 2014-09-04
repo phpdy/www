@@ -21,16 +21,16 @@
 			<td><b style="color:#F00;">*</b>电子邮箱：</td><td align="left"><input type="text" tabindex="3" class="sele" size="30" maxlength="30" name="name" id="name">（电子邮箱地址，用户的登录名）</td>
 		</tr>
 		<tr>
-			<td><b style="color:#F00;">*</b>电话号码：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="mobile" id="mobile"></td>
+			<td><b style="color:#F00;">*</b>电话号码：</td><td align="left"><input type="text" tabindex="4" class="sele" size="20" maxlength="20" name="mobile" id="mobile"></td>
 		</tr>
 		<tr>
-			<td><b style="color:#F00;">*</b>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</td><td align="left"><input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="password" id="password">（密码长度不少于6位）</td>
+			<td><b style="color:#F00;">*</b>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</td><td align="left"><input type="password" tabindex="4" class="sele" size="20" maxlength="20" name="password" id="password">（密码长度不少于6位）</td>
 		</tr>
 		<tr>
-			<td><b style="color:#F00;">*</b>确认密码：</td><td align="left"><input type="password" tabindex="3" class="sele" size="20" maxlength="20" name="repassword" id="repassword"></td>
+			<td><b style="color:#F00;">*</b>确认密码：</td><td align="left"><input type="password" tabindex="6" class="sele" size="20" maxlength="20" name="repassword" id="repassword"></td>
 		</tr>
 		<tr>
-			<td><b style="color:#F00;">*</b>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td><td align="left"><input type="text" tabindex="3" class="sele" size="20" maxlength="20" name="username" id="username">（请填写真实姓名）</td>
+			<td><b style="color:#F00;">*</b>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td><td align="left"><input type="text" tabindex="7" class="sele" size="20" maxlength="20" name="username" id="username">（请填写真实姓名）</td>
 		</tr>
 		<tr>
 			<td colspan=2 align="left"><label><font color="#B60925"><b>全科专业摄影课程咨询信息填写告知函：</b></font></label></td>
