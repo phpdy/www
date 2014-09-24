@@ -12,6 +12,15 @@
 <link type="text/css" href="./include/css/style.css" rel="stylesheet">
 <link type="text/css" href="./include/css/video.css" rel="stylesheet">
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c0f9a1897e0b5c971c4f213b761a5043";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 <!--[if lt IE 9]> <script src="http://stat.ablesky.cn/statb/js_optimize/lib/shiv/html5.js"></script> <![endif]-->
 <link type="image/x-icon" href="./favicon.ico" rel="shortcut icon"></head>
 

@@ -7,5 +7,9 @@
   <a href="index.php?control=detail&tid=59&id=633" target="_blank">友情链接</a></div>
 </div>
 <br/>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc0f9a1897e0b5c971c4f213b761a5043' type='text/javascript'%3E%3C/script%3E"));
+</script>
 </body>
 </html>
