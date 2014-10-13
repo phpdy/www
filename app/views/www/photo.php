@@ -30,6 +30,7 @@
   <div><a href='?control=order&catid=75'><img src="images/lkbm.jpg" border="0" width="105" height="35" align=order></a>&nbsp;&nbsp;
   <iframe scrolling="no" frameborder="0" width="102" height="24" allowtransparency="true" src="https://id.b.qq.com/static/account/bizqq/wpa/wpa_a01.html?type=1&kfuin=800002915&ws=http%3A%2F%2Fwww.nyipcn.com&btn1=%E5%9C%A8%E7%BA%BF%E8%AF%BE%E7%A8%8B%E5%92%A8%E8%AF%A2" title="在线课程咨询"></iframe>
   </div>
+  <div><img src="images/tel.jpg" border="0" align="tel"></div>
   </div>
   <!--left end-->
 
