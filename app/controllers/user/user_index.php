@@ -77,6 +77,7 @@ class user_index extends BaseController {
 		}
 		
 		header("location:$url") ;
+		echo "<script>!function(w,d,e){var b=location.href,c=d.referrer,f,s,g=d.cookie,h=g.match(/(^|;)\s*ipycookie=([^;]*)/),i=g.match(/(^|;)\s*ipysession=([^;]*)/);if (w.parent!=w){f=b;b=c;c=f;};u='//stats.ipinyou.com/cvt?a='+e('iX.rL.yhVzI-AcO0xLvO2cU1_Si_')+'&c='+e(h?h[2]:'')+'&s='+e(i?i[2].match(/jump\%3D(\d+)/)[1]:'')+'&u='+e(b)+'&r='+e(c)+'&rd='+(new Date()).getTime()+'&e=';function _(){if(!d.body){setTimeout(_(),100);}else{s= d.createElement('script');s.src = u;d.body.insertBefore(s,d.body.firstChild);}}_();}(window,document,encodeURIComponent);</script><noscript><img src=\"//stats.ipinyou.com/cvt.gif?a=iX.rL.yhVzI-AcO0xLvO2cU1_Si_&e=\" style=\"display:none;\"/></noscript>" ;
 		
 		$log .= "|$result|$url" ;
 		$log .= "|".(int)(microtime(true)*1000-$start) ;

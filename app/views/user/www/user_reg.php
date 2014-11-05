@@ -15,7 +15,7 @@
     <div class="apply_sub">全科专业摄影课程咨询信息填写</div>
     <form name="form" id="form" method="post" action="user.php?action=regSubmit">
 		<div class="apply_sheet">
-		
+		<div>&nbsp;</div>
 		<table>
 		<tr>
 			<td><b style="color:#F00;">*</b>电子邮箱：</td><td align="left"><input type="text" tabindex="3" class="sele" size="30" maxlength="30" name="name" id="name">（电子邮箱地址，用户的登录名）</td>
