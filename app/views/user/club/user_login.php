@@ -17,6 +17,7 @@
 	        <input type="button" class="btn-img btn-regist" id="login" value="登录" tabindex="5">&nbsp;&nbsp;
 	        <input type="button" name="regist" id="regist" class="btn-img btn-regist" value="注册" />
 		</div>
+		<div style="margin: 0px; padding: 7px 0px; text-indent: 29px; color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 24px;">如果您已经是纽约摄影学院中国学员班全科摄影课程的学员，您将自动具备纽摄俱乐部会员身份，无需注册会员。您可以使用您的学号作为用户名，并输入初始密码进行登录。如果您不知道您的初始密码，可以直接拨打学校电话010-51298186获取。</div>
     </form>
 	</div>
   </div>
