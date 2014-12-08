@@ -5,7 +5,7 @@ class www_model extends BaseModel {
 	protected $dbIndex = 'phpcms';
 	protected $dbTable = "v9_www" ;
 	
-	protected $items = array('catid','title','description','content','thumb','inputtime') ;
+	protected $items = array('catid','title','description','content','thumb','inputtime','posids') ;
 
 
 	protected function getOrder(){
