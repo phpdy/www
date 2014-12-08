@@ -40,10 +40,14 @@ class www_index extends BaseWWWController {
 		}
 		$this->view->assign('list',$list) ;
 
-		//Ê×Ò³Ìí¼Ó×îĞÂÏûÏ¢
+		//é¦–é¡µæ·»åŠ æœ€æ–°æ¶ˆæ¯
 		$newlist = $this->www_model->query(array('posids'=>1)) ;
+		$len = 7 ;
+		if(sizeof($newlist)>$len){
+			$newlist = array_slice($newlist,0,$len) ;
+		}
 		$this->view->assign('newlist',$newlist) ;
-		//¹ØÓÚÎÒÃÇ
+		//å…³äºæˆ‘ä»¬
 		$our = $this->www_model->getDataByPid(62) ;
 		$this->view->assign('our',$our[0]) ;
 
