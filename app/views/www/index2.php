@@ -22,32 +22,29 @@
 <!--main begin-->
 <div id="index_main">
   <!--channel begin-->
-  <div style="margin:0 auto;width:960px;margin-bottom:6px;height:300px;">
-	  <div style="width:632px;background:#1b559d;float:left;height:300px;">
-		  <div style="padding:15px;margin-left:60px;font-size:24px;color:#fff;text-align:left;">
-		  	<div style="border-bottom:2px solid #afd2f9">纽摄教育最新消息</div>
-		  </div>
+  <div id="index_public">
+	  <div class="index_pub1">
+		  <div class="index_pub_t">纽摄教育最新消息</div>
 			<?php 
 			foreach ($newlist as $key=>$item){
-				echo "<div style='font-size:14px;float:left;width:590px;margin-left:30px;margin-right:15px;margin-top:10px;border-bottom:2px dashed #afd2f9'>".
-				"<div style='float:left;color:#fff;text-align:left;'>".
-				"<a href='?control=detail&tid=60&pid=$item[catid]&id=$item[id]' style='color:#fff'>&gt;&nbsp;$item[title]</a></div>".
-				"<div style='float:right;color:#fff;text-align:right;'>".date("Y-m-d",$item['inputtime']).
-				"</div>".
+				echo "<div class='index_pub_list'>".
+				"<a href='?control=detail&tid=1&pid=$item[catid]&id=$item[id]' style='color:#fff' target=_blank><div style='float:left;text-align:left;width:492px;'>".
+				"&gt;&nbsp;$item[title]</div>".
+				"<div style='width:100px;float:right;text-align:right;'>".date("Y-m-d",$item['inputtime']).
+				"</div></a>".
 				"</div>" ;
 			}
 			?>
 	  </div>
-	  <div style="width:24px;float:left">&nbsp;</div>
-	  <div style="width:304px;background:#1b559d;float:left;height:300px;">
-	  		<div style="float:left;margin-left:60px;margin-right:15px;margin-top:10px;width:230px;font-size:24px;color:#fff;text-align:left;border-bottom:2px solid #afd2f9">
-	  			<div style="float:left;">关于纽摄教育</div>
-	  			<div style="float:right;text-align:right;"><a href="?control=ours" style="color:#f89646;font-size:18px;">更多</a></div>
-	  		</div>
-		  <div style="margin-left:15px;margin-right:10px;margin-top:10px;color:#fff;text-align:left;float:right;font-size:16px">
+	  <div class="index_pub2">
+      <div class="index_pub_t">关于纽摄教育
+        <div style="float:right;"><a href="?control=ours" class="index_pub_more" target=_blank>更多</a></div>
+      </div>
+		  <div class="index_pub_about">
 		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;纽约摄影学院中国学员班成立于2005年，目的在于向更多中国专业摄影师及爱好者推广纽约摄影学院著名的远程互动式全科专业摄影课程。纽约摄影学院全科专业摄影课程的主要作者、纽约摄影学院名誉院长、Home Study School现任院长唐·谢夫先生，经由纽约摄影学院授权，亲自负责监督并独家授权北京纽摄教育科技有限公司在中国汉化并教授这套专业摄影课程。</div>
 	  </div>
   </div>
+
   <div class="index_channel">
   <?php 
   //print_r($list);

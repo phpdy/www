@@ -1,19 +1,20 @@
 <div id="channel_nav">
-	<a href="?">首页</a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
-	<a href="?control=<?php echo $idlist[$tid] ;?>"><?php
-	 foreach ($categoryList as $value){
+	<a href="?">首页</a>&nbsp;&nbsp;
+	<?php
+	$typeid = $idlist[$tid] ;
+	$categoryList[] = array('catid'=>1,'catname'=>"最新消息") ;
+	foreach ($categoryList as $value){
 	 	if($value['catid']==$tid){
-	 		echo $value['catname'];
+	 		echo '<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;'.
+	 			'<a href="?control='.$typeid.'">'.$value['catname'].'</a>&nbsp;&nbsp;' ;
 	 		break ;
 	 	}
 	 }
-	 ?></a>&nbsp;&nbsp;<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;
-	 <?php
-	 $typeid = $idlist[$tid] ;
+	 if(!empty($typeid))
 	 foreach ($categoryList as $value){
 	 	if($value['catid']==@$pid){
-	 		
-	 		echo "<a href='?control=$typeid&id=$pid'>$value[catname]</a>";
+	 		echo '<img src="images/nav-breadcrumb.png" border="0" width="6" height="12" align=absmiddle>&nbsp;&nbsp;'.
+	 			"<a href='?control=$typeid&id=$pid'>$value[catname]</a>" ;
 	 		break ;
 	 	}
 	 }
