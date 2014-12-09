@@ -41,8 +41,24 @@ class www_index extends BaseWWWController {
 		$this->view->assign('list',$list) ;
 
 		//首页添加最新消息
-		$newlist = $this->www_model->query(array('posids'=>1)) ;
-		$len = 7 ;
+		//全科消息
+		$www_newlist = $this->www_model->query(array('posids'=>1)) ;
+		foreach ($www_newlist as $item){
+			$item['url'] = "?control=detail&tid=1&pid=$item[catid]&id=$item[id]" ;
+			$newlist[] = $item ;
+		}
+		//俱乐部消息
+		$this->club_model = $this->initModel('club_model','club');
+		$club_newlist = $this->club_model->query(array('posids'=>1)) ;
+		foreach ($club_newlist as $item){
+			$item['url'] = "http://club.nyipcn.com/index.php?control=news&t=99&id=$item[id]" ;
+			$newlist[] = $item ;
+			$sorts[] = $item['inputtime'] ;
+		}
+		//排序
+		array_multisort($sorts, SORT_ASC, $newlist);
+		//$this->multi_array_sort($newlist,'inputtime', SORT_DESC);
+		$len = 6 ;
 		if(sizeof($newlist)>$len){
 			$newlist = array_slice($newlist,0,$len) ;
 		}
@@ -58,5 +74,20 @@ class www_index extends BaseWWWController {
 		log::info($log);
 		$this->view->display('index2.php');
 	}
+	function multi_array_sort($multi_array,$sort_key,$sort=SORT_ASC){
+		if(is_array($multi_array)){
+			foreach ($multi_array as $row_array){
+				if(is_array($row_array)){
+					$key_array[] = $row_array[$sort_key];
+				}else{
+					return false;
+				}
+			}
+		}else{
+			return false;
+		}
+		array_multisort($key_array,$sort,$multi_array);
+		return $multi_array;
+	} 
 }
 ?>

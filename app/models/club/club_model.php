@@ -3,7 +3,7 @@
 class club_model extends BaseModel {
 	protected $dbIndex = 'phpcms';
 	protected $dbTable = "v9_club" ;
-	protected $items = array('id','catid','title','thumb','description','url','startdate','closedate','inputtime','updatetime','fee') ;
+	protected $items = array('id','catid','title','thumb','description','url','startdate','closedate','inputtime','updatetime','fee','posids') ;
 	
 
 	protected function getOrder(){

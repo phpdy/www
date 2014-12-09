@@ -28,7 +28,7 @@
 			<?php 
 			foreach ($newlist as $key=>$item){
 				echo "<div class='index_pub_list'>".
-				"<a href='?control=detail&tid=1&pid=$item[catid]&id=$item[id]' style='color:#fff' target=_blank><div style='float:left;text-align:left;width:492px;'>".
+				"<a href='$item[url]' style='color:#fff' target=_blank><div style='float:left;text-align:left;width:492px;'>".
 				"&gt;&nbsp;$item[title]</div>".
 				"<div style='width:100px;float:right;text-align:right;'>".date("Y-m-d",$item['inputtime']).
 				"</div></a>".
