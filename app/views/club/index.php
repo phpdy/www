@@ -64,11 +64,11 @@
 <div id="mainbody2">
 <div id="mainc2">
 	<div class="mainc_title">和我们一起探索美妙的摄影世界</div>
-	<div class="mainc_img" id="img_0"></div>
-	<div class="more" id="more0"><b>更多摄影作品展示</b>></div>
-	
 	<div class="mainc_img" id="img_1"></div>
 	<div class="more" id="more1"><b>更多过往活动花絮</b>></div>
+	
+	<div class="mainc_img" id="img_0"></div>
+	<div class="more" id="more0"><b>更多摄影作品展示</b>></div>
 	
 </div>
 </div>
