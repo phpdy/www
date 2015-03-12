@@ -8,7 +8,6 @@ class club_news extends BaseClubController {
 		$this->type = $type ;
 		$this->view->assign('t',$this->type) ;
 		
-		$this->view->display('comm-title.php');
 	}
 	
 	public function defaultAction(){
@@ -17,6 +16,11 @@ class club_news extends BaseClubController {
 		$news = $this->club_model->queryById($id) ;
 		$this->view->assign('news',$news) ;
 		
+		
+		$this->view->assign('description',$news['description']) ;
+		$this->view->assign('keywords',$news['keywords']) ;
+		$this->view->display('comm-title.php');
+
 		$result = $this->club_model->getContent($id) ;
 		$this->view->assign('result',$result) ;
 		$this->view->display('news.php');

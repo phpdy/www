@@ -5,9 +5,9 @@
 <meta http-equiv="Expires" content="0">
 <meta http-equiv="Cache-Control" content="no-cache">
 <meta http-equiv="Pragma" content="no-cache">
-<meta name="description" content="">
-<meta name="keywords" content="">
 <title>纽摄俱乐部——始创于2005年，顶级行摄品牌</title>
+<meta name="description" content="<?php echo $description ;?>">
+<meta name="keywords" content="<?php echo $keywords ;?>">
 <link type="text/css" href="./css/common.css" rel="stylesheet">
 <link type="image/x-icon" href="./favicon.ico" rel="shortcut icon">
 </head>

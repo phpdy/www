@@ -10,6 +10,8 @@ class club_list extends BaseClubController {
 		
 		$this->view->assign('t',$this->type) ;
 		
+		$this->view->assign('description',$this->description) ;
+		$this->view->assign('keywords',$this->keywords) ;
 		$this->view->display('comm-title.php');
 	}
 

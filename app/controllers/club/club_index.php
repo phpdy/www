@@ -8,6 +8,9 @@ class club_index extends BaseClubController {
 		
 		$this->view->assign('t',$this->t) ;
 		
+		$this->view->assign('description',$this->description) ;
+		$this->view->assign('keywords',$this->keywords) ;
+
 		$this->view->display('comm-title.php');
 	}
 
@@ -24,7 +27,7 @@ class club_index extends BaseClubController {
 		) ;
 		$this->view->assign('list',$list) ;
 
-		
+
 		$piclist = $this->pictue_model->getAllByCatid(57) ;
 		$this->view->assign('piclist',$piclist) ;
 		
