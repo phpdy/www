@@ -38,6 +38,7 @@ class club_list extends BaseClubController {
 				) ;
 				$title_before ="活动预告";
 				$title_after ="活动回顾" ;
+				$this->psize = 16 ;//活动预告改为4排
 				break ;
 			case 2:
 				$id = 48 ;
