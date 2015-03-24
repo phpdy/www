@@ -16,6 +16,8 @@ class pay_model extends BaseModel {
 	}
 
 	public function findOrderListByUserid($userid){
+		
+		$userid = htmlspecialchars($userid, ENT_QUOTES) ;
 		$sql = "select orderid,userid,username,ptype,pid,paytype,paydate,state,money from ".$this->dbTable." where ptype=4 and userid=$userid order by paydate" ;
 		$result = $this->getAll($sql) ;
 		
@@ -23,6 +25,7 @@ class pay_model extends BaseModel {
 	}
 
 	public function findOrderListByPid($pid){
+		$pid = htmlspecialchars($pid, ENT_QUOTES) ;
 		$sql = "select orderid,userid,username,ptype,pid,paytype,paydate,state,money from ".$this->dbTable." where ptype=4 and pid=$pid order by paydate" ;
 		$result = $this->getAll($sql) ;
 		return $result ;

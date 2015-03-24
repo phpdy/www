@@ -76,7 +76,7 @@ class BaseModel extends Model {
 			if(in_array($key, $this->items)){
 				$k[] = "$key" ;
 				$v[] = "?" ;
-				$params[] = $value ;
+				$params[] = htmlspecialchars($value, ENT_QUOTES) ;
 			}
 		}
 		$p1 = implode(",", $k) ;
@@ -108,7 +108,7 @@ class BaseModel extends Model {
 		foreach ($data as $key=>$value){
 			if(in_array($key, $this->items)){
 				$k[] = "$key=?" ;
-				$params[] = $value ;
+				$params[] = htmlspecialchars($value, ENT_QUOTES) ;
 			}
 		}
 		
@@ -164,7 +164,7 @@ class BaseModel extends Model {
 			}
 			if(in_array($key, $this->items)){
 				$k[] = " $key=? " ;
-				$params[] = $value ;
+				$params[] = htmlspecialchars($value, ENT_QUOTES) ;
 			}
 		}
 		$p1 = "" ;
@@ -200,7 +200,7 @@ class BaseModel extends Model {
 			}
 			if(in_array($key, $this->items)){
 				$k[] = " $key=? " ;
-				$params[] = $value ;
+				$params[] = htmlspecialchars($value, ENT_QUOTES) ;
 			}
 		}
 		$p1 = "" ;
@@ -235,7 +235,7 @@ class BaseModel extends Model {
 			}
 			if(in_array($key, $this->items)){
 				$k[] = " $key=? " ;
-				$params[] = $value ;
+				$params[] = htmlspecialchars($value, ENT_QUOTES) ;
 			}
 		}
 		$p1 = "" ;

@@ -81,5 +81,10 @@ class www_index extends BaseWWWController {
 		log::info($log);
 		$this->view->display('index2.php');
 	}
+	
+	public function destroy(){
+		$this->view->display('comm-footer.php');
+		echo '<a href="http://webscan.360.cn/index/checkwebsite/url/www.nyipcn.com"><img border="0" src="http://img.webscan.360.cn/status/pai/hash/6c5c489954148ea472c7755fea62fc76"/></a>' ;
+	}
 }
 ?>
