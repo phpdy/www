@@ -21,9 +21,9 @@ if(file_exists(MODEL_PATH . 'BaseModel.php')){
 }
 
 //设置默认控制器
-$dir = empty($_GET['dir']) ? '' : $_GET['dir'];
-$control = empty($_GET['control']) ? 'index' : $_GET['control'] ;
-$action = empty($_GET['action']) ? 'execute' : $_GET['action'];
+$dir = empty($_GET['dir']) ? '' : htmlspecialchars($_GET['dir']);
+$control = empty($_GET['control']) ? 'index' : htmlspecialchars($_GET['control']) ;
+$action = empty($_GET['action']) ? 'execute' : htmlspecialchars($_GET['action']) ;
 
 //$control .= "Controller" ;
 $action .= "Action" ;
