@@ -101,7 +101,9 @@ class Import {
 		$file_path .= $filename . '.php' ;
 		
 		if (!is_file($file_path)){
-			exit("找不到该页面，请确认请求地址正确性:$file_path");
+			echo "<script language='JavaScript' type='text/javascript'>window.location.href='http://www.nyipcn.com/';</script>";
+            die();
+			//exit("找不到该页面，请确认请求地址正确性:$file_path");
 		}
 		
 		require_once $file_path ;
