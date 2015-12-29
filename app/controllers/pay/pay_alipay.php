@@ -4,6 +4,10 @@ class pay_alipay extends BaseController {
 
 	public function init(){
 		$this->pay_model = $this->initModel('pay_model','user');
+		require_once(ROOT_PATH."club/alipay/alipay.config.php");
+		require_once(ROOT_PATH."club/alipay/lib/alipay_notify.class.php");
+		require_once(ROOT_PATH."club/alipay/lib/alipay_core.function.php");
+		require_once(ROOT_PATH."club/alipay/lib/alipay_md5.function.php");
 	}
 	
 	public function notifyAction(){
@@ -63,10 +67,15 @@ class pay_alipay extends BaseController {
 	}
 
 	public function returnAction(){
+		$log = __CLASS__."|".__FUNCTION__ ;
+		$start = microtime(true) ;
+		
+
 		//计算得出通知验证结果
 		$alipayNotify = new AlipayNotify($alipay_config);
 		$verify_result = $alipayNotify->verifyReturn();
-		
+		$log .="|".$verify_result ;
+
 		if($verify_result) {//验证成功
 		
 		    if($_GET['trade_status'] == 'WAIT_SELLER_SEND_GOODS') {
@@ -94,6 +103,8 @@ class pay_alipay extends BaseController {
 		   $text="交易失败";
 		}
 		
+		$log .="|".(int)(microtime(true)-$start) ;
+		log::info($log);
 		header("Location: pay.php?action=success&orderid=$_GET[orderid]&text=".$text);
 	}
 	
