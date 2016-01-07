@@ -63,6 +63,7 @@ if($verify_result) {//验证成功
     }
 /************************************************************/
 //提交订单
+/**
   $sql = "update v9_form_apply set state=1 where orderid=".$_POST['out_trade_no'];
   $result = mysql_query($sql) or die(mysql_error());
 
@@ -78,11 +79,31 @@ if($verify_result) {//验证成功
 	require_once("../wp-config.php");
 	require_once("../wp-includes/wp-db.php");
 	return $wpdb->update('cafe_flash',$regist, array( 'number' => $_POST['out_trade_no']));
+*/
+	$orderid = $_POST['out_trade_no'] ;
+	//CURL请求写入数据库
+	$ch = curl_init();
+	
+	$host = "http://".$_SERVER['SERVER_NAME'] ;
+	$db_url = "$host/pay.php?control=alipay&action=db&orderid=$orderid&re=success";
+　　//设置选项，包括URL
+　　curl_setopt($ch, CURLOPT_URL, $db_url);
+　　curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+　　curl_setopt($ch, CURLOPT_HEADER, 0);
+
+　　//执行并获取HTML文档内容
+　　$output = curl_exec($ch);
+
+　　//释放curl句柄
+　　curl_close($ch);
 
 } else {
   //验证失败
   echo "fail";
-  $sql = "update v9_form_apply set state=2 where orderid=".$_POST['out_trade_no'];
-  $result = mysql_query($sql) or die(mysql_error());
+  //$sql = "update v9_form_apply set state=2 where orderid=".$_POST['out_trade_no'];
+  //$result = mysql_query($sql) or die(mysql_error());
 }
+
+
+
 ?>

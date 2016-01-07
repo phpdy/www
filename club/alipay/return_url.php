@@ -38,7 +38,9 @@ if($verify_result) {//验证成功
     //验证失败
    $text="交易失败";
 }
+$orderid = $_POST['out_trade_no'] ;
 
-header("Location: http://www.nyipcn.com/?page_id=13316&text=".$text); 
+//header("Location: http://www.nyipcn.com/?page_id=13316&text=".$text); 
+header("Location: pay.php?action=success&orderid=$orderid&text=".$text);
 exit;
 ?>

@@ -32,11 +32,13 @@ require_once("lib/alipay_submit.class.php");
         //必填，不能修改
         //服务器异步通知页面路径
         $notify_url = "$host/pay.php?control=alipay&action=notify&orderid=$orderid";
+        $notify_url = "$host/notify_url.php";
         //需http://格式的完整路径，不允许加?id=123这类自定义参数
 
         //页面跳转同步通知页面路径
         $return_url = "http://v.nyipcn.com/clist.php?cid=15&lid=37";
         $return_url = "$host/pay.php?control=alipay&action=return&orderid=$orderid";
+		$return_url = "$host/return_url.php";
         //需http://格式的完整路径，不允许加?id=123这类自定义参数
 
         //卖家支付宝帐户
