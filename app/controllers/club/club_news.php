@@ -23,6 +23,19 @@ class club_news extends BaseClubController {
 
 		$result = $this->club_model->getContent($id) ;
 		$this->view->assign('result',$result) ;
+
+
+	/**
+	 * 1	=> '摄影之旅' ,47
+	   2	=> '摄影课程' ,48
+	 */
+		$type = 47 ;
+		if($this->type==2){
+			$type=48;
+		}
+		$newslist = $this->club_model->getAllByCatid($type) ;
+		$this->view->assign('newslists',$newslist) ;
+
 		$this->view->display('news.php');
 	}
 	

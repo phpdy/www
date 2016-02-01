@@ -77,19 +77,37 @@ echo "<tr>";
     	if($cd >= $fstdw && $cd<$days+$fstdw){
     		$oday = $cd-$fstdw+1;
     		if($year==date('Y',time()) && $month==date('m',time()) && $oday==date('d',time())){
-    			$css .= "background:#888;" ;
+    			$css = "background:#888;" ;
     		}
     		$date = ($cd-$fstdw+1);
     	}
-
-    	$today = strtotime("$year-$month-$date") ;
+		
+		$today = strtotime("$year-$month-$date") ;
 		$titleshow="" ;
-    	if($today>=$startdate && $today<=$closedate){
-    		$css .= "font-weight:bold;color:red;background:#f96;" ;
-			$titleshow='title="'.$news['title'].'"';
-    	}
+		//print_r($newslists) ;
+		//print_r($news) ;
+		foreach ($newslists as $item){
+			$title 	= $item['title'] ;
+			$startdate2 = strtotime($item['startdate']);
+			$closedate2 = strtotime($item['closedate']);
+
+			if($today>=$startdate2 && $today<=$closedate2){
+				if($css ==""){
+					$css = "font-weight:bold;color:red;background:#f96;" ;
+				}
+				if($titleshow==""){
+					$titleshow = $title ;
+				} else {
+					$titleshow .= "\r\n".$title ;
+				}
+			}
+		}
+		/*if($today>=$startdate && $today<=$closedate){
+			$css = "font-weight:bold;color:red;background:#f96;" ;
+			$titleshow ='title="'.$news['title'].'"';
+		}*/
     	$cd++;
-    	$out ="<td class='daily_td' style='$css' $titleshow >$date</td>";
+    	$out ="<td class='daily_td' style='$css' title='$titleshow' >$date</td>";
     	echo $out ;
     }
 echo "</tr>";
