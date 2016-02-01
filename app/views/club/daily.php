@@ -40,13 +40,13 @@ $month = date('m',$time);
 echo "<table width=260 cellspacing=0 cellpadding=0 class='daily'>";
 
 echo "<tr class='daily_td'><td colspan=7 class=title>";
-$str   = "<a href=?t=$t&id=$id&year=".($year-1)."&month=".$month.">";
+$str   = "<a href=?control=news&t=$t&id=$id&year=".($year-1)."&month=".$month.">";
 $str .= "&laquo;</a> ".$year."年 ";
-$str .= "<a href=?t=$t&id=$id&year=".($year+1)."&month=".$month.">";
+$str .= "<a href=?control=news&t=$t&id=$id&year=".($year+1)."&month=".$month.">";
 $str .= "&raquo;</a>   ";
-$str .= "<a href=?t=$t&id=$id&year=".$year."&month=".($month-1).">";
+$str .= "<a href=?control=news&t=$t&id=$id&year=".$year."&month=".($month-1).">";
 $str .= "&laquo;</a> ".$month."月 ";
-$str .= "<a href=?t=$t&id=$id&year=".$year."&month=".($month+1).">";
+$str .= "<a href=?control=news&t=$t&id=$id&year=".$year."&month=".($month+1).">";
 $str .= "&raquo; </a>";
 echo $str;
 echo "</td></tr>";
@@ -83,11 +83,13 @@ echo "<tr>";
     	}
 
     	$today = strtotime("$year-$month-$date") ;
+		$titleshow="" ;
     	if($today>=$startdate && $today<=$closedate){
     		$css .= "font-weight:bold;color:red;background:#f96;" ;
+			$titleshow='title="'.$news['title'].'"';
     	}
     	$cd++;
-    	$out ="<td class='daily_td' style='$css'>$date</td>";
+    	$out ="<td class='daily_td' style='$css' $titleshow >$date</td>";
     	echo $out ;
     }
 echo "</tr>";
